@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{ currentPage.title }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+      <div>
+        <img src="{{ currentPage.image }}">
+      </div>
+
+      <div>
+        <h2>{{ currentPage.text }}</h2>
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" ion-item *ngFor="let o of currentPage.options" (click)="sendFeedback(o.id)">
+          {{ o.title }}
+        </a>
+      </div>
+    </div>
+</ion-content>
