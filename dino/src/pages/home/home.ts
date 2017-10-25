@@ -18,7 +18,7 @@ export class HomePage {
       title:"The Zebrasaur",
       id:"0",
       text:"The zebrasaur is a mythical creature that is half zebra, half lion",
-      image:"../assets/images/zebrasaur.jpeg",
+      image:"../assets/images/kitchen.png",
       options: [{title:"Diet", id:"1"},{title:"Mating",id:"2"}],
     },
     {

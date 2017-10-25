@@ -1,24 +1,56 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar>
     <ion-title>
       {{ currentPage.title }}
     </ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content padding>
+<ion-content padding class='background' overflow-scroll="true" id="{{ currentPage.image }}">
+  <img class='image' src="{{ currentPage.image }}">
   <div>
-      <div>
-        <img src="{{ currentPage.image }}">
-      </div>
+      <h2>{{ currentPage.text }}</h2>
+  </div>
 
-      <div>
-        <h2>{{ currentPage.text }}</h2>
-      </div>
-      <div class="item tabs tabs-secondary tabs-icon-left">
-        <a class="tab-item" ion-item *ngFor="let o of currentPage.options" (click)="sendFeedback(o.id)">
-          {{ o.title }}
-        </a>
-      </div>
-    </div>
+    <ion-grid>
+      <ion-row text-center class="row1">
+        <ion-col col-4>
+        </ion-col>
+        <ion-col col-4>
+        </ion-col>
+        <ion-col col-4>
+        </ion-col>
+      </ion-row>
+      <ion-row text-center class="row2">
+        <ion-col col-4>
+          <img src="../assets/images/child.png">
+        </ion-col>
+        <ion-col col-4>
+        </ion-col>
+        <ion-col col-4>
+          <img src="../assets/images/mother.png">
+        </ion-col>
+      </ion-row>
+      <ion-row text-center class="row3">
+        <ion-col col-4>
+        </ion-col>
+        <ion-col col-4>
+        </ion-col>
+        <ion-col col-4>
+        </ion-col>
+      </ion-row>
+      <ion-row text-center class="row3">
+        <ion-col col-4>
+        </ion-col>
+        <ion-col col-4>
+          <div id="buttons" ion-item *ngFor="let o of currentPage.options" (click)="sendFeedback(o.id)">
+            <button ion-button round>
+              {{ o.title }}
+            </button>
+          </div>
+        </ion-col>
+        <ion-col col-4>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 </ion-content>
