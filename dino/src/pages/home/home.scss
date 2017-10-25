@@ -1,18 +1,14 @@
 page-home {
-  // .background{
-  //       background: no-repeat fixed center;
-  //       -webkit-background-size: cover;
-  //       -moz-background-size: cover;
-  //       background-size: cover;
-  //       background-image: url(../assets/images/kitchen.png);
-  //   }
-
   ion-grid {
    border: 2px solid black;
    height: 90%;
 
    ion-row {
-     height: 33.33%;
+     height: 25%;
+   }
+
+   .text_row {
+     height: 10%;
    }
 
    ion-col {

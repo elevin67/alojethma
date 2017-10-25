@@ -78,13 +78,15 @@ var HomePage = (function () {
                 options: [{ title: "Diet", id: "1" }, { title: "First Page", id: "0" }],
             }
         ];
-        console.log(this.pages);
         this.currentPage = this.pages[0];
+        this.lastPage = this.pages[0];
         this.sendFeedback = function (id) {
-            this.next_page_index = this.find_next_page(id);
+            this.next_page_index = this.find_page(id);
+            this.lastPage = this.pages[this.find_page(this.currentPage.id)];
+            console.log(this.lastPage.id);
             this.currentPage = this.pages[this.next_page_index];
         };
-        this.find_next_page = function (id) {
+        this.find_page = function (id) {
             for (var i = 0; i < this.pages.length; i++) {
                 if (this.pages[i].id == id) {
                     return i;
@@ -97,11 +99,12 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/elevin/Documents/Macalester/Fall2017/Software/alojethma/dino/src/pages/home/home.html"*/'<!-- <ion-header>\n  <ion-navbar>\n    <ion-title>\n      {{ currentPage.title }}\n    </ion-title>\n  </ion-navbar>\n</ion-header> -->\n\n<ion-content padding class=\'background\' overflow-scroll="true" id="{{ currentPage.image }}">\n  <img class=\'image\' src="{{ currentPage.image }}">\n  <div>\n      <h2>{{ currentPage.text }}</h2>\n  </div>\n\n    <ion-grid>\n      <ion-row text-center class="row1">\n        <ion-col col-4>\n        </ion-col>\n        <ion-col col-4>\n        </ion-col>\n        <ion-col col-4>\n        </ion-col>\n      </ion-row>\n      <ion-row text-center class="row2">\n        <ion-col col-4>\n          <img src="../assets/images/child.png">\n        </ion-col>\n        <ion-col col-4>\n        </ion-col>\n        <ion-col col-4>\n          <img src="../assets/images/mother.png">\n        </ion-col>\n      </ion-row>\n      <ion-row text-center class="row3">\n        <ion-col col-4>\n        </ion-col>\n        <ion-col col-4>\n        </ion-col>\n        <ion-col col-4>\n        </ion-col>\n      </ion-row>\n      <ion-row text-center class="row3">\n        <ion-col col-4>\n        </ion-col>\n        <ion-col col-4>\n          <div id="buttons" ion-item *ngFor="let o of currentPage.options" (click)="sendFeedback(o.id)">\n            <button ion-button round>\n              {{ o.title }}\n            </button>\n          </div>\n        </ion-col>\n        <ion-col col-4>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/elevin/Documents/Macalester/Fall2017/Software/alojethma/dino/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/Users/elevin/Documents/Macalester/Fall2017/Software/alojethma/dino/src/pages/home/home.html"*/'<ion-content padding class=\'background\' overflow-scroll="true" id="{{ currentPage.image }}">\n  <img class=\'image\' src="{{ currentPage.image }}">\n  <!-- <div>\n      <h2>{{ currentPage.text }}</h2>\n  </div> -->\n\n    <ion-grid>\n      <ion-row text-center class="text_row">\n        <ion-col col-1 class="back_button">\n          <button ion-button (click)="sendFeedback(lastPage.id)">\n            Back\n          </button>\n        </ion-col>\n        <ion-col col-11><h2>{{ currentPage.text }}</h2></ion-col>\n      </ion-row>\n      <ion-row text-center class="row1">\n        <ion-col col-4>\n        </ion-col>\n        <ion-col col-4>\n        </ion-col>\n        <ion-col col-4>\n        </ion-col>\n      </ion-row>\n      <ion-row text-center class="row2">\n        <ion-col col-4>\n        </ion-col>\n        <ion-col col-4>\n        </ion-col>\n        <ion-col col-4>\n          <img src="../assets/images/mother.png" height="300%" width="100%">\n        </ion-col>\n      </ion-row>\n      <ion-row text-center class="row3">\n        <ion-col col-4>\n          <img src="../assets/images/child.png" height="200%" width="100%">\n        </ion-col>\n        <ion-col col-4>\n        </ion-col>\n        <ion-col col-4>\n        </ion-col>\n      </ion-row>\n      <ion-row text-center class="row3">\n        <ion-col col-4>\n        </ion-col>\n        <ion-col col-4>\n          <div id="buttons" ion-item *ngFor="let o of currentPage.options" (click)="sendFeedback(o.id)">\n            <button ion-button round>\n              {{ o.title }}\n            </button>\n          </div>\n        </ion-col>\n        <ion-col col-4>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/elevin/Documents/Macalester/Fall2017/Software/alojethma/dino/src/pages/home/home.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object])
 ], HomePage);
 
+var _a;
 //# sourceMappingURL=home.js.map
 
 /***/ }),

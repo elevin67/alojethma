@@ -1,18 +1,18 @@
-<!-- <ion-header>
-  <ion-navbar>
-    <ion-title>
-      {{ currentPage.title }}
-    </ion-title>
-  </ion-navbar>
-</ion-header> -->
-
 <ion-content padding class='background' overflow-scroll="true" id="{{ currentPage.image }}">
   <img class='image' src="{{ currentPage.image }}">
-  <div>
+  <!-- <div>
       <h2>{{ currentPage.text }}</h2>
-  </div>
+  </div> -->
 
     <ion-grid>
+      <ion-row text-center class="text_row">
+        <ion-col col-1 class="back_button">
+          <button ion-button (click)="sendFeedback(lastPage.id)">
+            Back
+          </button>
+        </ion-col>
+        <ion-col col-11><h2>{{ currentPage.text }}</h2></ion-col>
+      </ion-row>
       <ion-row text-center class="row1">
         <ion-col col-4>
         </ion-col>
@@ -23,16 +23,16 @@
       </ion-row>
       <ion-row text-center class="row2">
         <ion-col col-4>
-          <img src="../assets/images/child.png">
         </ion-col>
         <ion-col col-4>
         </ion-col>
         <ion-col col-4>
-          <img src="../assets/images/mother.png">
+          <img src="../assets/images/mother.png" height="300%" width="100%">
         </ion-col>
       </ion-row>
       <ion-row text-center class="row3">
         <ion-col col-4>
+          <img src="../assets/images/child.png" height="200%" width="100%">
         </ion-col>
         <ion-col col-4>
         </ion-col>

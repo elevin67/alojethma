@@ -11,6 +11,7 @@ export class HomePage {
   currentPage;
   sendFeedback;
   find_next_page;
+  lastPage;
 
   constructor(public navCtrl: NavController) {
     this.pages = [
@@ -36,16 +37,18 @@ export class HomePage {
       options: [{title:"Diet", id:"1"},{title:"First Page",id:"0"}],
     }
     ];
-    console.log(this.pages);
 
     this.currentPage = this.pages[0];
+    this.lastPage = this.pages[0];
 
     this.sendFeedback = function (id) {
-      this.next_page_index = this.find_next_page(id);
+      this.next_page_index = this.find_page(id);
+      this.lastPage = this.pages[this.find_page(this.currentPage.id)];
+      console.log(this.lastPage.id);
       this.currentPage = this.pages[this.next_page_index];
     }
 
-    this.find_next_page = function (id) {
+    this.find_page = function (id) {
       for (let i = 0; i < this.pages.length; i++) {
         if(this.pages[i].id == id) {
           return i;
