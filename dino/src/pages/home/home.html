@@ -1,56 +1,64 @@
-<ion-content padding class='background' overflow-scroll="true" id="{{ currentPage.image }}">
-  <img class='image' src="{{ currentPage.image }}">
-  <!-- <div>
-      <h2>{{ currentPage.text }}</h2>
-  </div> -->
-
-    <ion-grid>
+<ion-content padding class='{{currentPage.image}}' overflow-scroll="true">
+    <ion-grid class="grid">
       <ion-row text-center class="text_row">
         <ion-col col-1 class="back_button">
-          <button ion-button (click)="sendFeedback(lastPage.id)">
+          <h2 (click)="sendFeedback(lastPage.id)">
             Back
-          </button>
+          </h2>
         </ion-col>
         <ion-col col-11><h2>{{ currentPage.text }}</h2></ion-col>
       </ion-row>
       <ion-row text-center class="row1">
-        <ion-col col-4>
+        <ion-col col-4 class="col1">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row1>col1'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
         </ion-col>
-        <ion-col col-4>
+        <ion-col col-4 class="col2">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row1>col2'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
         </ion-col>
-        <ion-col col-4>
+        <ion-col col-4 class="col3">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row1>col3'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
         </ion-col>
       </ion-row>
       <ion-row text-center class="row2">
-        <ion-col col-4>
+        <ion-col col-4 class="col1">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row2>col1'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
         </ion-col>
-        <ion-col col-4>
+        <ion-col col-4 class="col2">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row2>col2'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
         </ion-col>
-        <ion-col col-4>
-          <img src="../assets/images/mother.png" height="300%" width="100%">
-        </ion-col>
-      </ion-row>
-      <ion-row text-center class="row3">
-        <ion-col col-4>
-          <img src="../assets/images/child.png" height="200%" width="100%">
-        </ion-col>
-        <ion-col col-4>
-        </ion-col>
-        <ion-col col-4>
+        <ion-col col-4 class="col3">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row2>col3'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
         </ion-col>
       </ion-row>
       <ion-row text-center class="row3">
-        <ion-col col-4>
+        <ion-col col-4 class="col1">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row3>col1'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
         </ion-col>
-        <ion-col col-4>
+        <ion-col col-4 class="col2">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row3>col2'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
+        </ion-col>
+        <ion-col col-4 class="col3">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row3>col3'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
+        </ion-col>
+      </ion-row>
+      <ion-row text-center class="row4">
+        <ion-col col-4 class="col1">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row4>col1'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
+        </ion-col>
+        <ion-col col-4 class="col2">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row4>col2'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
           <div id="buttons" ion-item *ngFor="let o of currentPage.options" (click)="sendFeedback(o.id)">
             <button ion-button round>
               {{ o.title }}
             </button>
           </div>
         </ion-col>
-        <ion-col col-4>
+        <ion-col col-4 class="col3">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row4>col3'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
         </ion-col>
       </ion-row>
     </ion-grid>
+
+
+    <script src="/home_jQuery.js"></script>
 </ion-content>

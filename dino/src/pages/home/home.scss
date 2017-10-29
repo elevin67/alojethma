@@ -1,19 +1,29 @@
 page-home {
   ion-grid {
-   border: 2px solid black;
-   height: 90%;
+    // border: 2px solid black;
+    height: 100%;
+    width: 100%;
+    ion-row {
+      height: 25%;
+    }
 
-   ion-row {
-     height: 25%;
-   }
+    .text_row {
+      height: 10%;
+    }
 
-   .text_row {
-     height: 10%;
-   }
+    ion-col {
+      // border: 2px solid black;
+    }
+  }
 
-   ion-col {
-     border: 2px solid black;
-   }
+  .child {
+    width: 100vw;
+    height: 40vh;
+  }
+
+  .mother {
+    width: 100vw;
+    height: 60vh;
   }
 
   .image {
@@ -38,4 +48,11 @@ page-home {
       border-bottom: 0px;
       text-align: center;
     }
+
+  .kitchen {
+    background-image: url('../assets/images/kitchen.png');
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+  }
 }

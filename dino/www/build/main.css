@@ -25513,8 +25513,8 @@ ion-navbar.toolbar {
 }
 
 page-home ion-grid {
-  border: 2px solid black;
-  height: 90%;
+  height: 100%;
+  width: 100%;
 }
 
 page-home ion-grid ion-row {
@@ -25525,8 +25525,14 @@ page-home ion-grid .text_row {
   height: 10%;
 }
 
-page-home ion-grid ion-col {
-  border: 2px solid black;
+page-home .child {
+  width: 100vw;
+  height: 40vh;
+}
+
+page-home .mother {
+  width: 100vw;
+  height: 60vh;
 }
 
 page-home .image {
@@ -25550,4 +25556,11 @@ page-home #buttons {
   border-right: 0px;
   border-bottom: 0px;
   text-align: center;
+}
+
+page-home .kitchen {
+  background-image: url("../assets/images/kitchen.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
