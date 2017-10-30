@@ -21,17 +21,9 @@ page-home {
     height: 40vh;
   }
 
-  .mother {
+  .parent {
     width: 100vw;
     height: 60vh;
-  }
-
-  .image {
-    pointer-events: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
   }
 
   h2 {
@@ -40,18 +32,18 @@ page-home {
     text-align: center;
   }
 
-    #buttons {
-      background: transparent;
-      border-top: 0px;
-      border-left: 0px;
-      border-right: 0px;
-      border-bottom: 0px;
-      text-align: center;
-    }
+  #buttons {
+    background: transparent;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    text-align: center;
+  }
 
   .kitchen {
     background-image: url('../assets/images/kitchen.png');
-    background-size:     cover;
+    background-size: cover;
     background-repeat:   no-repeat;
     background-position: center center;
   }

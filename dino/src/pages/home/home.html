@@ -36,6 +36,11 @@
         </ion-col>
         <ion-col col-4 class="col2">
           <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row3>col2'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
+          <div id="buttons" ion-item *ngFor="let o of currentPage.options" (click)="sendFeedback(o.id)">
+            <button ion-button round>
+              {{ o.title }}
+            </button>
+          </div>
         </ion-col>
         <ion-col col-4 class="col3">
           <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row3>col3'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
@@ -47,11 +52,6 @@
         </ion-col>
         <ion-col col-4 class="col2">
           <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row4>col2'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
-          <div id="buttons" ion-item *ngFor="let o of currentPage.options" (click)="sendFeedback(o.id)">
-            <button ion-button round>
-              {{ o.title }}
-            </button>
-          </div>
         </ion-col>
         <ion-col col-4 class="col3">
           <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row4>col3'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>

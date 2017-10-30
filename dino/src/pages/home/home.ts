@@ -27,7 +27,7 @@ export class HomePage {
       image:"kitchen",
       options: [{title:"Diet", id:"1"},{title:"Mating",id:"2"}],
       characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col1"},
-      {image:"../assets/images/mother.png", style:"mother", location:"row2>col3"}]
+      {image:"../assets/images/mother.png", style:"parent", location:"row2>col3"}]
     },
     {
       title:"Zebrasaur Diet",
@@ -35,7 +35,8 @@ export class HomePage {
       text:"The zebrasaur diet consists mainly of kosher sasquatch.",
       image:"kitchen",
       options: [{title:"Mating",id:"2"},{title:"First Page",id:"0"}],
-      characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col1"}]
+      characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col3"},
+      {image:"../assets/images/father.png",style:"parent", location:"row2>col1"}]
     },
     {
       title:"Zebrasaur Mating Patterns",
@@ -52,7 +53,6 @@ export class HomePage {
       this.lastPage = this.pages[this.find_page(this.currentPage.id)];
       console.log(this.lastPage.id);
       this.currentPage = this.pages[this.next_page_index];
-      this.add_characters_to_page(this.currentPage);
     }
 
     this.find_page = function (id) {
@@ -64,37 +64,8 @@ export class HomePage {
       return false;
     }
 
-    this.add_character = function (character) {
-      this.selector = character.location;
-      console.log(this.selector);
-      // $(this.selector).append($('img', {src:""+character.image+"", height:""+character.height+"", width:""+character.width+""}));
-      this.element = document.getElementsByClassName(this.selector);
-      console.log(this.element);
-      console.log(character.height);
-      console.log(character.width);
-      // console.log($('.'+this.selector));
-      //$('.'+this.selector).attr("src", this.currentPage.image);
-      // this.element.setAttribute("src",this.currentPage.image);
-      // this.element.appendChild("<img src="+character.image+">");
-      return true;
-    }
-
-    this.add_characters_to_page = function(page) {
-      for (let i = 0; i < page.characters.length; i++) {
-        this.add_character(page.characters[i]);
-      }
-      return true;
-    }
-
     this.currentPage = this.pages[0];
-    // this.add_characters_to_page(this.currentPage);
     this.lastPage = this.pages[0];
-  }
-
-  ionViewDidLoad() {
-    console.log("ionViewDidLoad");
-    console.log(screen.height);
-    this.add_characters_to_page(this.currentPage);
   }
 
 }

@@ -65,7 +65,7 @@ var HomePage = (function () {
                 image: "kitchen",
                 options: [{ title: "Diet", id: "1" }, { title: "Mating", id: "2" }],
                 characters: [{ image: "../assets/images/child.png", style: "child", location: "row3>col1" },
-                    { image: "../assets/images/mother.png", style: "mother", location: "row2>col3" }]
+                    { image: "../assets/images/mother.png", style: "parent", location: "row2>col3" }]
             },
             {
                 title: "Zebrasaur Diet",
@@ -73,7 +73,8 @@ var HomePage = (function () {
                 text: "The zebrasaur diet consists mainly of kosher sasquatch.",
                 image: "kitchen",
                 options: [{ title: "Mating", id: "2" }, { title: "First Page", id: "0" }],
-                characters: [{ image: "../assets/images/child.png", style: "child", location: "row3>col1" }]
+                characters: [{ image: "../assets/images/child.png", style: "child", location: "row3>col3" },
+                    { image: "../assets/images/father.png", style: "parent", location: "row2>col1" }]
             },
             {
                 title: "Zebrasaur Mating Patterns",
@@ -89,7 +90,6 @@ var HomePage = (function () {
             this.lastPage = this.pages[this.find_page(this.currentPage.id)];
             console.log(this.lastPage.id);
             this.currentPage = this.pages[this.next_page_index];
-            this.add_characters_to_page(this.currentPage);
         };
         this.find_page = function (id) {
             for (var i = 0; i < this.pages.length; i++) {
@@ -99,40 +99,14 @@ var HomePage = (function () {
             }
             return false;
         };
-        this.add_character = function (character) {
-            this.selector = character.location;
-            console.log(this.selector);
-            // $(this.selector).append($('img', {src:""+character.image+"", height:""+character.height+"", width:""+character.width+""}));
-            this.element = document.getElementsByClassName(this.selector);
-            console.log(this.element);
-            console.log(character.height);
-            console.log(character.width);
-            // console.log($('.'+this.selector));
-            //$('.'+this.selector).attr("src", this.currentPage.image);
-            // this.element.setAttribute("src",this.currentPage.image);
-            // this.element.appendChild("<img src="+character.image+">");
-            return true;
-        };
-        this.add_characters_to_page = function (page) {
-            for (var i = 0; i < page.characters.length; i++) {
-                this.add_character(page.characters[i]);
-            }
-            return true;
-        };
         this.currentPage = this.pages[0];
-        // this.add_characters_to_page(this.currentPage);
         this.lastPage = this.pages[0];
     }
-    HomePage.prototype.ionViewDidLoad = function () {
-        console.log("ionViewDidLoad");
-        console.log(screen.height);
-        this.add_characters_to_page(this.currentPage);
-    };
     return HomePage;
 }());
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/elevin/Documents/Macalester/Fall2017/Software/alojethma/dino/src/pages/home/home.html"*/'<ion-content padding class=\'{{currentPage.image}}\' overflow-scroll="true">\n    <ion-grid class="grid">\n      <ion-row text-center class="text_row">\n        <ion-col col-1 class="back_button">\n          <h2 (click)="sendFeedback(lastPage.id)">\n            Back\n          </h2>\n        </ion-col>\n        <ion-col col-11><h2>{{ currentPage.text }}</h2></ion-col>\n      </ion-row>\n      <ion-row text-center class="row1">\n        <ion-col col-4 class="col1">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row1>col1\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n        <ion-col col-4 class="col2">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row1>col2\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n        <ion-col col-4 class="col3">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row1>col3\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n      </ion-row>\n      <ion-row text-center class="row2">\n        <ion-col col-4 class="col1">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row2>col1\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n        <ion-col col-4 class="col2">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row2>col2\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n        <ion-col col-4 class="col3">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row2>col3\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n      </ion-row>\n      <ion-row text-center class="row3">\n        <ion-col col-4 class="col1">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row3>col1\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n        <ion-col col-4 class="col2">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row3>col2\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n        <ion-col col-4 class="col3">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row3>col3\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n      </ion-row>\n      <ion-row text-center class="row4">\n        <ion-col col-4 class="col1">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row4>col1\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n        <ion-col col-4 class="col2">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row4>col2\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n          <div id="buttons" ion-item *ngFor="let o of currentPage.options" (click)="sendFeedback(o.id)">\n            <button ion-button round>\n              {{ o.title }}\n            </button>\n          </div>\n        </ion-col>\n        <ion-col col-4 class="col3">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row4>col3\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n\n\n    <script src="/home_jQuery.js"></script>\n</ion-content>\n'/*ion-inline-end:"/Users/elevin/Documents/Macalester/Fall2017/Software/alojethma/dino/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/Users/elevin/Documents/Macalester/Fall2017/Software/alojethma/dino/src/pages/home/home.html"*/'<ion-content padding class=\'{{currentPage.image}}\' overflow-scroll="true">\n    <ion-grid class="grid">\n      <ion-row text-center class="text_row">\n        <ion-col col-1 class="back_button">\n          <h2 (click)="sendFeedback(lastPage.id)">\n            Back\n          </h2>\n        </ion-col>\n        <ion-col col-11><h2>{{ currentPage.text }}</h2></ion-col>\n      </ion-row>\n      <ion-row text-center class="row1">\n        <ion-col col-4 class="col1">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row1>col1\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n        <ion-col col-4 class="col2">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row1>col2\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n        <ion-col col-4 class="col3">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row1>col3\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n      </ion-row>\n      <ion-row text-center class="row2">\n        <ion-col col-4 class="col1">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row2>col1\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n        <ion-col col-4 class="col2">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row2>col2\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n        <ion-col col-4 class="col3">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row2>col3\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n      </ion-row>\n      <ion-row text-center class="row3">\n        <ion-col col-4 class="col1">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row3>col1\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n        <ion-col col-4 class="col2">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row3>col2\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n          <div id="buttons" ion-item *ngFor="let o of currentPage.options" (click)="sendFeedback(o.id)">\n            <button ion-button round>\n              {{ o.title }}\n            </button>\n          </div>\n        </ion-col>\n        <ion-col col-4 class="col3">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row3>col3\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n      </ion-row>\n      <ion-row text-center class="row4">\n        <ion-col col-4 class="col1">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row4>col1\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n        <ion-col col-4 class="col2">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row4>col2\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n        <ion-col col-4 class="col3">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row4>col3\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n\n\n    <script src="/home_jQuery.js"></script>\n</ion-content>\n'/*ion-inline-end:"/Users/elevin/Documents/Macalester/Fall2017/Software/alojethma/dino/src/pages/home/home.html"*/
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object])
 ], HomePage);

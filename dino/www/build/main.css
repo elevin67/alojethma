@@ -25530,17 +25530,9 @@ page-home .child {
   height: 40vh;
 }
 
-page-home .mother {
+page-home .parent {
   width: 100vw;
   height: 60vh;
-}
-
-page-home .image {
-  pointer-events: none;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
 }
 
 page-home h2 {
