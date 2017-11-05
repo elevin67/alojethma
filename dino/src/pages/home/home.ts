@@ -50,8 +50,6 @@ export class HomePage {
 
     this.sendFeedback = function (id) {
       this.next_page_index = this.find_page(id);
-      this.lastPage = this.pages[this.find_page(this.currentPage.id)];
-      console.log(this.lastPage.id);
       this.currentPage = this.pages[this.next_page_index];
     }
 
@@ -65,7 +63,6 @@ export class HomePage {
     }
 
     this.currentPage = this.pages[0];
-    this.lastPage = this.pages[0];
   }
 
 }

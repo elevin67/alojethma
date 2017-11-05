@@ -1,12 +1,7 @@
 <ion-content padding class='{{currentPage.image}}' overflow-scroll="true">
     <ion-grid class="grid">
       <ion-row text-center class="text_row">
-        <ion-col col-1 class="back_button">
-          <h2 (click)="sendFeedback(lastPage.id)">
-            Back
-          </h2>
-        </ion-col>
-        <ion-col col-11><h2>{{ currentPage.text }}</h2></ion-col>
+        <ion-col col-12><h2>{{ currentPage.text }}</h2></ion-col>
       </ion-row>
       <ion-row text-center class="row1">
         <ion-col col-4 class="col1">
