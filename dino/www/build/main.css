@@ -25526,7 +25526,7 @@ page-home ion-grid .text_row {
 }
 
 page-home .child {
-  width: 100vw;
+  width: 20vw;
   height: 40vh;
 }
 
@@ -25537,7 +25537,16 @@ page-home .parent {
 
 page-home h2 {
   background-color: white;
+  background-color: rgba(255, 255, 240, 0.85);
   border: 2px solid black;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: Papyrus, fantasy;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  line-height: 26px;
   text-align: center;
 }
 

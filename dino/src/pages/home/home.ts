@@ -23,7 +23,7 @@ export class HomePage {
     {
       title:"The Zebrasaur",
       id:"0",
-      text:"This is the first page.",
+      text:"This is the first page.\n jdnfihebfoeinjxe \n kniebuiebfuoenfuenjdfneinc ejfoiuebcuieygiuygyugyuyugyugyuguygygygogouyguyguygyugyugyuguygyuguygyugyugyug",
       image:"kitchen",
       options: [{title:"Diet", id:"1"},{title:"Mating",id:"2"}],
       characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col1"},
