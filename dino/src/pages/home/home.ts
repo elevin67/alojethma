@@ -8,7 +8,7 @@ import * as $ from 'jquery'
 })
 export class HomePage {
 
-  pages: Array<{title: string, id: string, text: string, image: string, options: Array<{title: string,id: string}>, characters: Array<{image: string, style: string, location: string}>}>;
+  pages: Array<{title: string, id: string, text: string, image: string, options: Array<{title: string,id: string, location: string, style: string}>, characters: Array<{image: string, style: string, location: string}>, dialogue: Array<{text: string, location: string, owner: string}>}>;
   currentPage;
   sendFeedback;
   find_page;
@@ -25,26 +25,30 @@ export class HomePage {
       id:"0",
       text:"This is the first page.\n jdnfihebfoeinjxe \n kniebuiebfuoenfuenjdfneinc ejfoiuebcuieygiuygyugyuyugyugyuguygygygogouyguyguygyugyugyuguygyuguygyugyugyug",
       image:"kitchen",
-      options: [{title:"Diet", id:"1"},{title:"Mating",id:"2"}],
+      options: [{title:"Diet", id:"1", location:"row2>col2", style:"left"},{title:"Mating",id:"2",location:"row2>col2", style:"right"},{title:"Page 3",id:"2", location:"row3>col2", style:"left"},{title:"Page 4",id:"1", location:"row3>col2", style:"right"}],
       characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col1"},
-      {image:"../assets/images/mother.png", style:"parent", location:"row2>col3"}]
+      {image:"../assets/images/mother.png", style:"parent", location:"row2>col3"}],
+      dialogue: [{text:"I'm a super duper child. Like really really really really really really really really super.",location:"row2>col1",owner:"child"},{text:"I'm a mom",location:"row1>col3",owner:"parent"}]
     },
     {
       title:"Zebrasaur Diet",
       id:"1",
-      text:"The zebrasaur diet consists mainly of kosher sasquatch.",
+      text:"",
       image:"kitchen",
-      options: [{title:"Mating",id:"2"},{title:"First Page",id:"0"}],
+      options: [{title:"Mating",id:"2",location:"row2>col2", style:"left"},{title:"First Page",id:"0",location:"row2>col2", style:"right"},
+      {title:"Option 3",id:"2",location:"row3>col2", style:"left"},{title:"Option 4",id:"0",location:"row3>col2", style:"right"}],
       characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col3"},
-      {image:"../assets/images/father.png",style:"parent", location:"row2>col1"}]
+      {image:"../assets/images/father.png",style:"parent", location:"row2>col1"}],
+      dialogue: []
     },
     {
       title:"Zebrasaur Mating Patterns",
       id:"2",
       text:"Zebrasaurs mate during the harvest moon.",
       image:"kitchen",
-      options: [{title:"Diet", id:"1"},{title:"First Page",id:"0"}],
-      characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col1"}]
+      options: [{title:"Diet", id:"1",location:"row2>col2", style:"left"},{title:"First Page",id:"0",location:"row2>col2", style:"right"}],
+      characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col1"}],
+      dialogue: []
     }
     ];
 
