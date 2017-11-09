@@ -55,43 +55,53 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var HomePage = (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
+        this.moral_array = [];
         this.screen_height = screen.height;
         this.screen_width = screen.width;
+        this.moral_array = [0, 0, 0, 0];
+        console.log(this.moral_array);
         this.pages = [
             {
                 title: "The Zebrasaur",
                 id: "0",
                 text: "This is the first page.\n jdnfihebfoeinjxe \n kniebuiebfuoenfuenjdfneinc ejfoiuebcuieygiuygyugyuyugyugyuguygygygogouyguyguygyugyugyuguygyuguygyugyugyug",
                 image: "kitchen",
-                options: [{ title: "Diet", id: "1", location: "row2>col2", style: "left" }, { title: "Mating", id: "2", location: "row2>col2", style: "right" }, { title: "Page 3", id: "2", location: "row3>col2", style: "left" }, { title: "Page 4", id: "1", location: "row3>col2", style: "right" }],
+                options: [{ title: "Diet", id: "1", location: "row2>col2", style: "left", moral_index: 0 }, { title: "Mating", id: "2", location: "row2>col2", style: "right", moral_index: 1 }, { title: "Page 3", id: "2", location: "row3>col2", style: "left", moral_index: 2 }, { title: "Page 4", id: "1", location: "row3>col2", style: "right", moral_index: 3 }],
                 characters: [{ image: "../assets/images/child.png", style: "child", location: "row3>col1" },
                     { image: "../assets/images/mother.png", style: "parent", location: "row2>col3" }],
-                dialogue: [{ text: "I'm a super duper child. Like really really really really really really really really super.", location: "row2>col1", owner: "child" }, { text: "I'm a mom", location: "row1>col3", owner: "parent" }]
+                dialogue: [{ text: "I'm a super duper child. Like really really really really really really really really super.", location: "row2>col1", owner: "child", delay: 1 }, { text: "I'm a mom", location: "row1>col3", owner: "mother", delay: 3 }],
+                weight: 10
             },
             {
                 title: "Zebrasaur Diet",
                 id: "1",
                 text: "",
-                image: "kitchen",
-                options: [{ title: "Mating", id: "2", location: "row2>col2", style: "left" }, { title: "First Page", id: "0", location: "row2>col2", style: "right" },
-                    { title: "Option 3", id: "2", location: "row3>col2", style: "left" }, { title: "Option 4", id: "0", location: "row3>col2", style: "right" }],
+                image: "backyard",
+                options: [{ title: "Mating", id: "2", location: "row2>col2", style: "left", moral_index: 0 }, { title: "First Page", id: "0", location: "row2>col2", style: "right", moral_index: 1 },
+                    { title: "Option 3", id: "2", location: "row3>col2", style: "left", moral_index: 1 }, { title: "Option 4", id: "0", location: "row3>col2", style: "right", moral_index: 3 }],
                 characters: [{ image: "../assets/images/child.png", style: "child", location: "row3>col3" },
                     { image: "../assets/images/father.png", style: "parent", location: "row2>col1" }],
-                dialogue: []
+                dialogue: [{ text: "I'm a superb father.", location: "row1>col1", owner: "father", delay: 1 }, { text: "I love dinosaurs.", location: "row2>col3", owner: "child", delay: 3 }],
+                weight: 3
             },
             {
                 title: "Zebrasaur Mating Patterns",
                 id: "2",
                 text: "Zebrasaurs mate during the harvest moon.",
                 image: "kitchen",
-                options: [{ title: "Diet", id: "1", location: "row2>col2", style: "left" }, { title: "First Page", id: "0", location: "row2>col2", style: "right" }],
+                options: [{ title: "Diet", id: "1", location: "row2>col2", style: "left", moral_index: 0 }, { title: "First Page", id: "0", location: "row2>col2", style: "right", moral_index: 2 }],
                 characters: [{ image: "../assets/images/child.png", style: "child", location: "row3>col1" }],
-                dialogue: []
+                dialogue: [],
+                weight: 4
             }
         ];
-        this.sendFeedback = function (id) {
+        this.sendFeedback = function (id, moral_index) {
             this.next_page_index = this.find_page(id);
+            console.log(this.moral_array);
+            this.moral_array[moral_index] += this.currentPage.weight;
+            console.log(this.moral_array);
             this.currentPage = this.pages[this.next_page_index];
+            this.reveal_delayed();
         };
         this.find_page = function (id) {
             for (var i = 0; i < this.pages.length; i++) {
@@ -101,18 +111,78 @@ var HomePage = (function () {
             }
             return false;
         };
+        this.reveal_delayed = function () {
+            var options = document.getElementsByClassName('options');
+            ;
+            setTimeout(function () {
+                for (var i = 0; i < options.length; i++) {
+                    options[i].style.visibility = "visible";
+                }
+            }, 5000);
+            var dialogue_delay0, dialogue_delay1, dialogue_delay2;
+            var dialogue_id0, dialogue_id1, dialogue_id2;
+            for (var i = 0; i < this.currentPage.dialogue.length; i++) {
+                if (i == 0) {
+                    dialogue_delay0 = this.currentPage.dialogue[i].delay;
+                    dialogue_id0 = this.currentPage.dialogue[i].owner;
+                }
+                else if (i == 1) {
+                    dialogue_delay1 = this.currentPage.dialogue[i].delay;
+                    dialogue_id1 = this.currentPage.dialogue[i].owner;
+                }
+                else if (i == 2) {
+                    dialogue_delay2 = this.currentPage.dialogue[i].delay;
+                    dialogue_id2 = this.currentPage.dialogue[i].owner;
+                }
+            }
+            if (dialogue_id0 != null) {
+                setTimeout(function () {
+                    document.getElementById(dialogue_id0).style.visibility = "visible";
+                }, dialogue_delay0 * 1000);
+            }
+            if (dialogue_id1 != null) {
+                setTimeout(function () {
+                    document.getElementById(dialogue_id1).style.visibility = "visible";
+                }, dialogue_delay1 * 1000);
+            }
+            if (dialogue_id2 != null) {
+                setTimeout(function () {
+                    document.getElementById(dialogue_id2).style.visibility = "visible";
+                }, dialogue_delay2 * 1000);
+            }
+            // for loop over all dialogue items doesn't work because timeout causes dialogue_delay
+            // and dialogue_id to move to the next index before function is executed
+            // leaving in code just in case
+            // for (let i = 0; i < this.currentPage.dialogue.length; i++) {
+            //   var dialogue_delay = this.currentPage.dialogue[i].delay;
+            //   var dialogue_id = this.currentPage.dialogue[i].owner;
+            //   setTimeout(function() {
+            //     document.getElementById(dialogue_id).style.visibility = "visible";
+            //   }, dialogue_delay * 1000);
+            // }
+        };
         this.currentPage = this.pages[0];
+        this.reveal_delayed();
     }
+    HomePage.prototype.ionViewDidLoad = function () {
+        // console.log(document.getElementsByClassName('dialogue_box'));
+        // var elems = document.getElementsByClassName('dialogue_box');
+        // setTimeout(function(){
+        //   for (let i = 0; i < elems.length; i++) {
+        //     elems[i].style.visibility = "visible";
+        //   }
+        // },3000);
+        this.reveal_delayed();
+    };
     return HomePage;
 }());
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/elevin/Documents/Macalester/Fall2017/Software/alojethma/dino/src/pages/home/home.html"*/'<ion-content padding class=\'{{currentPage.image}}\' overflow-scroll="true">\n    <ion-grid class="grid">\n      <ion-row text-center class="text_row">\n        <ion-col col-12>\n          <div *ngIf="currentPage.text != \'\'"><h2>{{ currentPage.text }}</h2></div>\n        </ion-col>\n      </ion-row>\n      <ion-row text-center class="row1">\n        <ion-col col-4 class="col1">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row1>col1\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == \'row1>col1\'"><div class="dialogue_box">{{d.text}}</div></div></div>\n        </ion-col>\n        <ion-col col-4 class="col2">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row1>col2\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == \'row1>col2\'"><div class="dialogue_box">{{d.text}}</div></div></div>\n        </ion-col>\n        <ion-col col-4 class="col3">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row1>col3\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == \'row1>col3\'"><div class="dialogue_box">{{d.text}}</div></div></div>\n        </ion-col>\n      </ion-row>\n      <ion-row text-center class="row2">\n        <ion-col col-4 class="col1">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row2>col1\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == \'row2>col1\'"><div class="dialogue_box">{{d.text}}</div></div></div>\n        </ion-col>\n        <ion-col col-4 class="col2">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row2>col2\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n          <div *ngFor="let o of currentPage.options"><div *ngIf="o.location == \'row2>col2\'"><div class="{{ o.style }}" (click)="sendFeedback(o.id)"><img src="../assets/images/thought_cloud.png"><div class="thought_cloud_text">{{ o.title }}</div></div></div></div>\n          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == \'row2>col2\'"><div class="dialogue_box">{{d.text}}</div></div></div>\n          <!-- <div id="buttons" ion-item *ngFor="let o of currentPage.options" (click)="sendFeedback(o.id)">\n              <img class="thought_clouds" src="../assets/images/thought_cloud.png">\n              <div class="thought_cloud_text"><p><b>{{ o.title }}</b></p></div>\n          </div> -->\n        </ion-col>\n        <ion-col col-4 class="col3">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row2>col3\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == \'row2>col3\'"><div class="dialogue_box">{{d.text}}</div></div></div>\n        </ion-col>\n      </ion-row>\n      <ion-row text-center class="row3">\n        <ion-col col-4 class="col1">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row3>col1\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n        <ion-col col-4 class="col2">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row3>col2\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n          <div *ngFor="let o of currentPage.options"><div *ngIf="o.location == \'row3>col2\'"><div class="{{ o.style }}" (click)="sendFeedback(o.id)"><img src="../assets/images/thought_cloud.png"><div class="thought_cloud_text">{{ o.title }}</div></div></div></div>\n        </ion-col>\n        <ion-col col-4 class="col3">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row3>col3\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n      </ion-row>\n      <ion-row text-center class="row4">\n        <ion-col col-4 class="col1">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row4>col1\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n        <ion-col col-4 class="col2">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row4>col2\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n        <ion-col col-4 class="col3">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row4>col3\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/elevin/Documents/Macalester/Fall2017/Software/alojethma/dino/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/Users/elevin/Documents/Macalester/Fall2017/Software/alojethma/dino/src/pages/home/home.html"*/'<ion-content padding class=\'{{currentPage.image}}\' overflow-scroll="true">\n    <ion-grid class="grid">\n      <ion-row text-center class="text_row">\n        <ion-col col-12>\n          <div *ngIf="currentPage.text != \'\'"><h2>{{ currentPage.text }}</h2></div>\n        </ion-col>\n      </ion-row>\n      <ion-row text-center class="row1">\n        <ion-col col-4 class="col1">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row1>col1\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == \'row1>col1\'"><div class="dialogue_box" id={{d.owner}} style="visibility:hidden;">{{d.text}}</div></div></div>\n        </ion-col>\n        <ion-col col-4 class="col2">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row1>col2\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == \'row1>col2\'"><div class="dialogue_box" id={{d.owner}} style="visibility:hidden;">{{d.text}}</div></div></div>\n        </ion-col>\n        <ion-col col-4 class="col3">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row1>col3\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == \'row1>col3\'"><div class="dialogue_box" id={{d.owner}} style="visibility:hidden;">{{d.text}}</div></div></div>\n        </ion-col>\n      </ion-row>\n      <ion-row text-center class="row2">\n        <ion-col col-4 class="col1">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row2>col1\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == \'row2>col1\'"><div class="dialogue_box" id={{d.owner}} style="visibility:hidden;">{{d.text}}</div></div></div>\n        </ion-col>\n        <ion-col col-4 class="col2">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row2>col2\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n          <div *ngFor="let o of currentPage.options"><div *ngIf="o.location == \'row2>col2\'"><div class="{{ o.style }} options" (click)="sendFeedback(o.id,o.moral_index)" style="visibility:hidden;"><img src="../assets/images/thought_cloud.gif"><div class="thought_cloud_text">{{ o.title }}</div></div></div></div>\n          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == \'row2>col2\'"><div class="dialogue_box" id={{d.owner}} style="visibility:hidden;">{{d.text}}</div></div></div>\n        </ion-col>\n        <ion-col col-4 class="col3">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row2>col3\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == \'row2>col3\'"><div class="dialogue_box" id={{d.owner}} style="visibility:hidden;">{{d.text}}</div></div></div>\n        </ion-col>\n      </ion-row>\n      <ion-row text-center class="row3">\n        <ion-col col-4 class="col1">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row3>col1\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n        <ion-col col-4 class="col2">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row3>col2\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n          <div *ngFor="let o of currentPage.options"><div *ngIf="o.location == \'row3>col2\'"><div class="{{ o.style }} options" (click)="sendFeedback(o.id,o.moral_index)" style="visibility:hidden;"><img src="../assets/images/thought_cloud.gif"><div class="thought_cloud_text">{{ o.title }}</div></div></div></div>\n        </ion-col>\n        <ion-col col-4 class="col3">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row3>col3\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n      </ion-row>\n      <ion-row text-center class="row4">\n        <ion-col col-4 class="col1">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row4>col1\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n        <ion-col col-4 class="col2">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row4>col2\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n        <ion-col col-4 class="col3">\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row4>col3\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/elevin/Documents/Macalester/Fall2017/Software/alojethma/dino/src/pages/home/home.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
 ], HomePage);
 
-var _a;
 //# sourceMappingURL=home.js.map
 
 /***/ }),

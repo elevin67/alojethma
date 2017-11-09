@@ -25613,3 +25613,10 @@ page-home .kitchen {
   background-repeat: no-repeat;
   background-position: center center;
 }
+
+page-home .backyard {
+  background-image: url("../assets/images/backyard.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
