@@ -25536,8 +25536,8 @@ page-home .parent {
 }
 
 page-home .ball {
-  width: 15vw;
-  height: 20vh;
+  width: 20vw;
+  height: 25vh;
 }
 
 page-home h2 {
@@ -25560,7 +25560,7 @@ page-home .dialogue_box {
   padding: 10px;
   border-radius: 15px;
   font-family: Papyrus, fantasy;
-  font-size: 16px;
+  font-size: 24px;
   font-style: normal;
   font-variant: normal;
   font-weight: 900;
@@ -25593,6 +25593,8 @@ page-home .left {
 page-home .right {
   width: 40%;
   position: absolute;
+  top: 0px;
+  right: 0px;
 }
 
 page-home .thought_cloud_text {
@@ -25602,11 +25604,11 @@ page-home .thought_cloud_text {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-family: Papyrus, fantasy;
-  font-size: 16px;
+  font-size: 20px;
   font-style: normal;
   font-variant: normal;
   font-weight: bolder;
-  line-height: 26px;
+  line-height: 22px;
   text-align: center;
   position: absolute;
   bottom: 0;

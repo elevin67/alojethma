@@ -27,8 +27,8 @@ page-home {
   }
 
   .ball {
-    width: 15vw;
-    height: 20vh;
+    width: 20vw;
+    height: 25vh;
   }
 
   h2 { //story narrative
@@ -50,7 +50,7 @@ page-home {
     border: 2px solid black; padding: 10px;
     border-radius: 15px;
     font-family: Papyrus, fantasy;
-  	font-size: 16px;
+  	font-size: 24px;
   	font-style: normal;
   	font-variant: normal;
   	font-weight: 900;
@@ -83,6 +83,8 @@ page-home {
   .right {
     width: 40%;
     position: absolute;
+    top: 0px;
+    right: 0px;
   }
 
   .thought_cloud_text {
@@ -91,11 +93,11 @@ page-home {
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: Papyrus, fantasy;
-  	font-size: 16px;
+  	font-size: 20px;
   	font-style: normal;
   	font-variant: normal;
   	font-weight: bolder;
-  	line-height: 26px;
+  	line-height: 22px;
     text-align: center;
     position: absolute;
     bottom: 0;

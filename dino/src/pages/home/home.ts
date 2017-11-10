@@ -24,85 +24,86 @@ export class HomePage {
     this.moral_array = [0,0,0,0];
     console.log(this.moral_array);
     this.pages = [
-    {
+
+    { //index 0
       title:"Rowlf_Play1",
       id:"A0F1",
       text:"It's a lovely Sunday afternoon and Rowlf, the baby dinosaur is playing in his backyard...",
       image:"backyard",
-      options: [{title:"Next..", id:"A0F2", location:"row2>col2", style:"left", moral_index:0}],
-      characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
+      options: [{title:"Next..", id:"A0F2", location:"row2>col3", style:"right", moral_index:0}],
+      characters: [{image:"../assets/images/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
       dialogue: [],
       weight: 0
     },
 
-    {
+    { //index 1
       title:"Rowlf_Play2",
       id:"A0F2",
       text:"\"Rowlf\"... calls his Mommy from the kitchen.",
       image:"backyard",
-      options: [{title:"Next..", id:"A0F3", location:"row2>col2", style:"left", moral_index:0}],
-      characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
+      options: [{title:"Next..", id:"A0F3", location:"row2>col3", style:"right", moral_index:0}],
+      characters: [{image:"../assets/images/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col3"}],
       dialogue: [],
       weight: 0
     },
 
-    {//options
+    { //index 2
+      //options
       title:"Rowlf_Play3",
       id:"A0F3",
-      text:"",
+      text:"\"Rowlf....\"",
       image:"backyard",
-      options: [{title:"Yes!", id:"A01", location:"row2>col1", style:"left", moral_index:0},{title:"No..", id:"A02", location:"row2>col3", style:"left", moral_index:0}],
-      characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
-      dialogue: [{text:"Should I go in?",location:"row2>col2",owner:"child", delay:0}],
+      options: [{title:"Yes!", id:"A01", location:"row2>col3", style:"right", moral_index:0},{title:"No..", id:"A02", location:"row3>col3", style:"right", moral_index:0}],
+      characters: [{image:"../assets/images/child.png", style:"child", location:"row2>col1"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col2"}],
+      dialogue: [{text:"Should I go in?",location:"row1>col1",style:"right",owner:"child", delay:2}],
       weight: 0
     },
 
-    {
+    { //index 3
       title:"Rowlf_Stays",
       id:"A02",
       text:"\"Rowlf, honey...\", Mommy calls out again\.",
       image:"backyard",
-      options: [{title:"Next..", id:"A0F3", location:"row2>col3", style:"left", moral_index:0}],
-      characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
-      dialogue: [{text:"Hmm... I should go inside and see why Mommy is calling me..",location:"row2>col2",owner:"child", delay:3}],
+      options: [{title:"Next..", id:"A01", location:"row2>col3", style:"right", moral_index:0}],
+      characters: [{image:"../assets/images/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
+      dialogue: [{text:"Hmm... I should go inside and see why Mommy is calling me..",location:"row1>col2",owner:"child", delay:3}],
+      weight: 0
+    },
+
+    { //index 4
+      title:"Rowlf_Goes_in",
+      id:"A01",
+      text:"",
+      image:"kitchen",
+      options: [{title:"Ummm... Yeah", id:"A011", location:"row2>col2", style:"left", moral_index:0},{title:"No.. not really", id:"A012", location:"row3>col2", style:"left", moral_index:0}],
+      characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col1"},{image:"../assets/images/mother.png", style:"mother", location:"row2>col3"}],
+      dialogue: [{text:"Hey bud, are you tired after playing all afternoon?",location:"row1>col3",owner:"mother", delay:1}],
+      weight: 0
+    },
+
+    { //index 5
+      title:"Rowlf_Goes_in",
+      id:"A011",
+      text:"",
+      image:"kitchen",
+      options: [],
+      characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col2"},{image:"../assets/images/mother.png", style:"mother", location:"row2>col3"}],
+      dialogue: [{text:"I bet you would love some cookies then!",location:"row1>col3",owner:"mother", delay:1}],
+      weight: 0
+    },
+
+    { //index 6
+      title:"Rowlf_Goes_in",
+      id:"A012",
+      text:"",
+      image:"kitchen",
+      options: [],
+      characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col2"},{image:"../assets/images/mother.png", style:"mother", location:"row2>col3"}],
+      dialogue: [{text:"Oh, that's great!! Well, I was wondering if you would you like some cookies?",location:"row1>col3",owner:"mother", delay:1}],
       weight: 0
     },
 
 
-
-    {
-      title:"Sunday",
-      id:"A0",
-      text:"It's a lovely afternon..",
-      image:"backyard",
-      options: [{title:"Diet", id:"1", location:"row2>col2", style:"left", moral_index:0},{title:"Mating",id:"2",location:"row2>col2", style:"right", moral_index:1},{title:"Page 3",id:"2", location:"row3>col2", style:"left",moral_index:2},{title:"Page 4",id:"1", location:"row3>col2", style:"right",moral_index:3}],
-      characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col1"},
-      {image:"../assets/images/mother.png", style:"parent", location:"row2>col3"}],
-      dialogue: [{text:"I'm.",location:"row2>col1",owner:"child", delay:1},{text:"Sweetheart, do you want to hvae ",location:"row1>col3",owner:"mother",delay:3}],
-      weight: 10
-    },
-    {
-      title:"Zebrasaur Diet",
-      id:"1",
-      text:"",
-      image:"backyard",
-      options: [{title:"Mating",id:"2",location:"row2>col2", style:"left",moral_index:0},{title:"First Page",id:"0",location:"row2>col2", style:"right",moral_index:1},
-      {title:"Option 3",id:"2",location:"row3>col2", style:"left",moral_index:1},{title:"Option 4",id:"0",location:"row3>col2", style:"right",moral_index:3}],
-      characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col3"},
-      {image:"../assets/images/father.png",style:"parent", location:"row2>col1"}],
-      dialogue: [{text:"I'm a superb father.",location:"row1>col1",owner:"father", delay:1},{text:"I love dinosaurs.",location:"row2>col3",owner:"child",delay:3}],
-      weight: 3
-    },
-    {
-      title:"Zebrasaur Mating Patterns",
-      id:"2",
-      text:"Zebrasaurs mate during the harvest moon.",
-      image:"kitchen",
-      options: [{title:"Diet", id:"1",location:"row2>col2", style:"left",moral_index:0},{title:"First Page",id:"0",location:"row2>col2", style:"right",moral_index:2}],
-      characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col1"}],
-      dialogue: [],
-      weight: 4
-    }
     ];
 
     this.sendFeedback = function (id, moral_index) {
@@ -131,7 +132,7 @@ export class HomePage {
         for (let i = 0; i < options.length; i++) {
           options[i].style.visibility = "visible";
         }
-      },5000);
+      },4000);
 
       var dialogue_delay0, dialogue_delay1, dialogue_delay2;
       var dialogue_id0, dialogue_id1, dialogue_id2;
