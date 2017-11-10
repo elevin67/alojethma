@@ -25,14 +25,60 @@ export class HomePage {
     console.log(this.moral_array);
     this.pages = [
     {
-      title:"The Zebrasaur",
-      id:"0",
-      text:"This is the first page.\n jdnfihebfoeinjxe \n kniebuiebfuoenfuenjdfneinc ejfoiuebcuieygiuygyugyuyugyugyuguygygygogouyguyguygyugyugyuguygyuguygyugyugyug",
-      image:"kitchen",
+      title:"Rowlf_Play1",
+      id:"A0F1",
+      text:"It's a lovely Sunday afternoon and Rowlf, the baby dinosaur is playing in his backyard...",
+      image:"backyard",
+      options: [{title:"Next..", id:"A0F2", location:"row2>col1", style:"left", moral_index:0}],
+      characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
+      dialogue: [],
+      weight: 0
+    },
+
+    {
+      title:"Rowlf_Play2",
+      id:"A0F2",
+      text:"\"Rowlf\"... calls his Mommy from the kitchen.",
+      image:"backyard",
+      options: [{title:"Next..", id:"A0F3", location:"row2>col1", style:"left", moral_index:0}],
+      characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
+      dialogue: [],
+      weight: 0
+    },
+
+    {//options
+      title:"Rowlf_Play3",
+      id:"A0F3",
+      text:"",
+      image:"backyard",
+      options: [{title:"Yes!", id:"A01", location:"row2>col1", style:"left", moral_index:0},{title:"No..", id:"A02", location:"row2>col1", style:"right", moral_index:0}],
+      characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
+      dialogue: [{text:"Should I go in?",location:"row2>col2",owner:"child", delay:0}],
+      weight: 0
+    },
+
+    {
+      title:"Rowlf_Stays",
+      id:"A02",
+      text:"\"Rowlf, honey...\", Mommy calls out again\.",
+      image:"backyard",
+      options: [{title:"Next..", id:"A0F3", location:"row2>col2", style:"left", moral_index:0}],
+      characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
+      dialogue: [{text:"Hmm... I should go inside and see why Mommy is calling me..",location:"row2>col2",owner:"child", delay:3}],
+      weight: 0
+    },
+
+
+
+    {
+      title:"Sunday",
+      id:"A0",
+      text:"It's a lovely afternon..",
+      image:"backyard",
       options: [{title:"Diet", id:"1", location:"row2>col2", style:"left", moral_index:0},{title:"Mating",id:"2",location:"row2>col2", style:"right", moral_index:1},{title:"Page 3",id:"2", location:"row3>col2", style:"left",moral_index:2},{title:"Page 4",id:"1", location:"row3>col2", style:"right",moral_index:3}],
       characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col1"},
       {image:"../assets/images/mother.png", style:"parent", location:"row2>col3"}],
-      dialogue: [{text:"I'm a super duper child. Like really really really really really really really really super.",location:"row2>col1",owner:"child", delay:1},{text:"I'm a mom",location:"row1>col3",owner:"mother",delay:3}],
+      dialogue: [{text:"I'm.",location:"row2>col1",owner:"child", delay:1},{text:"Sweetheart, do you want to hvae ",location:"row1>col3",owner:"mother",delay:3}],
       weight: 10
     },
     {
