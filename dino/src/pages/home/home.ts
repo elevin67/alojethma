@@ -29,7 +29,7 @@ export class HomePage {
       id:"A0F1",
       text:"It's a lovely Sunday afternoon and Rowlf, the baby dinosaur is playing in his backyard...",
       image:"backyard",
-      options: [{title:"Next..", id:"A0F2", location:"row2>col1", style:"left", moral_index:0}],
+      options: [{title:"Next..", id:"A0F2", location:"row2>col2", style:"left", moral_index:0}],
       characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
       dialogue: [],
       weight: 0
@@ -40,7 +40,7 @@ export class HomePage {
       id:"A0F2",
       text:"\"Rowlf\"... calls his Mommy from the kitchen.",
       image:"backyard",
-      options: [{title:"Next..", id:"A0F3", location:"row2>col1", style:"left", moral_index:0}],
+      options: [{title:"Next..", id:"A0F3", location:"row2>col2", style:"left", moral_index:0}],
       characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
       dialogue: [],
       weight: 0
@@ -51,7 +51,7 @@ export class HomePage {
       id:"A0F3",
       text:"",
       image:"backyard",
-      options: [{title:"Yes!", id:"A01", location:"row2>col1", style:"left", moral_index:0},{title:"No..", id:"A02", location:"row2>col1", style:"right", moral_index:0}],
+      options: [{title:"Yes!", id:"A01", location:"row2>col1", style:"left", moral_index:0},{title:"No..", id:"A02", location:"row2>col3", style:"left", moral_index:0}],
       characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
       dialogue: [{text:"Should I go in?",location:"row2>col2",owner:"child", delay:0}],
       weight: 0
@@ -62,7 +62,7 @@ export class HomePage {
       id:"A02",
       text:"\"Rowlf, honey...\", Mommy calls out again\.",
       image:"backyard",
-      options: [{title:"Next..", id:"A0F3", location:"row2>col2", style:"left", moral_index:0}],
+      options: [{title:"Next..", id:"A0F3", location:"row2>col3", style:"left", moral_index:0}],
       characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
       dialogue: [{text:"Hmm... I should go inside and see why Mommy is calling me..",location:"row2>col2",owner:"child", delay:3}],
       weight: 0
@@ -124,7 +124,9 @@ export class HomePage {
     }
 
     this.reveal_delayed = function () {
-      var options = document.getElementsByClassName('options') as HTMLCollectionOf<HTMLElement>;;
+      var options = document.getElementsByClassName('options') as HTMLCollectionOf<HTMLElement>;
+      console.log(options);
+      console.log(this.currentPage.options);
       setTimeout(function(){
         for (let i = 0; i < options.length; i++) {
           options[i].style.visibility = "visible";
