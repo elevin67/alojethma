@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Act2Page } from '../home/home'
+import { HomePage } from '../home/home'
 
 @Component({
   selector: 'page-act2',
@@ -109,7 +109,6 @@ export class Act2Page {
       this.sendFeedback = function (id, moral_index) {
         console.log(id);
         if(id == 'next') {
-          console.log('okay?');
           this.navCtrl.setRoot(Act2Page);
           return;
         }
