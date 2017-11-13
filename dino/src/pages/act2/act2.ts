@@ -10,8 +10,7 @@ import { HomePage } from '../home/home'
 export class Act2Page {
 
 
-    pages: Array<{title: string, id: string, text: string, image: string, options: Array<{title: string,id: string, location: string, style: string, moral_index: number}>, characters: Array<{image: string, style: string, location: string}>, dialogue: Array<{text:string, location:string, owner:string, delay:number}>, weight:number}>;
-    moral_array = [];
+    pages: Array<{title: string, id: string, text: string, image: string, options: Array<{title: string,id: string, location: string, style: string}>, characters: Array<{image: string, style: string, location: string}>, dialogue: Array<{text:string, location:string, owner:string, delay:number}>}>;
     currentPage;
     sendFeedback;
     find_page;
@@ -24,7 +23,6 @@ export class Act2Page {
     next_act;
 
     constructor(public navCtrl: NavController) {
-      this.moral_array = [0,0,0,0];
       this.pages = [
 
       { //index 0
@@ -32,10 +30,9 @@ export class Act2Page {
         id:"A0F1",
         text:"It's a lovely Sunday afternoon and Rowlf, the baby dinosaur is playing in his backyard...",
         image:"backyard",
-        options: [{title:"Next..", id:"A0F2", location:"row2>col3", style:"right", moral_index:0}],
+        options: [{title:"Next..", id:"A0F2", location:"row2>col3", style:"right"}],
         characters: [{image:"../assets/images/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
         dialogue: [],
-        weight: 0
       },
 
       { //index 1
@@ -43,10 +40,9 @@ export class Act2Page {
         id:"A0F2",
         text:"\"Rowlf\"... calls his Mommy from the kitchen.",
         image:"backyard",
-        options: [{title:"Next..", id:"A0F3", location:"row2>col3", style:"right", moral_index:0}],
+        options: [{title:"Next..", id:"A0F3", location:"row2>col3", style:"right"}],
         characters: [{image:"../assets/images/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col3"}],
         dialogue: [],
-        weight: 0
       },
 
       { //index 2
@@ -55,10 +51,9 @@ export class Act2Page {
         id:"A0F3",
         text:"\"Rowlf....\"",
         image:"backyard",
-        options: [{title:"Yes!", id:"A01", location:"row2>col3", style:"right", moral_index:0},{title:"No..", id:"A02", location:"row3>col3", style:"right", moral_index:0}],
+        options: [{title:"Yes!", id:"A01", location:"row2>col3", style:"right"},{title:"No..", id:"A02", location:"row3>col3", style:"right"}],
         characters: [{image:"../assets/images/child.png", style:"child", location:"row2>col1"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col2"}],
         dialogue: [{text:"Should I go in?",location:"row1>col1",owner:"child", delay:2}],
-        weight: 0
       },
 
       { //index 3
@@ -66,10 +61,9 @@ export class Act2Page {
         id:"A02",
         text:"\"Rowlf, honey...\", Mommy calls out again\.",
         image:"backyard",
-        options: [{title:"Next..", id:"A01", location:"row2>col3", style:"right", moral_index:0}],
+        options: [{title:"Next..", id:"A01", location:"row2>col3", style:"right"}],
         characters: [{image:"../assets/images/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
         dialogue: [{text:"Hmm... I should go inside and see why Mommy is calling me..",location:"row1>col2",owner:"child", delay:3}],
-        weight: 0
       },
 
       { //index 4
@@ -77,10 +71,9 @@ export class Act2Page {
         id:"A01",
         text:"",
         image:"kitchen",
-        options: [{title:"Ummm... Yeah", id:"A011", location:"row2>col2", style:"left", moral_index:0},{title:"No.. not really", id:"A012", location:"row3>col2", style:"left", moral_index:0}],
+        options: [{title:"Ummm... Yeah", id:"A011", location:"row2>col2", style:"left"},{title:"No.. not really", id:"A012", location:"row3>col2", style:"left"}],
         characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col1"},{image:"../assets/images/mother.png", style:"mother", location:"row2>col3"}],
-        dialogue: [{text:"Hey bud, are you tired after playing all afternoon?",location:"row1>col3",owner:"mother", delay:1}],
-        weight: 0
+        dialogue: [{text:"Hey bud, are you tired after playing all afternoon?",location:"row1>col3",owner:"mother", delay:1}]
       },
 
       { //index 5
@@ -88,10 +81,9 @@ export class Act2Page {
         id:"A011",
         text:"",
         image:"kitchen",
-        options: [{title:"Next..", id:"next", location:"row3>col1", style:"right", moral_index:0}],
+        options: [{title:"Next..", id:"next", location:"row3>col1", style:"right"}],
         characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col2"},{image:"../assets/images/mother.png", style:"mother", location:"row2>col3"}],
         dialogue: [{text:"I bet you would love some cookies then!",location:"row1>col3",owner:"mother", delay:1}],
-        weight: 0
       },
 
       { //index 6
@@ -99,14 +91,13 @@ export class Act2Page {
         id:"A012",
         text:"",
         image:"kitchen",
-        options: [{title:"Next..", id:"next", location:"row3>col1", style:"right", moral_index:0}],
+        options: [{title:"Next..", id:"next", location:"row3>col1", style:"right"}],
         characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col2"},{image:"../assets/images/mother.png", style:"mother", location:"row2>col3"}],
         dialogue: [{text:"Oh, that's great!! Well, I was wondering if you would you like some cookies?",location:"row1>col3",owner:"mother", delay:1}],
-        weight: 0
       },
       ];
 
-      this.sendFeedback = function (id, moral_index) {
+      this.sendFeedback = function (id) {
         console.log(id);
         if(id == 'next') {
           this.navCtrl.setRoot(Act2Page);
@@ -114,7 +105,6 @@ export class Act2Page {
         }
         console.log('alright');
         this.next_page_index = this.find_page(id);
-        this.moral_array[moral_index] += this.currentPage.weight;
         this.currentPage = this.pages[this.next_page_index];
         this.reveal_delayed();
       }
