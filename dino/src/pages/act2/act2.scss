@@ -1,4 +1,4 @@
-page-act2 {
+page-act1 {
   ion-grid {
     // border: 2px solid black;
     height: 100%;
@@ -68,6 +68,10 @@ page-act2 {
     border-bottom: 0px;
     text-align: center;
     z-index: 10000;
+  }
+
+  .home_button {
+    font-size: 14px;
   }
 
   .thought_clouds {

@@ -1,14 +1,14 @@
 webpackJsonp([0],{
 
-/***/ 265:
+/***/ 267:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Act2PageModule", function() { return Act2PageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PersonalizePageModule", function() { return PersonalizePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__act2__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__personalize__ = __webpack_require__(102);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var Act2PageModule = (function () {
-    function Act2PageModule() {
+var PersonalizePageModule = (function () {
+    function PersonalizePageModule() {
     }
-    return Act2PageModule;
+    return PersonalizePageModule;
 }());
-Act2PageModule = __decorate([
+PersonalizePageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__act2__["a" /* Act2Page */],
+            __WEBPACK_IMPORTED_MODULE_2__personalize__["a" /* PersonalizePage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__act2__["a" /* Act2Page */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__personalize__["a" /* PersonalizePage */]),
         ],
     })
-], Act2PageModule);
+], PersonalizePageModule);
 
-//# sourceMappingURL=act2.module.js.map
+//# sourceMappingURL=personalize.module.js.map
 
 /***/ })
 

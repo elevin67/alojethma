@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { Act2Page } from '../act2/act2';
+import { HomePage } from '../home/home';
 
 @Component({
   selector: 'page-act1',
@@ -9,7 +10,7 @@ import { Act2Page } from '../act2/act2';
 @IonicPage()
 export class Act1Page {
 
-  pages: Array<{title: string, id: string, text: string, image: string, options: Array<{title: string,id: string, location: string, style: string}>, characters: Array<{image: string, style: string, location: string}>, dialogue: Array<{text:string, location:string, owner:string, delay:number}>}>;
+  pages: Array<{title: string, id: string, text: string, image: string, options: Array<{title: string,id: string, location: string, style: string}>, options_delay: number, characters: Array<{image: string, style: string, location: string}>, dialogue: Array<{text:string, location:string, owner:string, delay:number}>}>;
   currentPage;
   sendFeedback;
   find_page;
@@ -20,8 +21,15 @@ export class Act1Page {
   screen_width = screen.width;
   reveal_delayed;
   next_act;
+  dino_color;
+  character_path;
+  goHome;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.dino_color = this.navParams.get('dino_color');
+    console.log(this.dino_color);
+    console.log(this.navParams.get('dino_color'));
+    this.character_path = "../assets/images/"+this.dino_color;
     this.pages = [
 
     { //index 0
@@ -30,7 +38,8 @@ export class Act1Page {
       text:"It's a lovely Sunday afternoon and Rowlf, the baby dinosaur is playing in his backyard...",
       image:"backyard",
       options: [{title:"Next..", id:"A0F2", location:"row2>col3", style:"right"}],
-      characters: [{image:"../assets/images/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
+      options_delay: 1,
+      characters: [{image:this.character_path+"/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
       dialogue: [],
     },
 
@@ -40,7 +49,8 @@ export class Act1Page {
       text:"\"Rowlf\"... calls his Mommy from the kitchen.",
       image:"backyard",
       options: [{title:"Next..", id:"A0F3", location:"row2>col3", style:"right"}],
-      characters: [{image:"../assets/images/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col3"}],
+      options_delay: 1,
+      characters: [{image:this.character_path+"/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col3"}],
       dialogue: [],
     },
 
@@ -51,7 +61,8 @@ export class Act1Page {
       text:"\"Rowlf....\"",
       image:"backyard",
       options: [{title:"Yes!", id:"A01", location:"row2>col3", style:"right"},{title:"No..", id:"A02", location:"row3>col3", style:"right"}],
-      characters: [{image:"../assets/images/child.png", style:"child", location:"row2>col1"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col2"}],
+      options_delay: 3,
+      characters: [{image:this.character_path+"/child.png", style:"child", location:"row2>col1"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col2"}],
       dialogue: [{text:"Should I go in?",location:"row1>col1",owner:"child", delay:2}],
     },
 
@@ -61,8 +72,9 @@ export class Act1Page {
       text:"\"Rowlf, honey...\", Mommy calls out again\.",
       image:"backyard",
       options: [{title:"Next..", id:"A01", location:"row2>col3", style:"right"}],
-      characters: [{image:"../assets/images/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
-      dialogue: [{text:"Hmm... I should go inside and see why Mommy is calling me..",location:"row1>col2",owner:"child", delay:3}],
+      options_delay: 3,
+      characters: [{image:this.character_path+"/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
+      dialogue: [{text:"Hmm... I should go inside and see why Mommy is calling me..",location:"row1>col2",owner:"child", delay:2}],
     },
 
     { //index 4
@@ -71,7 +83,8 @@ export class Act1Page {
       text:"",
       image:"kitchen",
       options: [{title:"Ummm... Yeah", id:"A011", location:"row2>col2", style:"left"},{title:"No.. not really", id:"A012", location:"row3>col2", style:"left"}],
-      characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col1"},{image:"../assets/images/mother.png", style:"mother", location:"row2>col3"}],
+      options_delay: 3,
+      characters: [{image:this.character_path+"/child.png", style:"child", location:"row3>col1"},{image:this.character_path+"/mother.png", style:"mother", location:"row2>col3"}],
       dialogue: [{text:"Hey bud, are you tired after playing all afternoon?",location:"row1>col3",owner:"mother", delay:1}]
     },
 
@@ -81,7 +94,8 @@ export class Act1Page {
       text:"",
       image:"kitchen",
       options: [{title:"Next..", id:"next", location:"row3>col1", style:"right"}],
-      characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col2"},{image:"../assets/images/mother.png", style:"mother", location:"row2>col3"}],
+      options_delay: 3,
+      characters: [{image:this.character_path+"/child.png", style:"child", location:"row3>col2"},{image:this.character_path+"/mother.png", style:"mother", location:"row2>col3"}],
       dialogue: [{text:"I bet you would love some cookies then!",location:"row1>col3",owner:"mother", delay:1}],
     },
 
@@ -91,7 +105,8 @@ export class Act1Page {
       text:"",
       image:"kitchen",
       options: [{title:"Next..", id:"next", location:"row3>col1", style:"right"}],
-      characters: [{image:"../assets/images/child.png", style:"child", location:"row3>col2"},{image:"../assets/images/mother.png", style:"mother", location:"row2>col3"}],
+      options_delay: 3,
+      characters: [{image:this.character_path+"/child.png", style:"child", location:"row3>col2"},{image:this.character_path+"/mother.png", style:"mother", location:"row2>col3"}],
       dialogue: [{text:"Oh, that's great!! Well, I was wondering if you would you like some cookies?",location:"row1>col3",owner:"mother", delay:1}],
     },
     ];
@@ -100,7 +115,9 @@ export class Act1Page {
       console.log(id);
       if(id == 'next') {
         console.log('okay?');
-        this.navCtrl.setRoot(Act2Page);
+        this.navCtrl.push(Act2Page, {
+          dino_color: this.dino_color,
+        });
         return;
       }
       console.log('alright');
@@ -124,7 +141,7 @@ export class Act1Page {
         for (let i = 0; i < options.length; i++) {
           options[i].style.visibility = "visible";
         }
-      },4000);
+      }, this.currentPage.options_delay * 1000);
 
       var dialogue_delay0, dialogue_delay1, dialogue_delay2;
       var dialogue_id0, dialogue_id1, dialogue_id2;
@@ -157,18 +174,10 @@ export class Act1Page {
           document.getElementById(dialogue_id2).style.visibility = "visible";
         }, dialogue_delay2 * 1000);
       }
+    }
 
-      // for loop over all dialogue items doesn't work because timeout causes dialogue_delay
-      // and dialogue_id to move to the next index before function is executed
-      // leaving in code just in case
-
-      // for (let i = 0; i < this.currentPage.dialogue.length; i++) {
-      //   var dialogue_delay = this.currentPage.dialogue[i].delay;
-      //   var dialogue_id = this.currentPage.dialogue[i].owner;
-      //   setTimeout(function() {
-      //     document.getElementById(dialogue_id).style.visibility = "visible";
-      //   }, dialogue_delay * 1000);
-      // }
+    this.goHome = function() {
+      this.navCtrl.push(HomePage);
     }
 
     this.currentPage = this.pages[0];

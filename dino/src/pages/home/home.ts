@@ -1,17 +1,17 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Act1Page } from '../act1/act1';
+import { PersonalizePage } from '../personalize/personalize';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
 })
 export class HomePage {
-  openAct1;
+  openStory;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.openAct1 = function() {
-      this.navCtrl.push(Act1Page);
+    this.openStory = function() {
+      this.navCtrl.push(PersonalizePage);
     }
   }
 
