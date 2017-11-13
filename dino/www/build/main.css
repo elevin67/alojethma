@@ -25512,35 +25512,35 @@ ion-navbar.toolbar {
   min-height: calc(46px + constant(safe-area-inset-top));
 }
 
-page-home ion-grid {
+page-act1 ion-grid {
   height: 100%;
   width: 100%;
 }
 
-page-home ion-grid ion-row {
+page-act1 ion-grid ion-row {
   height: 25%;
 }
 
-page-home ion-grid .text_row {
+page-act1 ion-grid .text_row {
   height: 10%;
 }
 
-page-home .child {
+page-act1 .child {
   width: 20vw;
   height: 40vh;
 }
 
-page-home .parent {
+page-act1 .parent {
   width: 100vw;
   height: 60vh;
 }
 
-page-home .ball {
+page-act1 .ball {
   width: 20vw;
   height: 25vh;
 }
 
-page-home h2 {
+page-act1 h2 {
   background-color: rgba(200, 255, 240, 0.9);
   border: 2px solid black;
   padding: 10px;
@@ -25554,7 +25554,7 @@ page-home h2 {
   text-align: center;
 }
 
-page-home .dialogue_box {
+page-act1 .dialogue_box {
   background-color: white;
   border: 2px solid black;
   padding: 10px;
@@ -25570,7 +25570,7 @@ page-home .dialogue_box {
   bottom: 0;
 }
 
-page-home #buttons {
+page-act1 #buttons {
   background: transparent;
   border-top: 0px;
   border-left: 0px;
@@ -25580,24 +25580,24 @@ page-home #buttons {
   z-index: 10000;
 }
 
-page-home .thought_clouds {
+page-act1 .thought_clouds {
   position: static;
   width: 10%;
 }
 
-page-home .left {
+page-act1 .left {
   width: 40%;
   position: absolute;
 }
 
-page-home .right {
+page-act1 .right {
   width: 40%;
   position: absolute;
   top: 0px;
   right: 0px;
 }
 
-page-home .thought_cloud_text {
+page-act1 .thought_cloud_text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -25614,16 +25614,176 @@ page-home .thought_cloud_text {
   bottom: 0;
 }
 
-page-home .kitchen {
+page-act1 .kitchen {
   background-image: url("../assets/images/kitchen.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-page-home .backyard {
+page-act1 .backyard {
   background-image: url("../assets/images/backyard.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+page-act2 ion-grid {
+  height: 100%;
+  width: 100%;
+}
+
+page-act2 ion-grid ion-row {
+  height: 25%;
+}
+
+page-act2 ion-grid .text_row {
+  height: 10%;
+}
+
+page-act2 .child {
+  width: 20vw;
+  height: 40vh;
+}
+
+page-act2 .parent {
+  width: 100vw;
+  height: 60vh;
+}
+
+page-act2 .ball {
+  width: 20vw;
+  height: 25vh;
+}
+
+page-act2 h2 {
+  background-color: rgba(200, 255, 240, 0.9);
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: Papyrus, fantasy;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  line-height: 26px;
+  text-align: center;
+}
+
+page-act2 .dialogue_box {
+  background-color: white;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: Papyrus, fantasy;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  line-height: 26px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+
+page-act2 #buttons {
+  background: transparent;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  text-align: center;
+  z-index: 10000;
+}
+
+page-act2 .thought_clouds {
+  position: static;
+  width: 10%;
+}
+
+page-act2 .left {
+  width: 40%;
+  position: absolute;
+}
+
+page-act2 .right {
+  width: 40%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+page-act2 .thought_cloud_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: Papyrus, fantasy;
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bolder;
+  line-height: 22px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+
+page-act2 .kitchen {
+  background-image: url("../assets/images/kitchen.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+page-act2 .backyard {
+  background-image: url("../assets/images/backyard.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+page-home ion-content {
+  background-image: url("../assets/images/backyard.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+page-home h2 {
+  background-color: rgba(200, 255, 240, 0.9);
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: Papyrus, fantasy;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  line-height: 26px;
+  text-align: center;
+}
+
+page-home img {
+  position: static;
+  width: 20%;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+
+page-home .thought_cloud_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: Papyrus, fantasy;
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bolder;
+  line-height: 22px;
+  text-align: center;
 }
