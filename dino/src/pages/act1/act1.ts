@@ -28,7 +28,7 @@ export class Act1Page {
       image:"backyard",
       options: [{title:"Next..", id:"A0F2", location:"row2>col3", style:"right"}],
       options_delay: 1,
-      characters: [{image:this.character_path+"/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
+      characters: [{image:this.character_path+"/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"},{image:"../assets/images/sun.gif", style:"ball", location:"row1>col3"}],
       dialogue: [],
     },
 
@@ -39,7 +39,7 @@ export class Act1Page {
       image:"backyard",
       options: [{title:"Next..", id:"A0F3", location:"row2>col3", style:"right"}],
       options_delay: 1,
-      characters: [{image:this.character_path+"/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col3"}],
+      characters: [{image:this.character_path+"/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col3"},{image:"../assets/images/sun.gif", style:"ball", location:"row1>col3"}],
       dialogue: [],
     },
 
@@ -51,7 +51,7 @@ export class Act1Page {
       image:"backyard",
       options: [{title:"Yes!", id:"A01", location:"row2>col3", style:"right"},{title:"No..", id:"A02", location:"row3>col3", style:"right"}],
       options_delay: 3,
-      characters: [{image:this.character_path+"/child.png", style:"child", location:"row2>col1"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col2"}],
+      characters: [{image:this.character_path+"/child.png", style:"child", location:"row2>col1"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col2"},{image:"../assets/images/sun.gif", style:"ball", location:"row1>col3"}],
       dialogue: [{text:"Should I go in?",location:"row1>col1",owner:"child", delay:2}],
     },
 
@@ -62,7 +62,7 @@ export class Act1Page {
       image:"backyard",
       options: [{title:"Next..", id:"A01", location:"row2>col3", style:"right"}],
       options_delay: 3,
-      characters: [{image:this.character_path+"/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
+      characters: [{image:this.character_path+"/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"},{image:"../assets/images/sun.gif", style:"ball", location:"row1>col3"}],
       dialogue: [{text:"Hmm... I should go inside and see why Mommy is calling me..",location:"row1>col2",owner:"child", delay:2}],
     },
 
