@@ -1,31 +1,20 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-import { Act2Page } from '../act2/act2';
+import { NavController, NavParams, Events } from 'ionic-angular';
 import { HomePage } from '../home/home';
 
 @Component({
   selector: 'page-act1',
-  templateUrl: 'act1.html'
+  templateUrl: '../act.html'
 })
 @IonicPage()
 export class Act1Page {
 
   pages: Array<{title: string, id: string, text: string, image: string, options: Array<{title: string,id: string, location: string, style: string}>, options_delay: number, characters: Array<{image: string, style: string, location: string}>, dialogue: Array<{text:string, location:string, owner:string, delay:number}>}>;
   currentPage;
-  sendFeedback;
-  find_page;
-  lastPage;
-  add_character;
-  add_characters_to_page;
-  screen_height = screen.height;
-  screen_width = screen.width;
-  reveal_delayed;
-  next_act;
   dino_color;
   character_path;
-  goHome;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
     this.dino_color = this.navParams.get('dino_color');
     console.log(this.dino_color);
     console.log(this.navParams.get('dino_color'));
@@ -111,79 +100,23 @@ export class Act1Page {
     },
     ];
 
-    this.sendFeedback = function (id) {
-      console.log(id);
-      if(id == 'next') {
-        console.log('okay?');
-        this.navCtrl.push(Act2Page, {
-          dino_color: this.dino_color,
-        });
-        return;
-      }
-      console.log('alright');
-      this.next_page_index = this.find_page(id);
-      this.currentPage = this.pages[this.next_page_index];
-      this.reveal_delayed();
-    }
-
-    this.find_page = function (id) {
-      for (let i = 0; i < this.pages.length; i++) {
-        if(this.pages[i].id == id) {
-          return i;
-        }
-      }
-      return false;
-    }
-
-    this.reveal_delayed = function () {
-      var options = document.getElementsByClassName('options') as HTMLCollectionOf<HTMLElement>;
-      setTimeout(function(){
-        for (let i = 0; i < options.length; i++) {
-          options[i].style.visibility = "visible";
-        }
-      }, this.currentPage.options_delay * 1000);
-
-      var dialogue_delay0, dialogue_delay1, dialogue_delay2;
-      var dialogue_id0, dialogue_id1, dialogue_id2;
-
-      for (let i = 0; i < this.currentPage.dialogue.length; i++) {
-        if(i == 0) {
-          dialogue_delay0 = this.currentPage.dialogue[i].delay;
-          dialogue_id0 = this.currentPage.dialogue[i].owner;
-        } else if(i == 1) {
-          dialogue_delay1 = this.currentPage.dialogue[i].delay;
-          dialogue_id1 = this.currentPage.dialogue[i].owner;
-        } else if(i == 2) {
-          dialogue_delay2 = this.currentPage.dialogue[i].delay;
-          dialogue_id2 = this.currentPage.dialogue[i].owner;
-        }
-      }
-
-      if(dialogue_id0 != null) {
-        setTimeout(function() {
-          document.getElementById(dialogue_id0).style.visibility = "visible";
-        }, dialogue_delay0 * 1000);
-      }
-      if(dialogue_id1 != null) {
-        setTimeout(function() {
-          document.getElementById(dialogue_id1).style.visibility = "visible";
-        }, dialogue_delay1 * 1000);
-      }
-      if(dialogue_id2 != null) {
-        setTimeout(function() {
-          document.getElementById(dialogue_id2).style.visibility = "visible";
-        }, dialogue_delay2 * 1000);
-      }
-    }
-
-    this.goHome = function() {
-      this.navCtrl.push(HomePage);
-    }
-
     this.currentPage = this.pages[0];
-    this.reveal_delayed();
+    this.events.publish('opened', this.currentPage);
+    this.events.subscribe('next_page', (currentPage) => {
+      this.currentPage = currentPage;
+    });
   }
 
+  // called whenever an option button is clicked
+  sendFeedback (id) {
+    this.events.publish('buttonClick', id, this.pages, HomePage);
+  }
+
+  goHome() {
+    this.events.publish('buttonClick', 'next', this.pages, HomePage);
+  }
+
+  // test to see if opened a page
   ionViewDidLoad() {
     console.log('ionViewDidLoad Act1Page');
   }
