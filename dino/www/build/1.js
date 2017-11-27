@@ -1,15 +1,14 @@
 webpackJsonp([1],{
 
-/***/ 269:
+/***/ 268:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DrawActPageModule", function() { return DrawActPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CookieActPageModule", function() { return CookieActPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__draw_act__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_screenshot__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cookie_act__ = __webpack_require__(102);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -19,27 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var DrawActPageModule = (function () {
-    function DrawActPageModule() {
+var CookieActPageModule = (function () {
+    function CookieActPageModule() {
     }
-    return DrawActPageModule;
+    return CookieActPageModule;
 }());
-DrawActPageModule = __decorate([
+CookieActPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__draw_act__["a" /* DrawActPage */]
+            __WEBPACK_IMPORTED_MODULE_2__cookie_act__["a" /* CookieActPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__draw_act__["a" /* DrawActPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cookie_act__["a" /* CookieActPage */]),
         ],
-        providers: [
-            __WEBPACK_IMPORTED_MODULE_3__ionic_native_screenshot__["a" /* Screenshot */],
-        ]
     })
-], DrawActPageModule);
+], CookieActPageModule);
 
-//# sourceMappingURL=draw-act.module.js.map
+//# sourceMappingURL=cookie-act.module.js.map
 
 /***/ })
 
