@@ -1,0 +1,68 @@
+<ion-content padding class='{{currentPage.image}}' overflow-scroll="true">
+    <ion-grid class="grid">
+      <ion-row text-center class="text_row">
+        <ion-col col-1>
+          <h2 (click)="goHome()" class="home_button">Home</h2>
+        </ion-col>
+        <ion-col col-11>
+          <div *ngIf="currentPage.text != ''"><h2>{{ currentPage.text }}</h2></div>
+        </ion-col>
+      </ion-row>
+      <ion-row text-center class="row1">
+        <ion-col col-4 class="col1">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row1>col1'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
+          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == 'row1>col1'"><div class="dialogue_box" id={{d.owner}} style="visibility:hidden;">{{d.text}}</div></div></div>
+        </ion-col>
+        <ion-col col-4 class="col2">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row1>col2'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
+          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == 'row1>col2'"><div class="dialogue_box" id={{d.owner}} style="visibility:hidden;">{{d.text}}</div></div></div>
+        </ion-col>
+        <ion-col col-4 class="col3">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row1>col3'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
+          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == 'row1>col3'"><div class="dialogue_box" id={{d.owner}} style="visibility:hidden;">{{d.text}}</div></div></div>
+        </ion-col>
+      </ion-row>
+      <ion-row text-center class="row2">
+        <ion-col col-4 class="col1">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row2>col1'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
+          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == 'row2>col1'"><div class="dialogue_box" id={{d.owner}} style="visibility:hidden;">{{d.text}}</div></div></div>
+          <div *ngFor="let o of currentPage.options"><div *ngIf="o.location == 'row2>col1'"><div class="{{ o.style }} options" (click)="sendFeedback(o.id)" style="visibility:hidden;"><img src="../assets/images/thought_cloud.gif"><div class="thought_cloud_text">{{ o.title }}</div></div></div></div>
+        </ion-col>
+        <ion-col col-4 class="col2">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row2>col2'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
+          <div *ngFor="let o of currentPage.options"><div *ngIf="o.location == 'row2>col2'"><div class="{{ o.style }} options" (click)="sendFeedback(o.id)" style="visibility:hidden;"><img src="../assets/images/thought_cloud.gif"><div class="thought_cloud_text">{{ o.title }}</div></div></div></div>
+          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == 'row2>col2'"><div class="dialogue_box" id={{d.owner}} style="visibility:hidden;">{{d.text}}</div></div></div>
+        </ion-col>
+        <ion-col col-4 class="col3">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row2>col3'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
+          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == 'row2>col3'"><div class="dialogue_box" id={{d.owner}} style="visibility:hidden;">{{d.text}}</div></div></div>
+          <div *ngFor="let o of currentPage.options"><div *ngIf="o.location == 'row2>col3'"><div class="{{ o.style }} options" (click)="sendFeedback(o.id)" style="visibility:hidden;"><img src="../assets/images/thought_cloud.gif"><div class="thought_cloud_text">{{ o.title }}</div></div></div></div>
+        </ion-col>
+      </ion-row>
+      <ion-row text-center class="row3">
+        <ion-col col-4 class="col1">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row3>col1'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
+          <div *ngFor="let o of currentPage.options"><div *ngIf="o.location == 'row3>col1'"><div class="{{ o.style }} options" (click)="sendFeedback(o.id)" style="visibility:hidden;"><img src="../assets/images/thought_cloud.gif"><div class="thought_cloud_text">{{ o.title }}</div></div></div></div>
+        </ion-col>
+        <ion-col col-4 class="col2">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row3>col2'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
+          <div *ngFor="let o of currentPage.options"><div *ngIf="o.location == 'row3>col2'"><div class="{{ o.style }} options" (click)="sendFeedback(o.id)" style="visibility:hidden;"><img src="../assets/images/thought_cloud.gif"><div class="thought_cloud_text">{{ o.title }}</div></div></div></div>
+        </ion-col>
+        <ion-col col-4 class="col3">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row3>col3'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
+          <div *ngFor="let o of currentPage.options"><div *ngIf="o.location == 'row3>col3'"><div class="{{ o.style }} options" (click)="sendFeedback(o.id)" style="visibility:hidden;"><img src="../assets/images/thought_cloud.gif"><div class="thought_cloud_text">{{ o.title }}</div></div></div></div>
+        </ion-col>
+      </ion-row>
+      <ion-row text-center class="row4">
+        <ion-col col-4 class="col1">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row4>col1'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
+        </ion-col>
+        <ion-col col-4 class="col2">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row4>col2'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
+        </ion-col>
+        <ion-col col-4 class="col3">
+          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == 'row4>col3'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>
