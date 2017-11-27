@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, Events } from 'ionic-angular';
 import { HomePage } from '../home/home';
-// import { DrawPage } from '../draw/draw';
+import { DrawActPage } from '../draw-act/draw-act';
 
 /**
  * Generated class for the LiePage page.
@@ -130,7 +130,7 @@ export class LiePage {
 
   // called whenever an option button is clicked
   sendFeedback (id) {
-    this.events.publish('buttonClick', id, this.pages, HomePage);
+    this.events.publish('buttonClick', id, this.pages, DrawActPage);
   }
 
   goHome() {

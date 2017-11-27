@@ -2,6 +2,8 @@ import { Component, ViewChild, Renderer } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, Platform, Events } from 'ionic-angular';
 import { Screenshot } from '@ionic-native/screenshot';
 import { HomePage } from '../home/home';
+import { Ache1Page } from '../ache1/ache1';
+
 /**
  * Generated class for the DrawActPage page.
  *
@@ -108,7 +110,7 @@ export class DrawActPage {
                 })
               })
               console.log('now move to next page');
-              this.events.publish('buttonClick', 'next', null, HomePage);
+              this.events.publish('buttonClick', 'next', null, Ache1Page);
             }
           },
           {

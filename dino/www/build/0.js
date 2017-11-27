@@ -1,24 +1,14 @@
 webpackJsonp([0],{
 
-<<<<<<< HEAD
-/***/ 267:
-=======
-/***/ 269:
->>>>>>> 52c72a46ad8f002b7c360498f98172c01b32e047
+/***/ 274:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DrawActPageModule", function() { return DrawActPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TruthPageModule", function() { return TruthPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__personalize__ = __webpack_require__(101);
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__draw_act__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_screenshot__ = __webpack_require__(104);
->>>>>>> 52c72a46ad8f002b7c360498f98172c01b32e047
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__truth__ = __webpack_require__(199);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -28,27 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var DrawActPageModule = (function () {
-    function DrawActPageModule() {
+var TruthPageModule = (function () {
+    function TruthPageModule() {
     }
-    return DrawActPageModule;
+    return TruthPageModule;
 }());
-DrawActPageModule = __decorate([
+TruthPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__draw_act__["a" /* DrawActPage */]
+            __WEBPACK_IMPORTED_MODULE_2__truth__["a" /* TruthPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__draw_act__["a" /* DrawActPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__truth__["a" /* TruthPage */]),
         ],
-        providers: [
-            __WEBPACK_IMPORTED_MODULE_3__ionic_native_screenshot__["a" /* Screenshot */],
-        ]
     })
-], DrawActPageModule);
+], TruthPageModule);
 
-//# sourceMappingURL=draw-act.module.js.map
+//# sourceMappingURL=truth.module.js.map
 
 /***/ })
 

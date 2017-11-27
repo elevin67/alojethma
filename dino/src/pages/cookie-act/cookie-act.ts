@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, Events } from 'ionic-angular';
 import { HomePage } from '../home/home';
-import { DrawActPage } from '../draw-act/draw-act';
+import { LiePage } from '../lie/lie';
+import { TruthPage } from '../truth/truth';
 
 /**
  * Generated class for the CookieActPage page.
@@ -297,11 +298,11 @@ export class CookieActPage {
       if(this.currentPage.id == 'cookie3d') {
         // then it's TRUTH
         console.log('truth');
-        component = HomePage;
+        component = TruthPage;
       } else {
         // otherwise it's LIE
         console.log('lie');
-        component = DrawActPage;
+        component = LiePage;
       }
     }
     this.events.publish('buttonClick', id, this.pages, component);

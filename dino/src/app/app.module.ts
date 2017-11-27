@@ -7,11 +7,11 @@ import { Screenshot } from '@ionic-native/screenshot';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { Act1Page } from '../pages/act1/act1';
 import { PersonalizePage } from '../pages/personalize/personalize';
 
 import {Ache1Page} from '../pages/ache1/ache1';
-
+import { TruthPage } from '../pages/truth/truth';
+import { LiePage } from '../pages/lie/lie';
 import { DrawActPage } from '../pages/draw-act/draw-act';
 import { CookieActPage } from '../pages/cookie-act/cookie-act';
 
@@ -19,11 +19,12 @@ import { CookieActPage } from '../pages/cookie-act/cookie-act';
   declarations: [
     MyApp,
     HomePage,
-    Act1Page,
     PersonalizePage,
     Ache1Page,
     DrawActPage,
-    CookieActPage
+    CookieActPage,
+    TruthPage,
+    LiePage
   ],
   imports: [
     BrowserModule,
@@ -33,11 +34,12 @@ import { CookieActPage } from '../pages/cookie-act/cookie-act';
   entryComponents: [
     MyApp,
     HomePage,
-    Act1Page,
     PersonalizePage,
     Ache1Page,
     DrawActPage,
-    CookieActPage
+    CookieActPage,
+    TruthPage,
+    LiePage
   ],
   providers: [
     StatusBar,

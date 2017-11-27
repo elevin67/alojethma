@@ -4,14 +4,12 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { Act1Page } from '../pages/act1/act1';
 import { PersonalizePage } from '../pages/personalize/personalize';
-<<<<<<< HEAD
 import {Ache1Page} from '../pages/ache1/ache1';
-=======
+import { TruthPage } from '../pages/truth/truth';
+import { LiePage } from '../pages/lie/lie';
 import { DrawActPage } from '../pages/draw-act/draw-act';
 import { CookieActPage } from '../pages/cookie-act/cookie-act';
->>>>>>> 52c72a46ad8f002b7c360498f98172c01b32e047
 
 @Component({
   templateUrl: 'app.html'
