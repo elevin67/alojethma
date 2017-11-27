@@ -9,15 +9,22 @@ import { HomePage } from '../home/home';
 @IonicPage()
 export class Act1Page {
 
-  pages: Array<{title: string, id: string, text: string, image: string, options: Array<{title: string,id: string, location: string, style: string}>, options_delay: number, characters: Array<{image: string, style: string, location: string}>, dialogue: Array<{text:string, location:string, owner:string, delay:number}>}>;
+  pages: Array<{
+    title: string,
+    id: string,
+    text: string,
+    image: string,
+    characters: Array<{image: string, style: string, location: string}>,
+    dialogue: Array<{text: string, location: string, owner: string, delay: number}>,
+    options: Array<{title: string, id: string, location: string, style: string}>,
+    options_delay: number
+  }>;
   currentPage;
   dino_color;
   character_path;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
     this.dino_color = this.navParams.get('dino_color');
-    console.log(this.dino_color);
-    console.log(this.navParams.get('dino_color'));
     this.character_path = "../assets/images/"+this.dino_color;
     this.pages = [
 

@@ -25632,6 +25632,153 @@ page-act1 .backyard {
   background-position: center center;
 }
 
+page-cookie-act ion-grid {
+  height: 100%;
+  width: 100%;
+}
+
+page-cookie-act ion-grid ion-row {
+  height: 25%;
+}
+
+page-cookie-act ion-grid .text_row {
+  height: 10%;
+}
+
+page-cookie-act .child {
+  width: 20vw;
+  height: 40vh;
+}
+
+page-cookie-act .parent {
+  width: 100vw;
+  height: 60vh;
+}
+
+page-cookie-act .sun {
+  position: relative;
+  top: -3px;
+}
+
+page-cookie-act .ball {
+  width: 20vw;
+  height: 25vh;
+}
+
+page-cookie-act h2 {
+  background-color: rgba(200, 255, 240, 0.9);
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: Papyrus, fantasy;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  line-height: 26px;
+  text-align: center;
+}
+
+page-cookie-act .dialogue_box {
+  background-color: white;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: Papyrus, fantasy;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  line-height: 26px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+
+page-cookie-act #buttons {
+  background: transparent;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  text-align: center;
+  z-index: 10000;
+}
+
+page-cookie-act .home_button {
+  font-size: 14px;
+}
+
+page-cookie-act .thought_clouds {
+  position: static;
+  width: 10%;
+}
+
+page-cookie-act .left {
+  width: 40%;
+  position: absolute;
+}
+
+page-cookie-act .right {
+  width: 40%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+page-cookie-act .thought_cloud_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: Papyrus, fantasy;
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bolder;
+  line-height: 22px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+
+page-cookie-act .kitchen {
+  background-image: url("../assets/images/kitchen.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+page-cookie-act .backyard {
+  background-image: url("../assets/images/backyard.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+page-draw-act {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+page-draw-act h2 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+}
+
+page-draw-act #top-toolbar {
+  position: absolute;
+  top: 0;
+}
+
+page-draw-act #bottom-toolbar {
+  position: absolute;
+  bottom: 0;
+}
+
 page-home ion-content {
   background-image: url("../assets/images/LivingRoom.png");
   background-size: cover;
@@ -25674,4 +25821,38 @@ page-home .thought_cloud_text {
   font-weight: bolder;
   line-height: 22px;
   text-align: center;
+}
+
+page-personalize ion-grid {
+  height: 100%;
+  width: 100%;
+}
+
+page-personalize ion-grid ion-row {
+  height: 25%;
+}
+
+page-personalize ion-grid .text_row {
+  height: 10%;
+}
+
+page-personalize h2 {
+  background-color: rgba(200, 255, 240, 0.9);
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: Papyrus, fantasy;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  line-height: 26px;
+  text-align: center;
+}
+
+page-personalize ion-content {
+  background-image: url("../assets/images/kitchen.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
