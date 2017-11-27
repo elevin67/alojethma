@@ -8,13 +8,16 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Act1Page } from '../pages/act1/act1';
 import { PersonalizePage } from '../pages/personalize/personalize';
+import {Ache1Page} from '../pages/ache1/ache1';
+
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     Act1Page,
-    PersonalizePage
+    PersonalizePage,
+    Ache1Page
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,8 @@ import { PersonalizePage } from '../pages/personalize/personalize';
     MyApp,
     HomePage,
     Act1Page,
-    PersonalizePage
+    PersonalizePage,
+    Ache1Page
   ],
   providers: [
     StatusBar,

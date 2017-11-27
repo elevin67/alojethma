@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, Events } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import {Ache1Page} from '../ache1/ache1';
 
 @Component({
   selector: 'page-act1',
@@ -109,7 +110,7 @@ export class Act1Page {
 
   // called whenever an option button is clicked
   sendFeedback (id) {
-    this.events.publish('buttonClick', id, this.pages, HomePage);
+    this.events.publish('buttonClick', id, this.pages, Ache1Page);
   }
 
   goHome() {
