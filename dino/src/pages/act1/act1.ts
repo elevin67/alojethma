@@ -10,15 +10,22 @@ import {Ache1Page} from '../ache1/ache1';
 @IonicPage()
 export class Act1Page {
 
-  pages: Array<{title: string, id: string, text: string, image: string, options: Array<{title: string,id: string, location: string, style: string}>, options_delay: number, characters: Array<{image: string, style: string, location: string}>, dialogue: Array<{text:string, location:string, owner:string, delay:number}>}>;
+  pages: Array<{
+    title: string,
+    id: string,
+    text: string,
+    image: string,
+    characters: Array<{image: string, style: string, location: string}>,
+    dialogue: Array<{text: string, location: string, owner: string, delay: number}>,
+    options: Array<{title: string, id: string, location: string, style: string}>,
+    options_delay: number
+  }>;
   currentPage;
   dino_color;
   character_path;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
     this.dino_color = this.navParams.get('dino_color');
-    console.log(this.dino_color);
-    console.log(this.navParams.get('dino_color'));
     this.character_path = "../assets/images/"+this.dino_color;
     this.pages = [
 
@@ -29,7 +36,7 @@ export class Act1Page {
       image:"backyard",
       options: [{title:"Next..", id:"A0F2", location:"row2>col3", style:"right"}],
       options_delay: 1,
-      characters: [{image:this.character_path+"/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
+      characters: [{image:this.character_path+"/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"},{image:"../assets/images/sun.gif", style:"ball", location:"row1>col3"}],
       dialogue: [],
     },
 
@@ -40,7 +47,7 @@ export class Act1Page {
       image:"backyard",
       options: [{title:"Next..", id:"A0F3", location:"row2>col3", style:"right"}],
       options_delay: 1,
-      characters: [{image:this.character_path+"/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col3"}],
+      characters: [{image:this.character_path+"/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col3"},{image:"../assets/images/sun.gif", style:"ball", location:"row1>col3"}],
       dialogue: [],
     },
 
@@ -52,7 +59,7 @@ export class Act1Page {
       image:"backyard",
       options: [{title:"Yes!", id:"A01", location:"row2>col3", style:"right"},{title:"No..", id:"A02", location:"row3>col3", style:"right"}],
       options_delay: 3,
-      characters: [{image:this.character_path+"/child.png", style:"child", location:"row2>col1"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col2"}],
+      characters: [{image:this.character_path+"/child.png", style:"child", location:"row2>col1"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col2"},{image:"../assets/images/sun.gif", style:"ball", location:"row1>col3"}],
       dialogue: [{text:"Should I go in?",location:"row1>col1",owner:"child", delay:2}],
     },
 
@@ -63,7 +70,7 @@ export class Act1Page {
       image:"backyard",
       options: [{title:"Next..", id:"A01", location:"row2>col3", style:"right"}],
       options_delay: 3,
-      characters: [{image:this.character_path+"/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"}],
+      characters: [{image:this.character_path+"/child.png", style:"child", location:"row2>col2"},{image:"../assets/images/ball.gif", style:"ball", location:"row3>col1"},{image:"../assets/images/sun.gif", style:"ball", location:"row1>col3"}],
       dialogue: [{text:"Hmm... I should go inside and see why Mommy is calling me..",location:"row1>col2",owner:"child", delay:2}],
     },
 

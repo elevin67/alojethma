@@ -1,12 +1,17 @@
 import { Component, ViewChild } from '@angular/core';
-import { Platform, Events, Nav } from 'ionic-angular';
+import { Platform, Events, Nav, AlertController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { Act1Page } from '../pages/act1/act1';
 import { PersonalizePage } from '../pages/personalize/personalize';
+<<<<<<< HEAD
 import {Ache1Page} from '../pages/ache1/ache1';
+=======
+import { DrawActPage } from '../pages/draw-act/draw-act';
+import { CookieActPage } from '../pages/cookie-act/cookie-act';
+>>>>>>> 52c72a46ad8f002b7c360498f98172c01b32e047
 
 @Component({
   templateUrl: 'app.html'
@@ -14,9 +19,8 @@ import {Ache1Page} from '../pages/ache1/ache1';
 export class MyApp {
   @ViewChild(Nav) navCtrl: Nav;
   rootPage:any = HomePage;
-  //find_page;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public events: Events) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public events: Events, private alertCtrl: AlertController) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -25,12 +29,14 @@ export class MyApp {
     });
 
     this.events.subscribe('buttonClick',(id, pages, component) => {
-      console.log("clicked");
-      this.sendFeedback(id, pages, component);
+      if(id == 'home') {
+        this.homePrompt();
+      } else {
+        this.sendFeedback(id, pages, component);
+      }
     });
 
     this.events.subscribe('opened', (currentPage) => {
-      console.log("opened");
       this.reveal_delayed(currentPage);
     })
   }
@@ -57,6 +63,29 @@ export class MyApp {
     return;
   };
 
+  homePrompt() {
+    let alert = this.alertCtrl.create({
+      title: 'Home',
+      message: 'Do you really want to exit the story and return to the home page?',
+      buttons: [
+        {
+          text: 'Yes',
+          role: 'yes',
+          handler: () => {
+            this.navCtrl.push(HomePage);
+          }
+        },
+        {
+          text: 'No',
+          role: 'no',
+          handler: () => {
+
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
 
   reveal_delayed (currentPage) {
     // reveals the options
@@ -75,6 +104,7 @@ export class MyApp {
       if(i == 0) {
         dialogue_delay0 = currentPage.dialogue[i].delay;
         dialogue_id0 = currentPage.dialogue[i].owner;
+        console.log(dialogue_id0);
       } else if(i == 1) {
         dialogue_delay1 = currentPage.dialogue[i].delay;
         dialogue_id1 = currentPage.dialogue[i].owner;

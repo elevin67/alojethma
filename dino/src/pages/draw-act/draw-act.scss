@@ -1,0 +1,28 @@
+page-draw-act {
+
+  height: 100%;
+  width: 100%;
+  display: block;
+
+  canvas {
+    // height: 80%;
+    // width: 80%;
+    // border: 2px solid black;
+  }
+
+  h2 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+  }
+
+  #top-toolbar {
+    position: absolute;
+    top: 0;
+  }
+
+  #bottom-toolbar {
+    position: absolute;
+    bottom: 0;
+  }
+}
