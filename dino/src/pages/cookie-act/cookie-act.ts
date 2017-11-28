@@ -31,10 +31,10 @@ export class CookieActPage {
   currentPage;
   dino_color;
   character_path;
+  ache: boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
     this.dino_color = this.navParams.get('dino_color');
-    // this.dino_color = 'green';
     this.character_path = "../assets/images/"+this.dino_color;
     this.pages = [
       // Cookie1
@@ -297,19 +297,19 @@ export class CookieActPage {
     if(this.currentPage.id != 'next') {
       if(this.currentPage.id == 'cookie3d') {
         // then it's TRUTH
-        console.log('truth');
+        this.ache = false;
         component = TruthPage;
       } else {
         // otherwise it's LIE
-        console.log('lie');
+        this.ache = true;
         component = LiePage;
       }
     }
-    this.events.publish('buttonClick', id, this.pages, component);
+    this.events.publish('buttonClick', id, this.pages, component, this.dino_color, this.ache);
   }
 
   goHome() {
-    this.events.publish('buttonClick', 'home', this.pages, HomePage);
+    this.events.publish('buttonClick', 'home', this.pages, HomePage, null, null);
   }
 
   ionViewDidLoad() {

@@ -21,11 +21,11 @@ export class Ache1Page {
   currentPage;
   dino_color;
   character_path;
+  ache: boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public events: Events) {
     this.dino_color = this.navParams.get('dino_color');
-    console.log(this.dino_color);
-    console.log(this.navParams.get('dino_color'));
+    this.ache = this.navParams.get('ache');
     this.character_path = "../assets/images/"+this.dino_color;
     this.pages = [
 
@@ -36,7 +36,7 @@ export class Ache1Page {
       image:"backyard",
       options: [{title:"Next...", id:"ache1b", location:"row2>col3", style:"right"}],
       options_delay: 1,
-      characters: [{image:this.character_path+"/child.png", style:"child", location:"row3>col2"},{image:"../assets/images/sunShine.gif", style:"ball", location:"row1>col3"}],
+      characters: [{image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col2"},{image:"../assets/images/sun.gif", style:"ball", location:"row1>col3"}],
       dialogue: [{text:"\"Ow...\", Rowlf thinks to himself, \"my stomach really hurts!\"",location:"row1>col2",owner:"child", delay:2}],
     },
 
@@ -47,7 +47,7 @@ export class Ache1Page {
       image:"backyard",
       options: [{title:"Tell Mommy!", id:"ache1c", location:"row2>col3", style:"right"},{title:"Mommy doesn't need to know...", id:"ache1d", location:"row3>col3", style:"right"}],
       options_delay: 3,
-      characters: [{image:this.character_path+"/confusedChild.png", style:"child", location:"row3>col2"}],
+      characters: [{image:this.character_path+"/confusedChild.gif", style:"child", location:"row3>col2"}],
       dialogue: [{text:"Hmm...I wonder if Mommy would know what to do...",location:"row2>col2",owner:"child", delay:2}],
     },
 
@@ -59,7 +59,7 @@ export class Ache1Page {
       image:"backyard",
       options: [{title:"Call Mommy!", id:"ache1c", location:"row2>col3", style:"right"}],
       options_delay: 3,
-      characters: [{image:this.character_path+"/child.png", style:"child", location:"row3>col2"}],
+      characters: [{image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col2"}],
       dialogue: [{text:"My stomach really hurts, I'd better tell Mommy!",location:"row2>col2",owner:"child", delay:2}],
     },
 
@@ -70,7 +70,7 @@ export class Ache1Page {
       image:"backyard",
       options: [{title:"Next", id:"ache1e", location:"row2>col3", style:"right"}],
       options_delay: 3,
-      characters: [{image:this.character_path+"/child.png", style:"child", location:"row3>col1"},{image:this.character_path+"/mother.png", style:"mother", location:"row2>col2"}],
+      characters: [{image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col1"},{image:this.character_path+"/motherBlink.gif", style:"mother", location:"row2>col2"}],
       dialogue: [{text:"What is it, honey? What's wrong?",location:"row1>col2",owner:"child", delay:2}],
     },
 
@@ -82,7 +82,7 @@ export class Ache1Page {
       image:"kitchen",
       options: [{title:"Next...", id:"ache1f", location:"row2>col3", style:"right"}],
       options_delay: 3,
-      characters: [{image:this.character_path+"/child.png", style:"child", location:"row3>col2"},{image:this.character_path+"/mother.png", style:"mother", location:"row2>col3"},{image:this.character_path+"/father.png", style:"father", location:"row3>col1"}],
+      characters: [{image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col2"},{image:this.character_path+"/motherBlink.gif", style:"mother", location:"row2>col3"},{image:this.character_path+"/fatherBlink.gif", style:"father", location:"row3>col1"}],
       dialogue: [{text:"Rowlf ate too many chocolate chip cookies.The poor dear now has a stomach ache.",location:"row1>col3",owner:"child", delay:1}]
     },
 
@@ -93,7 +93,7 @@ export class Ache1Page {
       image:"kitchen",
       options: [{title:"Next...", id:"ache1g", location:"row2>col3", style:"right"}],
       options_delay: 3,
-      characters: [{image:this.character_path+"/child.png", style:"child", location:"row3>col2"},{image:this.character_path+"/mother.png", style:"mother", location:"row3>col3"},{image:this.character_path+"/father.png", style:"father", location:"row3>col1"}],
+      characters: [{image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col2"},{image:this.character_path+"/motherBlink.gif", style:"mother", location:"row3>col3"},{image:this.character_path+"/fatherBlink.gif", style:"father", location:"row3>col1"}],
       dialogue: [{text:"Don't cry, honey. I will go get some medicine and you will feel better in no time, eh?",location:"row1>col1",owner:"father", delay:1}],
     },
 
@@ -104,7 +104,7 @@ export class Ache1Page {
       image:"kitchen",
       options: [{title:"Next..", id:"ache1h", location:"row2>col3", style:"right"}],
       options_delay: 3,
-      characters: [{image:this.character_path+"/child.png", style:"child", location:"row3>col2"},{image:this.character_path+"/mother.png", style:"mother", location:"row3>col3"},{image:this.character_path+"/father.png", style:"father", location:"row3>col1"}],
+      characters: [{image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col2"},{image:this.character_path+"/motherBlink.gif", style:"mother", location:"row3>col3"},{image:this.character_path+"/fatherBlink.gif", style:"father", location:"row3>col1"}],
       dialogue: [{text:"B-but I don't want medicine, Dada! It tastes really bad!",location:"row1>col2",owner:"child", delay:1}],
     },
 
@@ -115,7 +115,7 @@ export class Ache1Page {
       image:"kitchen",
       options: [{title:"Next..", id:"ache1i", location:"row2>col3", style:"right"}],
       options_delay: 3,
-      characters: [{image:this.character_path+"/child.png", style:"child", location:"row3>col1"},{image:this.character_path+"/mother.png", style:"mother", location:"row3>col2"},{image:this.character_path+"/father.png", style:"father", location:"row3>col3"}],
+      characters: [{image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col1"},{image:this.character_path+"/motherBlink.gif", style:"mother", location:"row3>col2"},{image:this.character_path+"/fatherBlink.gif", style:"father", location:"row3>col3"}],
       dialogue: [{text:"Rowlf, honey, the medicine will really help the stomach ache go away and then maybe we can do something fun.",location:"row1>col3",owner:"mother", delay:1}],
     },
 
@@ -126,7 +126,7 @@ export class Ache1Page {
       image:"kitchen",
       options: [{title:"Take the medcine", id:"ache1j", location:"row2>col3", style:"right"}],
       options_delay: 3,
-      characters: [{image:this.character_path+"/child.png", style:"child", location:"row3>col1"}],
+      characters: [{image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col1"}],
       dialogue: [],
     },
 
@@ -137,7 +137,7 @@ export class Ache1Page {
       image:"kitchen",
       options: [{title:"Next", id:"ache1k", location:"row2>col3", style:"right"}],
       options_delay: 3,
-      characters: [{image:this.character_path+"/child.png", style:"child", location:"row3>col1"}],
+      characters: [{image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col1"}],
       dialogue: [{text:"Wow!My stomach ache is gone. I wonder if Dada will take me to the candy store now.",location:"row1>col3",owner:"mother", delay:1}],
     },
 
@@ -148,7 +148,7 @@ export class Ache1Page {
       image: "living",
       options: [{title:"Next", id:"ache1l", location:"row2>col2", style:"right"}],
       options_delay: 3,
-      characters: [{image:this.character_path+"/child.png", style:"child", location:"row3>col1"},{image:this.character_path+"/father.png", style:"father", location:"row3>col3"}],
+      characters: [{image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col1"},{image:this.character_path+"/fatherBlink.gif", style:"father", location:"row3>col3"}],
       dialogue: [{text:"Dada! I don't feel sick anymore.You said you would take me to candy shop today.Let's go!",location:"row1>col1",owner:"child", delay:1}],
     },
 
@@ -159,7 +159,7 @@ export class Ache1Page {
       image:"living",
       options: [{title:"Next", id:"ache1m", location:"row2>col2", style:"right"}],
       options_delay: 3,
-      characters: [{image:this.character_path+"/child.png", style:"child", location:"row3>col1"},{image:this.character_path+"/father.png", style:"father", location:"row3>col3"}],
+      characters: [{image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col1"},{image:this.character_path+"/fatherBlink.gif", style:"father", location:"row3>col3"}],
       dialogue: [{text:"I'm afraid we can't go today, kiddo. We don't want you to get a stomach ache again. How about we go some other day?",location:"row1>col3",owner:"father", delay:1}],
     },
 
@@ -170,8 +170,13 @@ export class Ache1Page {
       image:"living",
       options: [{title:"Next", id:"ache1n", location:"row2>col2", style:"right"}],
       options_delay: 3,
-      characters: [{image:this.character_path+"/child.png", style:"child", location:"row3>col1"},{image:this.character_path+"/father.png", style:"father", location:"row3>col3"}],
-      dialogue: [{text:"Hey, kiddo, don't feel bad. Next time, just be careful to not eat all the cookies, eh? Let's go have some dinner now. I've made your favourite dish.",location:"row1>col3",owner:"father", delay:1}],
+      characters: [
+        {image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col1"},
+        {image:this.character_path+"/fatherBlink.gif", style:"father", location:"row3>col3"}
+      ],
+      dialogue: [
+        {text:"Hey, kiddo, don't feel bad. Next time, just be careful to not eat all the cookies, eh? Let's go have some dinner now. I've made your favourite dish.",location:"row1>col3",owner:"father", delay:1}
+      ],
     },
 
 
@@ -198,12 +203,12 @@ export class Ache1Page {
 
 
   sendFeedback (id) {
-    this.events.publish('buttonClick', id, this.pages, HomePage);
+    this.events.publish('buttonClick', id, this.pages, HomePage, this.dino_color, this.ache);
   }
 
 
   goHome() {
-    this.events.publish('buttonClick', 'next', this.pages, HomePage);
+    this.events.publish('buttonClick', 'next', this.pages, HomePage, null, null);
   }
 
   ionViewDidLoad() {
