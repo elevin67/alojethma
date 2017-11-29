@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { NightPage } from '../night/night';
 
 
 /**
@@ -175,7 +176,7 @@ export class CandyPage {
         text: "Rowlf and his parents have dinner, and after a long day Momma and Dada put Rowlf to bed..",
         image: "kitchen",
         options: [
-          { title: "Next..", id: "candydinner", location: "row3>col1", style: "right" }
+          { title: "Next..", id: "next", location: "row3>col1", style: "right" }
         ],
         options_delay: 3,
         characters: [
@@ -194,9 +195,8 @@ export class CandyPage {
   }
 
   sendFeedback(id) {
-    this.events.publish('buttonClick', id, this.pages, HomePage, this.dino_color, this.ache);
+    this.events.publish('buttonClick', id, this.pages, NightPage, this.dino_color, this.ache);
   }
-
 
   goHome() {
     this.events.publish('buttonClick', 'next', this.pages, HomePage, null, null);

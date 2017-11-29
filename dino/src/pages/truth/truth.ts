@@ -58,7 +58,9 @@ export class TruthPage {
         {image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col2"},
         {image:this.character_path+"/motherBlink.gif", style:"mother", location:"row2>col3"}
       ],
-      dialogue: [{text:"Only two!",location:"row2>col2",owner:"child", delay:2}],
+      dialogue: [
+        {text:"Only two!",location:"row2>col2",owner:"child", delay:2}
+      ],
     },
 
     {
@@ -90,7 +92,7 @@ export class TruthPage {
         {image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col2"},
         {image:this.character_path+"/motherblink.gif", style:"mother", location:"row2>col3"}
       ],
-      dialogue: [{text:"Yes!!",location:"row1>col2",owner:"child", delay:2}],
+      dialogue: [{text:"Yes!!",location:"row2>col2",owner:"child", delay:2}],
     },
 
     ];

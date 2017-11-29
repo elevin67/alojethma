@@ -10,14 +10,14 @@ import { TruthPage } from '../pages/truth/truth';
 import { LiePage } from '../pages/lie/lie';
 import { DrawActPage } from '../pages/draw-act/draw-act';
 import { CookieActPage } from '../pages/cookie-act/cookie-act';
-import { CandyPage } from '../pages/candy/candy'; 
+import { CandyPage } from '../pages/candy/candy';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) navCtrl: Nav;
-  rootPage:any = HomePage;
+  rootPage:any = DrawActPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public events: Events, private alertCtrl: AlertController) {
     platform.ready().then(() => {
@@ -38,7 +38,7 @@ export class MyApp {
     this.events.subscribe('opened', (currentPage) => {
       console.log('opened event');
       this.reveal_delayed(currentPage);
-    })
+    });
   }
 
   sendFeedback (id, pages, component, dino_color, ache) {
@@ -90,6 +90,8 @@ export class MyApp {
 
   reveal_delayed (currentPage) {
     // reveals the options
+    // don't use document
+    // use currentPage
     var options = document.getElementsByClassName('options') as HTMLCollectionOf<HTMLElement>;
     setTimeout(function(){
       for (let i = 0; i < options.length; i++) {
@@ -98,45 +100,15 @@ export class MyApp {
     }, currentPage.options_delay * 1000);
 
     // reveals dialogues
-    console.log('delay revealed');
-    var dialogue_delay0, dialogue_delay1, dialogue_delay2;
-    var dialogue_id0, dialogue_id1, dialogue_id2;
-
     for (let i = 0; i < currentPage.dialogue.length; i++) {
-      if(i == 0) {
-        console.log("has dialogue0");
-        dialogue_delay0 = currentPage.dialogue[i].delay;
-        dialogue_id0 = currentPage.dialogue[i].owner;
-      } else if(i == 1) {
-        console.log("has dialogue1");
-        dialogue_delay1 = currentPage.dialogue[i].delay;
-        dialogue_id1 = currentPage.dialogue[i].owner;
-      } else if(i == 2) {
-        console.log("has dialogue2");
-        dialogue_delay2 = currentPage.dialogue[i].delay;
-        dialogue_id2 = currentPage.dialogue[i].owner;
-      }
+      let dialogue_delay = currentPage.dialogue[i].delay;
+      let dialogue_id = currentPage.dialogue[i].owner;
+      setTimeout(function() {
+        if(document.getElementById(dialogue_id) != null) {
+          document.getElementById(dialogue_id).style.visibility = "visible";
+        }
+      }, dialogue_delay * 1000);
     }
 
-    if(dialogue_id0 != null) {
-      setTimeout(function() {
-        console.log("dialogue 0 timeout succesful");
-        console.log(document.getElementById(dialogue_id0).style.visibility);
-        document.getElementById(dialogue_id0).style.visibility = "visible";
-        console.log(document.getElementById(dialogue_id0).style.visibility);
-      }, dialogue_delay0 * 1000);
-    }
-    if(dialogue_id1 != null) {
-      setTimeout(function() {
-        console.log("dialogue 1 timeout succesful");
-        document.getElementById(dialogue_id1).style.visibility = "visible";
-      }, dialogue_delay1 * 1000);
-    }
-    if(dialogue_id2 != null) {
-      setTimeout(function() {
-        console.log("dialogue 2 timeout succesful");
-        document.getElementById(dialogue_id2).style.visibility = "visible";
-      }, dialogue_delay2 * 1000);
-    }
   }
 }

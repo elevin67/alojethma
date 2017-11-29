@@ -1,14 +1,14 @@
 webpackJsonp([2],{
 
-/***/ 274:
+/***/ 276:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LiePageModule", function() { return LiePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PersonalizePageModule", function() { return PersonalizePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__lie__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__personalize__ = __webpack_require__(103);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var LiePageModule = (function () {
-    function LiePageModule() {
+var PersonalizePageModule = (function () {
+    function PersonalizePageModule() {
     }
-    return LiePageModule;
+    return PersonalizePageModule;
 }());
-LiePageModule = __decorate([
+PersonalizePageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__lie__["a" /* LiePage */],
+            __WEBPACK_IMPORTED_MODULE_2__personalize__["a" /* PersonalizePage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__lie__["a" /* LiePage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__personalize__["a" /* PersonalizePage */]),
         ],
     })
-], LiePageModule);
+], PersonalizePageModule);
 
-//# sourceMappingURL=lie.module.js.map
+//# sourceMappingURL=personalize.module.js.map
 
 /***/ })
 
