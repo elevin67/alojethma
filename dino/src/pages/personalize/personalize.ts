@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CookieActPage } from '../cookie-act/cookie-act';
 
+
 @IonicPage()
 @Component({
   selector: 'page-personalize',
