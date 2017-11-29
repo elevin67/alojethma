@@ -203,7 +203,8 @@ export class CookieActPage {
         image: "kitchen",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
-          {image: this.character_path+"/motherBlink.gif", style: "parent", location: "row2>col3"}
+          {image: this.character_path+"/motherBlink.gif", style: "parent", location: "row2>col3"},
+          {image: '../assets/images/cookieFull.png', style: 'cookieTray', location: 'row3>col2'},
         ],
         dialogue: [
           {text: "Now don't eat all of them at once! You may get a tummy ache...", location: "row1>col3", owner: "mother", delay: 2},
@@ -220,6 +221,7 @@ export class CookieActPage {
         image: "kitchen",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
+          {image: '../assets/images/cookieTray.gif', style: 'cookieTray', location: 'row3>col2'},
           // {image: this.character_path+"/motherBlink.gif", style: "parent", location: "row2>col3"}
         ],
         dialogue: [],
@@ -235,7 +237,7 @@ export class CookieActPage {
         image: "kitchen",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
-          // {image: this.character_path+"/motherBlink.gif", style: "parent", location: "row2>col3"}
+          {image: '../assets/images/cookie2.png', style: 'cookieTray', location: 'row3>col2'},
         ],
         dialogue: [
           {text: "Should I eat one more?", location: "row2>col1", owner: "child", delay: 2},
@@ -270,10 +272,11 @@ export class CookieActPage {
         image: "kitchen",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
-          // {image: this.character_path+"/motherBlink.gif", style: "parent", location: "row2>col3"}
+          {image: '../assets/images/cookie2-1.png', style: 'cookieTray', location: 'row3>col2'},
         ],
         dialogue: [
           {text: "I kind of want that last cookie... What should I do?", location: "row2>col1", owner: "child", delay: 2},
+
         ],
         options: [
           // leads to LIE

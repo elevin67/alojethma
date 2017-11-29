@@ -43,14 +43,6 @@ export class DrawActPage {
         '#e67e22',
         '#e74c3c'
       ];
-
-      this.screenshotPage = function() {
-        this.screenshot.save('jpg',80,'image.jpg')
-        .then(res => {
-          console.log(res.filepath)
-        })
-        // .catch(() => console.error("screenshot error"));
-      }
   }
 
 
@@ -102,24 +94,19 @@ export class DrawActPage {
 
     savePrompt() {
       let alert = this.alertCtrl.create({
-        title: 'Save',
-        message: 'Do you want to save your picture to Camera Roll?',
+        title: 'Exit',
+        message: 'Do you want to exit your picture?',
         buttons: [
           {
             text: 'Yes',
             role: 'yes',
             handler: () => {
-              this.platform.ready().then(()=>{
-                this.screenshot.save('jpg',80,'image.jpg')
-                .then(res => {
-                  console.log(res.filepath)
-                })
-              })
-              console.log('now move to next page');
               if(this.ache == true) {
+                console.log('now move to AchePage');
                 this.events.publish('buttonClick', 'next', null, Ache1Page, this.dino_color, this.ache);
               } else {
-                this.events.publish('buttonClick', 'next', null, Ache1Page, this.dino_color, this.ache);
+                console.log('now move to CandyPage');
+                this.events.publish('buttonClick', 'next', null, CandyPage, this.dino_color, this.ache);
               }
             }
           },
@@ -127,12 +114,6 @@ export class DrawActPage {
             text: 'No',
             role: 'no',
             handler: () => {
-              console.log('now move to next page');
-              if(this.ache == true) {
-                this.events.publish('buttonClick', 'next', null, Ache1Page, this.dino_color, this.ache);
-              } else {
-                this.events.publish('buttonClick', 'next', null, Ache1Page, this.dino_color, this.ache);
-              }
             }
           }
         ]

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams,Events } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { NightPage } from '../night/night';
 
 /**
  * Generated class for the Ache1Page page.
@@ -206,7 +207,7 @@ export class Ache1Page {
       id:"ache1n",
       text:"Rowlf, Mommy and Dada enjoy a delicious dinner of mashed potatoes, baked chicken and green beans.",
       image:"kitchen",
-      options: [{title:"Next", id:"ache1p", location:"row2>col2", style:"right"}],
+      options: [{title:"Next", id:"next", location:"row2>col2", style:"right"}],
       options_delay: 3,
       characters: [],
       dialogue: [],
@@ -223,7 +224,7 @@ export class Ache1Page {
 
 
   sendFeedback (id) {
-    this.events.publish('buttonClick', id, this.pages, HomePage, this.dino_color, this.ache);
+    this.events.publish('buttonClick', id, this.pages, NightPage, this.dino_color, this.ache);
   }
 
 
