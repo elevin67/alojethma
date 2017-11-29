@@ -17,7 +17,7 @@ import { CandyPage } from '../pages/candy/candy';
 })
 export class MyApp {
   @ViewChild(Nav) navCtrl: Nav;
-  rootPage:any = DrawActPage;
+  rootPage:any = HomePage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public events: Events, private alertCtrl: AlertController) {
     platform.ready().then(() => {

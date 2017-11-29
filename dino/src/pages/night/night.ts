@@ -63,7 +63,7 @@ export class NightPage {
           { image: this.character_path + "/fatherblink.gif", style: "father", location: "row2>col3" }
         ],
         dialogue: [
-          { text: "I love you Momma. I love you Dada.", location: "row1>col3", owner: "child", delay: 1 }
+          { text: "I love you Momma. I love you Dada.", location: "row1>col3", owner: "child", delay: 1 },
           { text: "Oh hon, we both love you too.", location: "row1>col3", owner: "mother", delay: 1 }
         ]
       },
