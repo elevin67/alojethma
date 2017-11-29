@@ -16,7 +16,7 @@ export class PersonalizePage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.startStory = function(color) {
       console.log(color);
-      this.navCtrl.push(Ache1Page, {
+      this.navCtrl.push(CookieActPage, {
         dino_color: color
       });
     }
