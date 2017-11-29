@@ -36,11 +36,10 @@ export class Ache1Page {
       text:"As Rowlf put the final touches to his wonderful drawing, he realized that his stomach was aching...",
       image:"backyard",
       options: [{title:"Next...", id:"ache1b", location:"row2>col3", style:"right"}],
-      options_delay: 1,
+      options_delay: 2,
       characters: [
-        {image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col2"},
-        {image:"../assets/images/sun.gif", style:"ball", location:"row1>col3"}],
-      dialogue: [{text:"\"Ow...\", Rowlf thinks to himself, \"my stomach really hurts!\"",location:"row1>col2",owner:"child", delay:2}],
+        {image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col2"}],
+      dialogue: [{text:"\"Ow...\", Rowlf thinks to himself, \"my stomach really hurts!\"",location:"row2>col2",owner:"child", delay:1}],
     },
 
     { //index 1
@@ -49,9 +48,9 @@ export class Ache1Page {
       text:" Confused, Rowlf wonders if he should call his Mommy",
       image:"backyard",
       options: [{title:"Tell Mommy!", id:"ache1c", location:"row2>col3", style:"right"},{title:"Mommy doesn't need to know...", id:"ache1d", location:"row3>col3", style:"right"}],
-      options_delay: 3,
+      options_delay: 2,
       characters: [{image:this.character_path+"/confusedChild.png", style:"child", location:"row3>col2"}],
-      dialogue: [{text:"Hmm...I wonder if Mommy would know what to do...",location:"row2>col2",owner:"child", delay:2}],
+      dialogue: [{text:"Hmm...I wonder if Mommy would know what to do...",location:"row2>col2",owner:"child", delay:1}],
     },
 
     { //index 2
@@ -61,9 +60,9 @@ export class Ache1Page {
       text:"But Rowlf's stomach ache continues to get worse...",
       image:"backyard",
       options: [{title:"Call Mommy!", id:"ache1c", location:"row2>col3", style:"right"}],
-      options_delay: 3,
+      options_delay: 2,
       characters: [{image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col2"}],
-      dialogue: [{text:"My stomach really hurts, I'd better tell Mommy!",location:"row2>col2",owner:"child", delay:2}],
+      dialogue: [{text:"My stomach really hurts, I'd better tell Mommy!",location:"row2>col2",owner:"child", delay:1}],
     },
 
     { //index 3
