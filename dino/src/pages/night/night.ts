@@ -91,7 +91,7 @@ export class NightPage {
   }
 
   goHome() {
-    this.events.publish('buttonClick', 'next', this.pages, HomePage, null, null);
+    this.events.publish('buttonClick', 'home', this.pages, HomePage, null, null);
   }
 
   ionViewDidLoad() {

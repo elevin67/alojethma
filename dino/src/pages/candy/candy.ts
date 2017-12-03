@@ -41,7 +41,7 @@ export class CandyPage {
         title: "CandyDad",
         id: "candy1",
         text: "Once Rowlf finished his drawing, his Dada came into the bedroom",
-        image: "kitchen",
+        image: "bedroom",
         options: [{ title: "Next..", id: "candy2", location: "row3>col1", style: "right" }],
         options_delay: 3,
         characters: [
@@ -58,7 +58,7 @@ export class CandyPage {
         title: "CandyDad",
         id: "candy2",
         text: "",
-        image: "kitchen",
+        image: "bedroom",
         options: [
           { title: "Next..", id: "candy3", location: "row3>col1", style: "right" }
         ],
@@ -77,11 +77,11 @@ export class CandyPage {
         title: "CandyDad",
         id: "candy3",
         text: "Rowlf and Dad drove to the candy store and Rowlf is excited to buy his favourite candy.",
-        image: "kitchen",
+        image: "candy",
         options: [
           { title: "Chocolate!", id: "candyChoco", location: "row3>col1", style: "right" },
-          { title: "Gummy Bear!", id: "candyGummy", location: "row3>col1", style: "right" },
-          { title: "Sour Bomb!", id: "candyBomb", location: "row3>col1", style: "right" }
+          { title: "Gummy Bear!", id: "candyGummy", location: "row3>col2", style: "left" },
+          { title: "Sour Bomb!", id: "candySour", location: "row3>col2", style: "right" }
         ],
         options_delay: 3,
         characters: [
@@ -97,7 +97,7 @@ export class CandyPage {
         title: "CandyDad",
         id: "candyChoco",
         text: "",
-        image: "kitchen",
+        image: "candy",
         options: [
           { title: "Next..", id: "candyend", location: "row3>col1", style: "right" }
         ],
@@ -142,7 +142,7 @@ export class CandyPage {
         title: "CandyDad",
         id: "candyend",
         text: "",
-        image: "kitchen",
+        image: "candy",
         options: [
           { title: "Next..", id: "candydinner", location: "row3>col1", style: "right" }
         ],
@@ -185,7 +185,7 @@ export class CandyPage {
   }
 
   goHome() {
-    this.events.publish('buttonClick', 'next', this.pages, HomePage, null, null);
+    this.events.publish('buttonClick', 'home', this.pages, HomePage, null, null);
   }
 
   ionViewDidLoad() {
