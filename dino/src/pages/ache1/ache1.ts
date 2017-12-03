@@ -34,7 +34,7 @@ export class Ache1Page {
       title:"Rowlf_Pain1",
       id:"ache1a",
       text:"As Rowlf put the final touches to his wonderful drawing, he realized that his stomach was aching...",
-      image:"backyard",
+      image:"bedroom",
       options: [{title:"Next...", id:"ache1b", location:"row2>col3", style:"right"}],
       options_delay: 2,
       characters: [
@@ -46,7 +46,7 @@ export class Ache1Page {
       title:"Rowlf_Pain2",
       id:"ache1b",
       text:" Confused, Rowlf wonders if he should call his Mommy",
-      image:"backyard",
+      image:"bedroom",
       options: [{title:"Tell Mommy!", id:"ache1c", location:"row2>col3", style:"right"},{title:"Mommy doesn't need to know...", id:"ache1d", location:"row3>col3", style:"right"}],
       options_delay: 2,
       characters: [{image:this.character_path+"/confusedChild.png", style:"child", location:"row3>col2"}],
@@ -58,7 +58,7 @@ export class Ache1Page {
       title:"Rowlf_Pain4",
       id:"ache1d",
       text:"But Rowlf's stomach ache continues to get worse...",
-      image:"backyard",
+      image:"bedroom",
       options: [{title:"Call Mommy!", id:"ache1c", location:"row2>col3", style:"right"}],
       options_delay: 2,
       characters: [{image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col2"}],
@@ -69,7 +69,7 @@ export class Ache1Page {
       title:"Rowlf_Pain3",
       id:"ache1c",
       text:"Rowlf decides to call his Mommy for help. She comes in, looking worried.",
-      image:"backyard",
+      image:"bedroom",
       options: [{title:"Next", id:"ache1e", location:"row2>col3", style:"right"}],
       options_delay: 3,
       characters: [
@@ -78,12 +78,11 @@ export class Ache1Page {
       dialogue: [{text:"What is it, honey? What's wrong?",location:"row1>col2",owner:"child", delay:2}],
     },
 
-    //NOT SURE WHERE DAD WILL BE IN THE FRAME POSITION WISE
     { //index 4
       title:"Rowlf_Pain5",
       id:"ache1e",
       text:"Unable to bear the pain, Rowlf starts to cry. Hearing Rowlf's cries, Dada comes into the room as well. He asks Mommy what is going on, and she explains.",
-      image:"kitchen",
+      image:"bedroom",
       options: [{title:"Next...", id:"ache1f", location:"row2>col3", style:"right"}],
       options_delay: 3,
       characters: [
@@ -97,7 +96,7 @@ export class Ache1Page {
       title:"Rowlf_Pain6",
       id:"ache1f",
       text:"Dada tries to console Rowlf, and offers to go get some medicine.",
-      image:"kitchen",
+      image:"bedroom",
       options: [{title:"Next...", id:"ache1g", location:"row2>col3", style:"right"}],
       options_delay: 3,
       characters: [
@@ -111,7 +110,7 @@ export class Ache1Page {
       title:"Rowlf_Pain7",
       id:"ache1g",
       text:"However, Rowlf refuses to take the medicine even though his stomach ache continues to get worse.",
-      image:"kitchen",
+      image:"bedroom",
       options: [{title:"Next..", id:"ache1h", location:"row2>col3", style:"right"}],
       options_delay: 3,
       characters: [
@@ -125,7 +124,7 @@ export class Ache1Page {
       title:"Rowlf_Pain8",
       id:"ache1h",
       text:"Mommy and Dada explain to Rowlf that if he takes the medicine, he would feel better in no time.",
-      image:"kitchen",
+      image:"bedroom",
       options: [{title:"Next..", id:"ache1i", location:"row2>col3", style:"right"}],
       options_delay: 3,
       characters: [
@@ -139,7 +138,7 @@ export class Ache1Page {
       title:"Rowlf_Pain9",
       id:"ache1i",
       text:"",
-      image:"kitchen",
+      image:"bedroom",
       options: [{title:"Take the medcine", id:"ache1j", location:"row2>col3", style:"right"}],
       options_delay: 3,
       characters: [{image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col2"}],
@@ -150,7 +149,7 @@ export class Ache1Page {
       title:"Rowlf_Pain10",
       id:"ache1j",
       text:"Rowlf decides to take the medicine, and soon, he starts to feel much better.",
-      image:"kitchen",
+      image:"bedroom",
       options: [{title:"Next", id:"ache1k", location:"row2>col3", style:"right"}],
       options_delay: 3,
       characters: [{image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col2"}],
