@@ -25639,6 +25639,13 @@ page-ache1 .living {
   background-position: center center;
 }
 
+page-ache1 .bedroom {
+  background-image: url("../assets/images/bedroom.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 page-candy ion-grid {
   height: 100%;
   width: 100%;

@@ -11,6 +11,7 @@ import { LiePage } from '../pages/lie/lie';
 import { DrawActPage } from '../pages/draw-act/draw-act';
 import { CookieActPage } from '../pages/cookie-act/cookie-act';
 import { CandyPage } from '../pages/candy/candy';
+import { NightPage } from '../pages/night/night';
 
 @Component({
   templateUrl: 'app.html'

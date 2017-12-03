@@ -15,6 +15,7 @@ import { LiePage } from '../pages/lie/lie';
 import { DrawActPage } from '../pages/draw-act/draw-act';
 import { CookieActPage } from '../pages/cookie-act/cookie-act';
 import { CandyPage } from '../pages/candy/candy';
+import { NightPage } from '../pages/night/night';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CandyPage } from '../pages/candy/candy';
     CookieActPage,
     TruthPage,
     LiePage,
-    CandyPage
+    CandyPage,
+    NightPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { CandyPage } from '../pages/candy/candy';
     CookieActPage,
     TruthPage,
     LiePage,
-    CandyPage
+    CandyPage,
+    NightPage
   ],
   providers: [
     StatusBar,

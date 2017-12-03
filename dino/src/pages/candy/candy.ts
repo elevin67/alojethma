@@ -50,7 +50,7 @@ export class CandyPage {
         ],
         dialogue: [
           { text: "Hey Rowlf, I heard you were a good boy today and only ate two cookies..", location: "row1>col3", owner: "father", delay: 1 },
-          {text: "Yes Dada! I ate only two cookies!", location: "row1>col3", owner: "child", delay: 1 }
+          {text: "Yes Dada! I ate only two cookies!", location: "row2>col2", owner: "child", delay: 1 }
         ]
       },
 
@@ -69,7 +69,7 @@ export class CandyPage {
         ],
         dialogue: [
           { text: "Well, let's go to the Candy shop to get you some candies..", location: "row1>col3", owner: "father", delay: 1 },
-          {text: "Really Dada??? Yay!", location: "row1>col3", owner: "child", delay: 1 }
+          {text: "Really Dada??? Yay!", location: "row2>col2", owner: "child", delay: 1 }
         ]
       },
 
@@ -148,6 +148,8 @@ export class CandyPage {
         ],
         options_delay: 3,
         characters: [
+          { image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" },
+          { image: this.character_path + "/fatherblink.gif", style: "father", location: "row2>col3" }
         ],
         dialogue: [
           { text: "Well let'g go home and have dinner.", location: "row1>col3", owner: "father", delay: 1 }
