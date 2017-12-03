@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, AlertController, Platform, Events 
 import { Screenshot } from '@ionic-native/screenshot';
 import { HomePage } from '../home/home';
 import { Ache1Page } from '../ache1/ache1';
+import { CandyPage } from '../candy/candy';
 
 /**
  * Generated class for the DrawActPage page.
@@ -18,6 +19,9 @@ import { Ache1Page } from '../ache1/ache1';
 })
 export class DrawActPage {
 
+  dino_color;
+  ache: boolean;
+
   @ViewChild('myCanvas') canvas: any;
   screenshotPage;
   canvasElement: any;
@@ -29,7 +33,9 @@ export class DrawActPage {
 
   brushSize: number = 10;
 
-  constructor(public platform: Platform, public renderer: Renderer, private alertCtrl: AlertController, private screenshot: Screenshot, public events: Events) {
+  constructor(public navParams: NavParams, public platform: Platform, public renderer: Renderer, private alertCtrl: AlertController, private screenshot: Screenshot, public events: Events) {
+      this.dino_color = this.navParams.get('dino_color');
+      this.ache = this.navParams.get('ache');
       this.availableColors = [
         '#1abc9c',
         '#3498db',
@@ -37,14 +43,6 @@ export class DrawActPage {
         '#e67e22',
         '#e74c3c'
       ];
-
-      this.screenshotPage = function() {
-        this.screenshot.save('jpg',80,'image.jpg')
-        .then(res => {
-          console.log(res.filepath)
-        })
-        // .catch(() => console.error("screenshot error"));
-      }
   }
 
 
@@ -96,29 +94,26 @@ export class DrawActPage {
 
     savePrompt() {
       let alert = this.alertCtrl.create({
-        title: 'Save',
-        message: 'Do you want to save your picture to Camera Roll?',
+        title: 'Exit',
+        message: 'Do you want to exit your picture?',
         buttons: [
           {
             text: 'Yes',
             role: 'yes',
             handler: () => {
-              this.platform.ready().then(()=>{
-                this.screenshot.save('jpg',80,'image.jpg')
-                .then(res => {
-                  console.log(res.filepath)
-                })
-              })
-              console.log('now move to next page');
-              this.events.publish('buttonClick', 'next', null, Ache1Page);
+              if(this.ache == true) {
+                console.log('now move to AchePage');
+                this.events.publish('buttonClick', 'next', null, Ache1Page, this.dino_color, this.ache);
+              } else {
+                console.log('now move to CandyPage');
+                this.events.publish('buttonClick', 'next', null, CandyPage, this.dino_color, this.ache);
+              }
             }
           },
           {
             text: 'No',
             role: 'no',
             handler: () => {
-              console.log('now move to next page');
-              this.events.publish('buttonClick', 'next', null, HomePage);
             }
           }
         ]

@@ -15,7 +15,7 @@
     </ion-buttons>
   </ion-toolbar>
 
-  <canvas #myCanvas (touchstart)="handleStart($event)" (touchmove)="handleMove($event)"></canvas>
+  <canvas #myCanvas id="canvas" (touchstart)="handleStart($event)" (touchmove)="handleMove($event)"></canvas>
 
   <ion-toolbar id="bottom-toolbar">
     <ion-buttons left>

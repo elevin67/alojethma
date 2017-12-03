@@ -10,6 +10,7 @@ import { TruthPage } from '../pages/truth/truth';
 import { LiePage } from '../pages/lie/lie';
 import { DrawActPage } from '../pages/draw-act/draw-act';
 import { CookieActPage } from '../pages/cookie-act/cookie-act';
+import { CandyPage } from '../pages/candy/candy';
 
 @Component({
   templateUrl: 'app.html'
@@ -26,23 +27,25 @@ export class MyApp {
       splashScreen.hide();
     });
 
-    this.events.subscribe('buttonClick',(id, pages, component) => {
+    this.events.subscribe('buttonClick',(id, pages, component, dino_color, ache) => {
       if(id == 'home') {
         this.homePrompt();
       } else {
-        this.sendFeedback(id, pages, component);
+        this.sendFeedback(id, pages, component, dino_color, ache);
       }
     });
 
     this.events.subscribe('opened', (currentPage) => {
+      console.log('opened event');
       this.reveal_delayed(currentPage);
-    })
+    });
   }
 
-  sendFeedback (id, pages, component) {
+  sendFeedback (id, pages, component, dino_color, ache) {
     if(id=='next') {
       this.navCtrl.push(component, {
-        dino_color: 'green'
+        dino_color: dino_color,
+        ache: ache
       });
       return;
     }
@@ -87,6 +90,8 @@ export class MyApp {
 
   reveal_delayed (currentPage) {
     // reveals the options
+    // don't use document
+    // use currentPage
     var options = document.getElementsByClassName('options') as HTMLCollectionOf<HTMLElement>;
     setTimeout(function(){
       for (let i = 0; i < options.length; i++) {
@@ -95,37 +100,15 @@ export class MyApp {
     }, currentPage.options_delay * 1000);
 
     // reveals dialogues
-    var dialogue_delay0, dialogue_delay1, dialogue_delay2;
-    var dialogue_id0, dialogue_id1, dialogue_id2;
-
     for (let i = 0; i < currentPage.dialogue.length; i++) {
-      if(i == 0) {
-        dialogue_delay0 = currentPage.dialogue[i].delay;
-        dialogue_id0 = currentPage.dialogue[i].owner;
-        console.log(dialogue_id0);
-      } else if(i == 1) {
-        dialogue_delay1 = currentPage.dialogue[i].delay;
-        dialogue_id1 = currentPage.dialogue[i].owner;
-      } else if(i == 2) {
-        dialogue_delay2 = currentPage.dialogue[i].delay;
-        dialogue_id2 = currentPage.dialogue[i].owner;
-      }
+      let dialogue_delay = currentPage.dialogue[i].delay;
+      let dialogue_id = currentPage.dialogue[i].owner;
+      setTimeout(function() {
+        if(document.getElementById(dialogue_id) != null) {
+          document.getElementById(dialogue_id).style.visibility = "visible";
+        }
+      }, dialogue_delay * 1000);
     }
 
-    if(dialogue_id0 != null) {
-      setTimeout(function() {
-        document.getElementById(dialogue_id0).style.visibility = "visible";
-      }, dialogue_delay0 * 1000);
-    }
-    if(dialogue_id1 != null) {
-      setTimeout(function() {
-        document.getElementById(dialogue_id1).style.visibility = "visible";
-      }, dialogue_delay1 * 1000);
-    }
-    if(dialogue_id2 != null) {
-      setTimeout(function() {
-        document.getElementById(dialogue_id2).style.visibility = "visible";
-      }, dialogue_delay2 * 1000);
-    }
   }
 }
