@@ -59,7 +59,7 @@ export class TruthPage {
         {image:this.character_path+"/motherBlink.gif", style:"mother", location:"row2>col3"}
       ],
       dialogue: [
-        {text:"Only two!",location:"row2>col2",owner:"child", delay:2}
+        {text:"Only a few!",location:"row2>col2",owner:"child", delay:2}
       ],
     },
 
