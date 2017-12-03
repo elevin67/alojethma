@@ -15,29 +15,7 @@ import { DrawActPage } from '../draw-act/draw-act';
  })
 @IonicPage()
 export class LiePage {
-<<<<<<< HEAD
 
-    pages: Array<{
-      title: string,
-      id: string,
-      text: string,
-      image: string,
-      characters: Array<{image: string, style: string, location: string}>,
-      dialogue: Array<{text: string, location: string, owner: string, delay: number}>,
-      options: Array<{title: string, id: string, location: string, style: string}>,
-      options_delay: number
-    }>;
-    currentPage;
-    dino_color;
-    character_path;
-
-    constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
-      this.dino_color = this.navParams.get('dino_color');
-      console.log(this.dino_color);
-      console.log(this.navParams.get('dino_color'));
-      this.character_path = "../assets/images/"+this.dino_color;
-      this.pages = [
-=======
   pages: Array<{title: string, id: string, text: string, image: string, options: Array<{title: string,id: string, location: string, style: string}>, options_delay: number, characters: Array<{image: string, style: string, location: string}>, dialogue: Array<{text:string, location:string, owner:string, delay:number}>}>;
   currentPage;
   dino_color;
@@ -49,7 +27,6 @@ export class LiePage {
     this.ache = this.navParams.get('ache');
     this.character_path = "../assets/images/"+this.dino_color;
     this.pages = [
->>>>>>> 26c5a7b949c58b1b86bb0484d426a6eab1e1eec8
 
     {
       title:"Rowlf_Lies",
@@ -57,7 +34,6 @@ export class LiePage {
       text:"Rowlf was putting the dish away right as mommy comes back to the kitchen.",
       image:"kitchen",
       options: [
-<<<<<<< HEAD
         {title: 'Next', id: 'A011', location: 'row2>col2', style: 'right'},
       ],
       options_delay: 3,
@@ -67,29 +43,12 @@ export class LiePage {
       ],
       dialogue: [
       {text: "Hey bud, how many cookies did you eat?", location: "row1>col3", owner: "mother", delay: 2}]
-=======
-        {title:"Next..", id:"A011", location:"row3>col1", style:"right"}
-      ],
-      options_delay: 3,
-      characters: [
-        {image:this.character_path+"/childblink.gif", style:"child", location:"row3>col2"},
-        {image:this.character_path+"/motherblink.gif", style:"mother", location:"row2>col3"}
-      ],
-      dialogue: [
-        {text:"Hey bud, how many cookies did you eat?",location:"row1>col3",owner:"mother", delay:1}
-      ]
->>>>>>> 26c5a7b949c58b1b86bb0484d426a6eab1e1eec8
     },
     {
       title:"Rowlf_Lies",
       id:"A011",
       text:"Rowlf thinks about it for a while. 'I ate all of them. But Mommy would be mad if I tell her that. What should I say?'",
       image:"kitchen",
-<<<<<<< HEAD
-      characters: [
-        {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
-        {image: this.character_path+"/motherBlink.gif", style: "parent", location: "row2>col3"}
-=======
       options: [
         {title:"Only a few", id:"A01A", location:"row2>col1", style:"left"},
         {title:"I ate all of them.", id:"A01B", location:"row3>col1", style:"left"}
@@ -97,15 +56,7 @@ export class LiePage {
       options_delay: 3,
       characters: [
         {image:this.character_path+"/childblink.gif", style:"child", location:"row3>col2"},
-        {image:this.character_path+"/motherblink.gif", style:"mother", location:"row2>col3"}
->>>>>>> 26c5a7b949c58b1b86bb0484d426a6eab1e1eec8
-      ],
-      dialogue: [],
-      options: [
-          {title: 'Only 2', id: 'A01A', location: 'row2>col2', style: 'left'},
-          {title: 'I ate 3 or 4 cookies.', id: 'A01B', location: 'row2>col2', style: 'right'},
-      ],
-      options_delay: 3
+        {image:this.character_path+"/motherblink.gif", style:"mother", location:"row2>col3"}]
     },
 
     {
@@ -114,19 +65,6 @@ export class LiePage {
       text:"Rowlf lies.",
       image:"kitchen",
       options: [
-<<<<<<< HEAD
-      {title: 'Next', id: 'A01AA', location: 'row2>col2', style: 'right'},
-      ],
-      options_delay: 3,
-      characters: [
-        {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
-        {image: this.character_path+"/motherBlink.gif", style: "parent", location: "row2>col3"}
-      ],
-      dialogue: [
-    {text: "I only ate 2", location: "row1>col2", owner: "child", delay: 2}
-      ],
-  },
-=======
         {title:"Next..", id:"A01AA", location:"row3>col1", style:"right"}
       ],
       options_delay: 3,
@@ -138,25 +76,13 @@ export class LiePage {
         {text:"I only ate a few!",location:"row2>col2",owner:"child", delay:2}
       ],
     },
->>>>>>> 26c5a7b949c58b1b86bb0484d426a6eab1e1eec8
     {
       title:"Rowlf_Lies",
       id:"A01AA",
       text:"",
       image:"kitchen",
       options: [
-<<<<<<< HEAD
-                {title: 'Yes', id: 'A01AB', location: 'row2>col1', style: 'left'},
-                {title: 'I ate 3 or 4 cookies.', id: 'A01AC', location: 'row3>col1', style: 'right'},
-              ],
-      options_delay: 3,
-      characters: [
-        {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
-        {image: this.character_path+"/motherBlink.gif", style: "parent", location: "row2>col3"}
-      ],
-      dialogue: [
-    {text: "Are you sure?", location: "row1>col3", owner: "child", delay: 1}
-=======
+
         {title:"Yes", id:"A01AB", location:"row2>col1", style:"left"},
         {title:"I ate all the cookies.", id:"A01AC", location:"row3>col1", style:"left"}
       ],
@@ -167,7 +93,6 @@ export class LiePage {
       ],
       dialogue: [
         {text:"Are you sure?",location:"row1>col3",owner:"mother", delay:1}
->>>>>>> 26c5a7b949c58b1b86bb0484d426a6eab1e1eec8
       ]
     },
     {

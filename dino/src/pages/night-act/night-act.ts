@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, Events } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { LiePage } from '../lie/lie';
+import { TruthPage } from '../truth/truth';
 
 /**
  * Generated class for the NightActPage page.
@@ -37,8 +39,8 @@ export class NightActPage {
       this.pages = [
         // Cookie1
         {
-          title: "Cookie1a",
-          id: "cookie1a",
+          title: "night",
+          id: "night",
           text: "It is a lovely Sunday afternoon and Rowlf is playing in his backyard.",
           image: "backyard",
           characters: [

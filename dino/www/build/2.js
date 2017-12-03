@@ -1,19 +1,14 @@
 webpackJsonp([2],{
 
-/***/ 276:
+/***/ 278:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NightPageModule", function() { return NightPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PersonalizePageModule", function() { return PersonalizePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__lie__ = __webpack_require__(51);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__night__ = __webpack_require__(104);
->>>>>>> 26c5a7b949c58b1b86bb0484d426a6eab1e1eec8
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__personalize__ = __webpack_require__(105);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -23,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var NightPageModule = (function () {
-    function NightPageModule() {
+var PersonalizePageModule = (function () {
+    function PersonalizePageModule() {
     }
-    return NightPageModule;
+    return PersonalizePageModule;
 }());
-NightPageModule = __decorate([
+PersonalizePageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__night__["a" /* NightPage */],
+            __WEBPACK_IMPORTED_MODULE_2__personalize__["a" /* PersonalizePage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__night__["a" /* NightPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__personalize__["a" /* PersonalizePage */]),
         ],
     })
-], NightPageModule);
+], PersonalizePageModule);
 
-//# sourceMappingURL=night.module.js.map
+//# sourceMappingURL=personalize.module.js.map
 
 /***/ })
 
