@@ -49,22 +49,6 @@ export class CandyPage {
           { image: this.character_path + "/fatherblink.gif", style: "father", location: "row2>col3" }
         ],
         dialogue: [
-          { text: "Hey Rowlf, I heard you were a good boy today and only ate two cookies..", location: "row1>col3", owner: "", delay: 1 }
-        ]
-      },
-
-      {
-        title: "CandyDad",
-        id: "candy1",
-        text: "Once Rowlf finished his drawing, his Dada came into the bedroom",
-        image: "kitchen",
-        options: [{ title: "Next..", id: "candy2", location: "row3>col1", style: "right" }],
-        options_delay: 3,
-        characters: [
-          { image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" },
-          { image: this.character_path + "/fatherblink.gif", style: "father", location: "row2>col3" }
-        ],
-        dialogue: [
           { text: "Hey Rowlf, I heard you were a good boy today and only ate two cookies..", location: "row1>col3", owner: "father", delay: 1 },
           {text: "Yes Dada! I ate only two cookies!", location: "row1>col3", owner: "child", delay: 1 }
         ]

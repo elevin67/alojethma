@@ -30,7 +30,7 @@ export class LiePage {
     {
       title:"Rowlf_Lies",
       id:"A01",
-      text:"Mom comes back to the kitchen.",
+      text:"Rowlf was putting the dish away right as mommy comes back to the kitchen.",
       image:"kitchen",
       options: [
         {title:"Next..", id:"A011", location:"row3>col1", style:"right"}
@@ -48,11 +48,11 @@ export class LiePage {
     {
       title:"Rowlf_Lies",
       id:"A011",
-      text:"Rowlf thinks about it for a while. 'I ate more than 2. But Mommy would be mad if I tell her that. What should I say?'",
+      text:"Rowlf thinks about it for a while. 'I ate all of them. But Mommy would be mad if I tell her that. What should I say?'",
       image:"kitchen",
       options: [
-        {title:"Only 2", id:"A01A", location:"row2>col1", style:"left"},
-        {title:"I ate 3 or 4 cookies.", id:"A01B", location:"row3>col1", style:"left"}
+        {title:"Only a few", id:"A01A", location:"row2>col1", style:"left"},
+        {title:"I ate all of them.", id:"A01B", location:"row3>col1", style:"left"}
       ],
       options_delay: 3,
       characters: [
@@ -76,7 +76,7 @@ export class LiePage {
         {image:this.character_path+"/motherblink.gif", style:"mother", location:"row2>col3"}
       ],
       dialogue: [
-        {text:"I only ate 2",location:"row2>col2",owner:"child", delay:2}
+        {text:"I only ate a few!",location:"row2>col2",owner:"child", delay:2}
       ],
     },
     {
@@ -86,7 +86,7 @@ export class LiePage {
       image:"kitchen",
       options: [
         {title:"Yes", id:"A01AB", location:"row2>col1", style:"left"},
-        {title:"I ate 3 or 4 cookies.", id:"A01AC", location:"row3>col1", style:"left"}
+        {title:"I ate all the cookies.", id:"A01AC", location:"row3>col1", style:"left"}
       ],
       options_delay: 3,
       characters: [
@@ -100,7 +100,7 @@ export class LiePage {
     {
       title:"Rowlf_Lies",
       id:"A01AB",
-      text:"Rowlf looks scared and lied as Mom glares at him",
+      text:"Rowlf looks scared and lies as Mom glares at him",
       image:"kitchen",
       options: [
         {title:"Next..", id:"A01D", location:"row3>col1", style:"right"}
@@ -132,7 +132,7 @@ export class LiePage {
       options: [{title:"Next..", id:"A01C", location:"row3>col1", style:"right"}],
       options_delay: 3,
       characters: [{image:this.character_path+"/childblink.gif", style:"child", location:"row3>col2"},{image:this.character_path+"/motherblink.gif", style:"mother", location:"row2>col3"}],
-      dialogue: [{text:"I ate 3 or 4 cookies.",location:"row1>col2",owner:"child", delay:1}],
+      dialogue: [{text:"I ate all the cookies.",location:"row1>col2",owner:"child", delay:1}],
     },
     {
       title:"Rowlf_Lies",

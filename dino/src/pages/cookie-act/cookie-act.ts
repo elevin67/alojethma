@@ -167,7 +167,8 @@ export class CookieActPage {
         image: "kitchen",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
-          {image: this.character_path+"/motherBlink.gif", style: "parent", location: "row2>col3"}
+          {image: this.character_path+"/motherBlink.gif", style: "parent", location: "row2>col3"},
+          {image: '../assets/images/cookie.png', style: 'cookie', location: "row3>col2"}
         ],
         dialogue: [
           {text: "What about chocolate chip cookies??", location: "row1>col3", owner: "mother", delay: 1},
@@ -222,7 +223,6 @@ export class CookieActPage {
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
           {image: '../assets/images/cookieTray.gif', style: 'cookieTray', location: 'row3>col2'},
-          // {image: this.character_path+"/motherBlink.gif", style: "parent", location: "row2>col3"}
         ],
         dialogue: [],
         options: [
@@ -255,7 +255,7 @@ export class CookieActPage {
         image: "kitchen",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
-          // {image: this.character_path+"/motherBlink.gif", style: "parent", location: "row2>col3"}
+          {image: '../assets/images/cookie2.png', style: 'cookieTray', location: 'row3>col2'},
         ],
         dialogue: [
           {text: "Mommy said my tummy would hurt. I'm done eating cookies", location: "row2>col1", owner: "child", delay: 2},

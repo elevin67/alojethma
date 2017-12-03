@@ -233,10 +233,9 @@ Ache1Page = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-ache1',template:/*ion-inline-start:"C:\Users\luit\Documents\GitHub\alojethma\dino\src\pages\act.html"*/'<ion-content padding class=\'{{currentPage.image}}\' overflow-scroll="true">\n\n    <ion-grid class="grid">\n\n      <ion-row text-center class="text_row">\n\n        <ion-col col-1>\n\n          <h2 (click)="goHome()" class="home_button">Home</h2>\n\n        </ion-col>\n\n        <ion-col col-11>\n\n          <div *ngIf="currentPage.text != \'\'"><h2>{{ currentPage.text }}</h2></div>\n\n        </ion-col>\n\n      </ion-row>\n\n      <ion-row text-center class="row1">\n\n        <ion-col col-4 class="col1">\n\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row1>col1\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n\n          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == \'row1>col1\'"><div class="dialogue_box" id={{d.owner}} style="visibility:hidden;">{{d.text}}</div></div></div>\n\n        </ion-col>\n\n        <ion-col col-4 class="col2">\n\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row1>col2\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n\n          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == \'row1>col2\'"><div class="dialogue_box" id={{d.owner}} style="visibility:hidden;">{{d.text}}</div></div></div>\n\n        </ion-col>\n\n        <ion-col col-4 class="col3">\n\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row1>col3\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n\n          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == \'row1>col3\'"><div class="dialogue_box" id={{d.owner}} style="visibility:hidden;">{{d.text}}</div></div></div>\n\n        </ion-col>\n\n      </ion-row>\n\n      <ion-row text-center class="row2">\n\n        <ion-col col-4 class="col1">\n\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row2>col1\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n\n          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == \'row2>col1\'"><div class="dialogue_box" id={{d.owner}} style="visibility:hidden;">{{d.text}}</div></div></div>\n\n          <div *ngFor="let o of currentPage.options"><div *ngIf="o.location == \'row2>col1\'"><div class="{{ o.style }} options" (click)="sendFeedback(o.id)" style="visibility:hidden;"><img src="../assets/images/thought_cloud.gif"><div class="thought_cloud_text">{{ o.title }}</div></div></div></div>\n\n        </ion-col>\n\n        <ion-col col-4 class="col2">\n\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row2>col2\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n\n          <div *ngFor="let o of currentPage.options"><div *ngIf="o.location == \'row2>col2\'"><div class="{{ o.style }} options" (click)="sendFeedback(o.id)" style="visibility:hidden;"><img src="../assets/images/thought_cloud.gif"><div class="thought_cloud_text">{{ o.title }}</div></div></div></div>\n\n          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == \'row2>col2\'"><div class="dialogue_box" id={{d.owner}} style="visibility:hidden;">{{d.text}}</div></div></div>\n\n        </ion-col>\n\n        <ion-col col-4 class="col3">\n\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row2>col3\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n\n          <div *ngFor="let d of currentPage.dialogue"><div *ngIf="d.location == \'row2>col3\'"><div class="dialogue_box" id={{d.owner}} style="visibility:hidden;">{{d.text}}</div></div></div>\n\n          <div *ngFor="let o of currentPage.options"><div *ngIf="o.location == \'row2>col3\'"><div class="{{ o.style }} options" (click)="sendFeedback(o.id)" style="visibility:hidden;"><img src="../assets/images/thought_cloud.gif"><div class="thought_cloud_text">{{ o.title }}</div></div></div></div>\n\n        </ion-col>\n\n      </ion-row>\n\n      <ion-row text-center class="row3">\n\n        <ion-col col-4 class="col1">\n\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row3>col1\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n\n          <div *ngFor="let o of currentPage.options"><div *ngIf="o.location == \'row3>col1\'"><div class="{{ o.style }} options" (click)="sendFeedback(o.id)" style="visibility:hidden;"><img src="../assets/images/thought_cloud.gif"><div class="thought_cloud_text">{{ o.title }}</div></div></div></div>\n\n        </ion-col>\n\n        <ion-col col-4 class="col2">\n\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row3>col2\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n\n          <div *ngFor="let o of currentPage.options"><div *ngIf="o.location == \'row3>col2\'"><div class="{{ o.style }} options" (click)="sendFeedback(o.id)" style="visibility:hidden;"><img src="../assets/images/thought_cloud.gif"><div class="thought_cloud_text">{{ o.title }}</div></div></div></div>\n\n        </ion-col>\n\n        <ion-col col-4 class="col3">\n\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row3>col3\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n\n          <div *ngFor="let o of currentPage.options"><div *ngIf="o.location == \'row3>col3\'"><div class="{{ o.style }} options" (click)="sendFeedback(o.id)" style="visibility:hidden;"><img src="../assets/images/thought_cloud.gif"><div class="thought_cloud_text">{{ o.title }}</div></div></div></div>\n\n        </ion-col>\n\n      </ion-row>\n\n      <ion-row text-center class="row4">\n\n        <ion-col col-4 class="col1">\n\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row4>col1\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n\n        </ion-col>\n\n        <ion-col col-4 class="col2">\n\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row4>col2\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n\n        </ion-col>\n\n        <ion-col col-4 class="col3">\n\n          <div *ngFor="let character of currentPage.characters"><div *ngIf="character.location == \'row4>col3\'"><img class="{{ character.style }}" src="{{ character.image }}"></div></div>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\luit\Documents\GitHub\alojethma\dino\src\pages\act.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */]])
 ], Ache1Page);
 
-var _a, _b, _c;
 //# sourceMappingURL=ache1.js.map
 
 /***/ }),
@@ -457,7 +456,8 @@ var CookieActPage = (function () {
                 image: "kitchen",
                 characters: [
                     { image: this.character_path + "/childBlink.gif", style: "child", location: "row3>col1" },
-                    { image: this.character_path + "/motherBlink.gif", style: "parent", location: "row2>col3" }
+                    { image: this.character_path + "/motherBlink.gif", style: "parent", location: "row2>col3" },
+                    { image: '../assets/images/cookie.png', style: 'cookie', location: "row3>col2" }
                 ],
                 dialogue: [
                     { text: "What about chocolate chip cookies??", location: "row1>col3", owner: "mother", delay: 1 },
@@ -544,6 +544,7 @@ var CookieActPage = (function () {
                 image: "kitchen",
                 characters: [
                     { image: this.character_path + "/childBlink.gif", style: "child", location: "row3>col1" },
+                    { image: '../assets/images/cookie2.png', style: 'cookieTray', location: 'row3>col2' },
                 ],
                 dialogue: [
                     { text: "Mommy said my tummy would hurt. I'm done eating cookies", location: "row2>col1", owner: "child", delay: 2 },
@@ -656,7 +657,7 @@ var LiePage = (function () {
             {
                 title: "Rowlf_Lies",
                 id: "A01",
-                text: "Mom comes back to the kitchen.",
+                text: "Rowlf was putting the dish away right as mommy comes back to the kitchen.",
                 image: "kitchen",
                 options: [
                     { title: "Next..", id: "A011", location: "row3>col1", style: "right" }
@@ -673,11 +674,11 @@ var LiePage = (function () {
             {
                 title: "Rowlf_Lies",
                 id: "A011",
-                text: "Rowlf thinks about it for a while. 'I ate more than 2. But Mommy would be mad if I tell her that. What should I say?'",
+                text: "Rowlf thinks about it for a while. 'I ate all of them. But Mommy would be mad if I tell her that. What should I say?'",
                 image: "kitchen",
                 options: [
-                    { title: "Only 2", id: "A01A", location: "row2>col1", style: "left" },
-                    { title: "I ate 3 or 4 cookies.", id: "A01B", location: "row3>col1", style: "left" }
+                    { title: "Only a few", id: "A01A", location: "row2>col1", style: "left" },
+                    { title: "I ate all of them.", id: "A01B", location: "row3>col1", style: "left" }
                 ],
                 options_delay: 3,
                 characters: [
@@ -700,7 +701,7 @@ var LiePage = (function () {
                     { image: this.character_path + "/motherblink.gif", style: "mother", location: "row2>col3" }
                 ],
                 dialogue: [
-                    { text: "I only ate 2", location: "row2>col2", owner: "child", delay: 2 }
+                    { text: "I only ate a few!", location: "row2>col2", owner: "child", delay: 2 }
                 ],
             },
             {
@@ -710,7 +711,7 @@ var LiePage = (function () {
                 image: "kitchen",
                 options: [
                     { title: "Yes", id: "A01AB", location: "row2>col1", style: "left" },
-                    { title: "I ate 3 or 4 cookies.", id: "A01AC", location: "row3>col1", style: "left" }
+                    { title: "I ate all the cookies.", id: "A01AC", location: "row3>col1", style: "left" }
                 ],
                 options_delay: 3,
                 characters: [
@@ -724,7 +725,7 @@ var LiePage = (function () {
             {
                 title: "Rowlf_Lies",
                 id: "A01AB",
-                text: "Rowlf looks scared and lied as Mom glares at him",
+                text: "Rowlf looks scared and lies as Mom glares at him",
                 image: "kitchen",
                 options: [
                     { title: "Next..", id: "A01D", location: "row3>col1", style: "right" }
@@ -756,7 +757,7 @@ var LiePage = (function () {
                 options: [{ title: "Next..", id: "A01C", location: "row3>col1", style: "right" }],
                 options_delay: 3,
                 characters: [{ image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" }, { image: this.character_path + "/motherblink.gif", style: "mother", location: "row2>col3" }],
-                dialogue: [{ text: "I ate 3 or 4 cookies.", location: "row1>col2", owner: "child", delay: 1 }],
+                dialogue: [{ text: "I ate all the cookies.", location: "row1>col2", owner: "child", delay: 1 }],
             },
             {
                 title: "Rowlf_Lies",
@@ -845,21 +846,6 @@ var CandyPage = (function () {
         this.dino_color = this.navParams.get('dino_color');
         this.character_path = "../assets/images/" + this.dino_color;
         this.pages = [
-            {
-                title: "CandyDad",
-                id: "candy1",
-                text: "Once Rowlf finished his drawing, his Dada came into the bedroom",
-                image: "kitchen",
-                options: [{ title: "Next..", id: "candy2", location: "row3>col1", style: "right" }],
-                options_delay: 3,
-                characters: [
-                    { image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" },
-                    { image: this.character_path + "/fatherblink.gif", style: "father", location: "row2>col3" }
-                ],
-                dialogue: [
-                    { text: "Hey Rowlf, I heard you were a good boy today and only ate two cookies..", location: "row1>col3", owner: "", delay: 1 }
-                ]
-            },
             {
                 title: "CandyDad",
                 id: "candy1",
@@ -1178,7 +1164,7 @@ var TruthPage = (function () {
                     { image: this.character_path + "/motherBlink.gif", style: "mother", location: "row2>col3" }
                 ],
                 dialogue: [
-                    { text: "Only two!", location: "row2>col2", owner: "child", delay: 2 }
+                    { text: "Only a few!", location: "row2>col2", owner: "child", delay: 2 }
                 ],
             },
             {
