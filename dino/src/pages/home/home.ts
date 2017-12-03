@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PersonalizePage } from '../personalize/personalize';
+import { LiePage } from '../lie/lie';
 
 @Component({
   selector: 'page-home',

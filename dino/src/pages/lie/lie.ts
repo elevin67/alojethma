@@ -15,6 +15,7 @@ import { DrawActPage } from '../draw-act/draw-act';
  })
 @IonicPage()
 export class LiePage {
+
   pages: Array<{title: string, id: string, text: string, image: string, options: Array<{title: string,id: string, location: string, style: string}>, options_delay: number, characters: Array<{image: string, style: string, location: string}>, dialogue: Array<{text:string, location:string, owner:string, delay:number}>}>;
   currentPage;
   dino_color;
@@ -33,18 +34,16 @@ export class LiePage {
       text:"Rowlf was putting the dish away right as mommy comes back to the kitchen.",
       image:"kitchen",
       options: [
-        {title:"Next..", id:"A011", location:"row3>col1", style:"right"}
+        {title: 'Next', id: 'A011', location: 'row2>col2', style: 'right'},
       ],
       options_delay: 3,
       characters: [
-        {image:this.character_path+"/childblink.gif", style:"child", location:"row3>col2"},
-        {image:this.character_path+"/motherblink.gif", style:"mother", location:"row2>col3"}
+        {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
+        {image: this.character_path+"/motherBlink.gif", style: "parent", location: "row2>col3"}
       ],
       dialogue: [
-        {text:"Hey bud, how many cookies did you eat?",location:"row1>col3",owner:"mother", delay:1}
-      ]
+      {text: "Hey bud, how many cookies did you eat?", location: "row1>col3", owner: "mother", delay: 2}]
     },
-
     {
       title:"Rowlf_Lies",
       id:"A011",
@@ -57,9 +56,7 @@ export class LiePage {
       options_delay: 3,
       characters: [
         {image:this.character_path+"/childblink.gif", style:"child", location:"row3>col2"},
-        {image:this.character_path+"/motherblink.gif", style:"mother", location:"row2>col3"}
-      ],
-      dialogue: [],
+        {image:this.character_path+"/motherblink.gif", style:"mother", location:"row2>col3"}]
     },
 
     {
@@ -85,6 +82,7 @@ export class LiePage {
       text:"",
       image:"kitchen",
       options: [
+
         {title:"Yes", id:"A01AB", location:"row2>col1", style:"left"},
         {title:"I ate all the cookies.", id:"A01AC", location:"row3>col1", style:"left"}
       ],

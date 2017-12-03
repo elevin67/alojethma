@@ -5,6 +5,7 @@ import { TruthPage } from '../truth/truth';
 import {Ache1Page} from '../ache1/ache1';
 
 
+
 @IonicPage()
 @Component({
   selector: 'page-personalize',
