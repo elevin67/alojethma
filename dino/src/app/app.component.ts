@@ -44,7 +44,7 @@ export class MyApp {
 
   sendFeedback (id, pages, component, dino_color, ache) {
     if(id=='next') {
-      this.navCtrl.push(component, {
+      this.navCtrl.setRoot(component, {
         dino_color: dino_color,
         ache: ache
       });
