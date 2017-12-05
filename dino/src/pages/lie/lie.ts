@@ -27,7 +27,6 @@ export class LiePage {
     this.ache = this.navParams.get('ache');
     this.character_path = "../assets/images/"+this.dino_color;
     this.pages = [
-
     {
       title:"Rowlf_Lies",
       id:"A01",
