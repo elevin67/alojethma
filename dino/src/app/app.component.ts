@@ -106,7 +106,9 @@ export class MyApp {
       let dialogue_id = currentPage.dialogue[i].owner;
       setTimeout(function() {
         if(document.getElementById(dialogue_id) != null) {
+          console.log(document.getElementById(dialogue_id));
           document.getElementById(dialogue_id).style.visibility = "visible";
+          console.log(document.getElementById(dialogue_id));
         }
       }, dialogue_delay * 1000);
     }
