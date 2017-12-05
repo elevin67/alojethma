@@ -25766,6 +25766,20 @@ page-candy .backyard {
   background-position: center center;
 }
 
+page-candy .bedroom {
+  background-image: url("../assets/images/bedroom.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+page-candy .candy {
+  background-image: url("../assets/images/candy.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 page-candy .livng {
   background-image: url("../assets/images/LivingRoom.png");
   background-size: cover;
@@ -25913,13 +25927,27 @@ page-draw-act {
 page-draw-act h2 {
   position: absolute;
   top: 20%;
-  left: 50%;
+  left: 10%;
   background-color: rgba(200, 255, 240, 0.9);
   border: 2px solid black;
   padding: 10px;
   border-radius: 15px;
   font-family: Papyrus, fantasy;
   font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  line-height: 26px;
+  text-align: center;
+}
+
+page-draw-act p {
+  background-color: rgba(200, 255, 240, 0.9);
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 15px;
+  font-family: Papyrus, fantasy;
+  font-size: 18px;
   font-style: normal;
   font-variant: normal;
   font-weight: 900;
@@ -26364,6 +26392,10 @@ page-personalize ion-grid ion-row {
 
 page-personalize ion-grid .text_row {
   height: 10%;
+}
+
+page-personalize img {
+  z-index: -1000000;
 }
 
 page-personalize h2 {
