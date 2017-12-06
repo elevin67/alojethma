@@ -43,7 +43,6 @@ export class LiePage {
     this.ache = this.navParams.get('ache');
     this.character_path = "../assets/images/" + this.dino_color;
     this.pages = [
-<<<<<<< HEAD
     {
       title:"Rowlf_Lies",
       id:"A01",
@@ -74,41 +73,6 @@ export class LiePage {
         {image:this.character_path+"/childblink.gif", style:"child", location:"row3>col2"},
         {image:this.character_path+"/motherblink.gif", style:"mother", location:"row2>col3"}]
     },
-=======
-
-      {
-        title: "Rowlf_Lies",
-        id: "A01",
-        text: "Rowlf was putting the dish away right as mommy comes back to the kitchen.",
-        image: "kitchen",
-        options: [
-          { title: 'Next', id: 'A011', location: 'row2>col2', style: 'right' },
-        ],
-        options_delay: 3,
-        characters: [
-          { image: this.character_path + "/childBlink.gif", style: "child", location: "row3>col1" },
-          { image: this.character_path + "/motherBlink.gif", style: "parent", location: "row2>col3" }
-        ],
-        dialogue: [
-          { text: "Hey bud, how many cookies did you eat?", location: "row1>col3", owner: "mother", delay: 2 }]
-      },
-      {
-        title: "Rowlf_Lies",
-        id: "A011",
-        text: "Rowlf thinks about it for a while. 'I ate all of them. But Mommy would be mad if I tell her that. What should I say?'",
-        image: "kitchen",
-        options: [
-          { title: "Only a few", id: "A01A", location: "row2>col1", style: "left" },
-          { title: "I ate all of them.", id: "A01B", location: "row3>col1", style: "left" }
-        ],
-        options_delay: 3,
-        characters: [
-          { image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" },
-          { image: this.character_path + "/motherblink.gif", style: "mother", location: "row2>col3" }
-        ],
-        dialogue: []
-      },
->>>>>>> 88dbb69c429183daaec03f391fea08deb0ac2070
 
       {
         title: "Rowlf_Lies",
