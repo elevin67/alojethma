@@ -111,7 +111,7 @@ export class CookieActPage {
         image: "kitchen",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
-          {image: this.character_path+"/motherBlink.gif", style: "parent", location: "row2>col3"}
+          {image: this.character_path+"/motherBlink.gif", style: "mother", location: "row2>col3"}
         ],
         dialogue: [
           {text: "You called, mommy?", location: "row2>col1", owner: "child", delay: 1},
@@ -130,7 +130,7 @@ export class CookieActPage {
         image: "kitchen",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
-          {image: this.character_path+"/motherBlink.gif", style: "parent", location: "row2>col3"}
+          {image: this.character_path+"/motherBlink.gif", style: "mother", location: "row2>col3"}
         ],
         dialogue: [
           {text: "Well that's good! I made cookies for you, would you like some?", location: "row1>col3", owner: "mother", delay: 1},
@@ -149,7 +149,7 @@ export class CookieActPage {
         image: "kitchen",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
-          {image: this.character_path+"/motherBlink.gif", style: "parent", location: "row2>col3"}
+          {image: this.character_path+"/motherBlink.gif", style: "mother", location: "row2>col3"}
         ],
         dialogue: [
           {text: "Oh I bet you would like some cookies then?", location: "row1>col3", owner: "mother", delay: 1},
@@ -167,7 +167,7 @@ export class CookieActPage {
         image: "kitchen",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
-          {image: this.character_path+"/motherBlink.gif", style: "parent", location: "row2>col3"},
+          {image: this.character_path+"/motherBlink.gif", style: "mother", location: "row2>col3"},
           {image: '../assets/images/cookie.png', style: 'cookie', location: "row3>col2"}
         ],
         dialogue: [
@@ -186,7 +186,7 @@ export class CookieActPage {
         image: "kitchen",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
-          {image: this.character_path+"/motherBlink.gif", style: "parent", location: "row2>col3"}
+          {image: this.character_path+"/motherBlink.gif", style: "mother", location: "row2>col3"}
         ],
         dialogue: [
           {text: "Okay I'll take some cookies!", location: "row2>col1", owner: "child", delay: 1}
@@ -204,7 +204,7 @@ export class CookieActPage {
         image: "kitchen",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
-          {image: this.character_path+"/motherBlink.gif", style: "parent", location: "row2>col3"},
+          {image: this.character_path+"/motherBlink.gif", style: "mother", location: "row2>col3"},
           {image: '../assets/images/cookieFull.png', style: 'cookieTray', location: 'row3>col2'},
         ],
         dialogue: [
