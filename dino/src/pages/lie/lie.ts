@@ -57,7 +57,8 @@ export class LiePage {
         {image: this.character_path+"/motherBlink.gif", style: "parent", location: "row2>col3"}
       ],
       dialogue: [
-      {text: "Hey bud, how many cookies did you eat?", location: "row1>col3", owner: "mother", delay: 2}]
+      {text: "Hey bud, how many cookies did you eat?", location: "row1>col3", owner: "mother", delay: 2}
+    ]
     },
     {
       title:"Rowlf_Lies",
@@ -71,7 +72,9 @@ export class LiePage {
       options_delay: 3,
       characters: [
         {image:this.character_path+"/childblink.gif", style:"child", location:"row3>col2"},
-        {image:this.character_path+"/motherblink.gif", style:"mother", location:"row2>col3"}]
+        {image:this.character_path+"/motherblink.gif", style:"mother", location:"row2>col3"}
+      ],
+      dialogue: []
     },
 
       {
