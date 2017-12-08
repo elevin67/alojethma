@@ -57,7 +57,8 @@ export class LiePage {
         {image: this.character_path+"/motherBlink.gif", style: "mother", location: "row2>col3"}
       ],
       dialogue: [
-      {text: "Hey bud, how many cookies did you eat?", location: "row1>col3", owner: "mother", delay: 2}]
+      {text: "Hey bud, how many cookies did you eat?", location: "row1>col3", owner: "mother", delay: 2}
+    ]
     },
     {
       title:"Rowlf_Lies",
