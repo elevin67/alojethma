@@ -30,7 +30,8 @@ export class Ache1Page {
     this.character_path = "../assets/images/"+this.dino_color;
     this.pages = [
 
-    { //index 0
+    { //Rowlf first feels tummy ache.
+
       title:"Rowlf_Pain1",
       id:"ache1a",
       text:"As Rowlf put the final touches to his wonderful drawing, he realized that his stomach was aching...",
@@ -42,7 +43,8 @@ export class Ache1Page {
       dialogue: [{text:"\"Ow...\", Rowlf thinks to himself, \"my stomach really hurts!\"",location:"row2>col2",owner:"child", delay:1}],
     },
 
-    { //index 1
+    { //Rowlf wonders if he should call his mommy.
+
       title:"Rowlf_Pain2",
       id:"ache1b",
       text:" Confused, Rowlf wonders if he should call his Mommy",
@@ -53,8 +55,8 @@ export class Ache1Page {
       dialogue: [{text:"Hmm...I wonder if Mommy would know what to do...",location:"row2>col2",owner:"child", delay:1}],
     },
 
-    { //index 2
-      //options
+    { //Rowlf decides to call her.
+
       title:"Rowlf_Pain4",
       id:"ache1d",
       text:"But Rowlf's stomach ache continues to get worse...",
@@ -65,7 +67,8 @@ export class Ache1Page {
       dialogue: [{text:"My stomach really hurts, I'd better tell Mommy!",location:"row2>col2",owner:"child", delay:1}],
     },
 
-    { //index 3
+    { //Mommy comes in and sees Rowlf is in pain.
+
       title:"Rowlf_Pain3",
       id:"ache1c",
       text:"Rowlf decides to call his Mommy for help. She comes in, looking worried.",
@@ -78,7 +81,8 @@ export class Ache1Page {
       dialogue: [{text:"What is it, honey? What's wrong?",location:"row1>col2",owner:"child", delay:2}],
     },
 
-    { //index 4
+    { //Mommy explains that Rowlf ate too many cookies.
+
       title:"Rowlf_Pain5",
       id:"ache1e",
       text:"Unable to bear the pain, Rowlf starts to cry. Hearing Rowlf's cries, Dada comes into the room as well. He asks Mommy what is going on, and she explains.",
@@ -92,7 +96,8 @@ export class Ache1Page {
       dialogue: [{text:"Rowlf ate too many chocolate chip cookies.The poor dear now has a stomach ache.",location:"row1>col3",owner:"child", delay:1}]
     },
 
-    { //index 5
+    { //Dada offers to go get some medicine.
+
       title:"Rowlf_Pain6",
       id:"ache1f",
       text:"Dada tries to console Rowlf, and offers to go get some medicine.",
@@ -106,7 +111,8 @@ export class Ache1Page {
       dialogue: [{text:"Don't cry, honey. I will go get some medicine and you will feel better in no time, eh?",location:"row1>col1",owner:"father", delay:1}],
     },
 
-    { //index 6
+    { //Rowlf refuses the medicine.
+
       title:"Rowlf_Pain7",
       id:"ache1g",
       text:"However, Rowlf refuses to take the medicine even though his stomach ache continues to get worse.",
@@ -120,7 +126,8 @@ export class Ache1Page {
       dialogue: [{text:"B-but I don't want medicine, Dada! It tastes really bad!",location:"row1>col2",owner:"child", delay:1}],
     },
 
-    { //index 7
+    { //Mommy and Dada convince Rowlf.
+
       title:"Rowlf_Pain8",
       id:"ache1h",
       text:"Mommy and Dada explain to Rowlf that if he takes the medicine, he would feel better in no time.",
@@ -134,7 +141,8 @@ export class Ache1Page {
       dialogue: [{text:"Rowlf, honey, the medicine will really help the stomach ache go away and then maybe we can do something fun.",location:"row1>col3",owner:"child", delay:1}],
     },
 
-    { //index 8
+    { //Rowlf finally decides to take the medicine.
+
       title:"Rowlf_Pain9",
       id:"ache1i",
       text:"",
@@ -145,7 +153,8 @@ export class Ache1Page {
       dialogue: [{text:"Hmm...I guess Mommy and Dada are right. I should probably take the medicine.",location:"row1>col2",owner:"child", delay:1}],
     },
 
-    { //index 9
+    { //He starts to feel much better.
+
       title:"Rowlf_Pain10",
       id:"ache1j",
       text:"Rowlf decides to take the medicine, and soon, he starts to feel much better.",
@@ -156,7 +165,8 @@ export class Ache1Page {
       dialogue: [{text:"Wow!My stomach ache is gone. I wonder if Dada will take me to the candy store now.",location:"row1>col2",owner:"child", delay:1}],
     },
 
-    { //index 10
+    { //Rowlf asks his Dada if they can go to the candy shop.
+
       title:"Rowlf_Pain11",
       id:"ache1k",
       text:"Excited at the thought of candy, Rowlf goes to Dada and asks him if they can go the candy store.",
@@ -169,7 +179,8 @@ export class Ache1Page {
       dialogue: [{text:"Dada! I don't feel sick anymore.You said you would take me to candy shop today.Let's go!",location:"row1>col1",owner:"child", delay:1}],
     },
 
-    { //index 11
+    { //Dada says no to the candy shop.
+
       title:"Rowlf_Pain12",
       id:"ache1l",
       text:"",
@@ -182,7 +193,8 @@ export class Ache1Page {
       dialogue: [{text:"I'm afraid we can't go today, kiddo. We don't want you to get a stomach ache again. How about we go some other day?",location:"row1>col3",owner:"father", delay:1}],
     },
 
-    { //index 12
+    { //Rowlf realises his mistake.
+
       title:"Rowlf_Pain13",
       id:"ache1m",
       text:"Dejected, Rowlf realizes he should not have eaten all the cookies. Dada notices Rowlf's sadness, and attempts to console him.",
@@ -200,7 +212,8 @@ export class Ache1Page {
 
 
 
-    { //index 14
+    { //The family decides to have dinner together.
+
       title:"Rowlf_Pain15",
       id:"ache1n",
       text:"Rowlf, Mommy and Dada enjoy a delicious dinner of mashed potatoes, baked chicken and green beans.",
