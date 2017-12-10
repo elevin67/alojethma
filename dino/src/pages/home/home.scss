@@ -29,16 +29,23 @@ page-home {
   }
 
   .thought_cloud_text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: Papyrus, fantasy;
-  	font-size: 20px;
-  	font-style: normal;
-  	font-variant: normal;
-  	font-weight: bolder;
-  	line-height: 22px;
+    background: url("../assets/images/thought_cloud.gif");
+    background-size: 100% 100%;
+    height: auto;
+    width: auto;
+    border:1px solid #021a40;
+    display: inline-block;
+    margin: auto;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // font-family: Papyrus, fantasy;
+  	// font-size: 20px;
+  	// font-style: normal;
+  	// font-variant: normal;
+  	// font-weight: bolder;
+  	line-height: 25px;
     text-align: center;
     // bottom: 0;
   }

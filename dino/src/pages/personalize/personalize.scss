@@ -1,44 +1,44 @@
 page-personalize {
-  ion-grid {
-    // border: 2px solid black;
-    height: 100%;
-    width: 100%;
-    ion-row {
-      height: 25%;
-    }
-
-    .text_row {
-      height: 10%;
-    }
-
-    ion-col {
-      // border: 2px solid black;
-    }
-  }
-
-  img {
-    // width: 40vw;
-    // height: 50vh;
-    z-index: -1000000;
-  }
-
-  h2 { //story narrative
-    background-color: rgba(200,255,240, 0.90);
-    border: 2px solid black; padding: 10px;
-    border-radius: 15px;
-    font-family: Papyrus, fantasy;
-    font-size: 24px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 900;
-    line-height: 26px;
-    text-align: center;
-  }
-
-  ion-content {
-    background-image: url('../assets/images/kitchen.png');
-    background-size: cover;
-    background-repeat:   no-repeat;
-    background-position: center center;
-  }
+  // ion-grid {
+  //   // border: 2px solid black;
+  //   height: 100%;
+  //   width: 100%;
+  //   ion-row {
+  //     height: 25%;
+  //   }
+  //
+  //   .text_row {
+  //     height: 10%;
+  //   }
+  //
+  //   ion-col {
+  //     // border: 2px solid black;
+  //   }
+  // }
+  //
+  // img {
+  //   // width: 40vw;
+  //   // height: 50vh;
+  //   z-index: -1000000;
+  // }
+  //
+  // h2 { //story narrative
+  //   background-color: rgba(200,255,240, 0.90);
+  //   border: 2px solid black; padding: 10px;
+  //   border-radius: 15px;
+  //   font-family: Papyrus, fantasy;
+  //   font-size: 24px;
+  //   font-style: normal;
+  //   font-variant: normal;
+  //   font-weight: 900;
+  //   line-height: 26px;
+  //   text-align: center;
+  // }
+  //
+  // ion-content {
+  //   background-image: url('../assets/images/kitchen.png');
+  //   background-size: cover;
+  //   background-repeat:   no-repeat;
+  //   background-position: center center;
+  // }
 }
