@@ -201,7 +201,7 @@ export class CookieActPage {
         title: "Cookie3a",
         id: "cookie3a",
         text: "Mommy brings out the cookies. They smell so good!",
-        image: "kitchen",
+        image: "kitchen2",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
           {image: this.character_path+"/motherBlink.gif", style: "mother", location: "row2>col3"},
