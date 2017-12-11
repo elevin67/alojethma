@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CookieActPage } from '../cookie-act/cookie-act';
+import { NightPage } from '../night/night';
 
 @IonicPage()
 @Component({
@@ -13,7 +14,7 @@ export class PersonalizePage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.startStory = function(color) {
       console.log(color);
-      this.navCtrl.push(CookieActPage, {
+      this.navCtrl.push(NightPage, {
         dino_color: color
       });
     }

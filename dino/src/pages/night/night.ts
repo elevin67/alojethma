@@ -30,10 +30,13 @@ export class NightPage {
   dino_color;
   character_path;
   ache: boolean;
+  sleep_background;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
     this.dino_color = this.navParams.get('dino_color');
     this.character_path = "../assets/images/" + this.dino_color;
+    this.sleep_background = this.dino_color+"Sleep";
+
     this.pages = [
       {
         title: "Night",
@@ -73,7 +76,7 @@ export class NightPage {
         title: "SleepingRowlf",
         id: "sleep",
         text: "",
-        image: "dinoB",
+        image: this.sleep_background,
         options: [],
         options_delay: 3,
         characters: [],
