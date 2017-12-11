@@ -73,7 +73,7 @@ export class NightPage {
         title: "SleepingRowlf",
         id: "sleep",
         text: "",
-        image: "dinoB"
+        image: "dinoB",
         options: [],
         options_delay: 3,
         characters: [],
