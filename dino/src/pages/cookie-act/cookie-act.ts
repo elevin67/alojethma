@@ -42,7 +42,7 @@ export class CookieActPage {
         title: "Cookie1a",
         id: "cookie1a",
         text: "It is a lovely Sunday afternoon and Rowlf is playing in his backyard.",
-        image: "backyard",
+        image: "dinoB",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col2"},
           {image: "../assets/images/sun.gif", style: "sun", location: "row1>col3"}
