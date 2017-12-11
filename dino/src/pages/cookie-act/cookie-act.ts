@@ -96,7 +96,7 @@ export class CookieActPage {
           {image: "../assets/images/sun.gif", style: "sun", location: "row1>col3"}
         ],
         dialogue: [
-          {text: "Rowlf honey??", location: "row1>col1", owner: "mother", delay: 1}
+          {text: "Rowlf, honey??", location: "row1>col1", owner: "mother", delay: 1}
         ],
         options: [
           {title: 'Next', id: 'cookie2a', location: 'row2>col3', style: 'left'}

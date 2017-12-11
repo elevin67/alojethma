@@ -79,9 +79,9 @@ export class CandyPage {
         text: "Rowlf and Dad drove to the candy store and Rowlf is excited to buy his favourite candy.",
         image: "candy",
         options: [
-          { title: "Chocolate!", id: "candyChoco", location: "row3>col1", style: "right" },
-          { title: "Gummy Bear!", id: "candyGummy", location: "row3>col2", style: "left" },
-          { title: "Sour Bomb!", id: "candySour", location: "row3>col2", style: "right" }
+          { title: "Chocolate!", id: "candyChoco", location: "row2>col1", style: "right" },
+          { title: "Gummy Bear!", id: "candyGummy", location: "row2>col2", style: "left" },
+          { title: "Sour Bomb!", id: "candySour", location: "row2>col2", style: "right" }
         ],
         options_delay: 3,
         characters: [
@@ -97,12 +97,13 @@ export class CandyPage {
         title: "CandyDad",
         id: "candyChoco",
         text: "",
-        image: "candy",
+        image: "dinoB",
         options: [
           { title: "Next..", id: "candyend", location: "row3>col1", style: "right" }
         ],
         options_delay: 3,
         characters: [
+          {image: '../assets/images/choco.png', style: 'cookie', location: "row2>col2"}
         ],
         dialogue: [
         ]
@@ -112,12 +113,13 @@ export class CandyPage {
         title: "CandyDad",
         id: "candyGummy",
         text: "",
-        image: "backyard",
+        image: "dinoB",
         options: [
           { title: "Next..", id: "candyend", location: "row3>col1", style: "right" }
         ],
         options_delay: 3,
         characters: [
+          {image: '../assets/images/gummy.png', style: 'cookie', location: "row2>col2"}
         ],
         dialogue: [
         ]
@@ -127,12 +129,13 @@ export class CandyPage {
         title: "CandyDad",
         id: "candySour",
         text: "",
-        image: "LivingRoom",
+        image: "dinoB",
         options: [
           { title: "Next..", id: "candyend", location: "row3>col1", style: "right" }
         ],
         options_delay: 3,
         characters: [
+          {image: '../assets/images/sour.png', style: 'cookie', location: "row2>col2"}
         ],
         dialogue: [
         ]
