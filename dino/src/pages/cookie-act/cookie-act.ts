@@ -42,7 +42,7 @@ export class CookieActPage {
         title: "Cookie1a",
         id: "cookie1a",
         text: "It is a lovely Sunday afternoon and Rowlf is playing in his backyard.",
-        image: "dinoB",
+        image: "backyard",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col2"},
           {image: "../assets/images/sun.gif", style: "sun", location: "row1>col3"}
@@ -96,7 +96,7 @@ export class CookieActPage {
           {image: "../assets/images/sun.gif", style: "sun", location: "row1>col3"}
         ],
         dialogue: [
-          {text: "Rowlf, honey??", location: "row1>col1", owner: "mother", delay: 1}
+          {text: "Rowlf honey??", location: "row1>col1", owner: "mother", delay: 1}
         ],
         options: [
           {title: 'Next', id: 'cookie2a', location: 'row2>col3', style: 'left'}
