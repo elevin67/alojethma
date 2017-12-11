@@ -39,12 +39,13 @@ export class NightPage {
         title: "Night",
         id: "night1",
         text: "After finishing dinner, Rowlf is very tired. He goes back to his room.",
-        image: "kitchen",
+        image: "bedroom",
         options: [{ title: "Next", id: "night2", location: "row3>col1", style: "right" }],
         options_delay: 3,
         characters: [
           { image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" },
-          { image: this.character_path + "/fatherblink.gif", style: "father", location: "row2>col3" }
+          { image: this.character_path + "/fatherblink.gif", style: "father", location: "row2>col3" },
+          { image: this.character_path + "/motherblink.gif", style: "mother", location: "row2>col1"}
         ],
         dialogue: [
           { text: "Ok, bud, off yo go to sleep..", location: "row1>col3", owner: "father", delay: 1 }
@@ -55,23 +56,24 @@ export class NightPage {
         title: "Night",
         id: "night2",
         text: "",
-        image: "kitchen",
+        image: "bedroom",
         options: [{ title: "I love you both", id: "sleep", location: "row3>col1", style: "right" }],
         options_delay: 3,
         characters: [
           { image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" },
-          { image: this.character_path + "/fatherblink.gif", style: "father", location: "row2>col3" }
+          { image: this.character_path + "/fatherblink.gif", style: "father", location: "row2>col3" },
+          { image: this.character_path + "/motherblink.gif", style: "mother", location: "row2>col1"}
         ],
         dialogue: [
           { text: "I love you Momma. I love you Dada.", location: "row1>col3", owner: "child", delay: 1 },
-          { text: "Oh hon, we both love you too.", location: "row1>col3", owner: "mother", delay: 1 }
+          { text: "Oh hon, we both love you too.", location: "row1>col1", owner: "mother", delay: 1 }
         ]
       },
       {
         title: "SleepingRowlf",
         id: "sleep",
         text: "",
-        image: "kitchen",
+        image: "dinoB"
         options: [],
         options_delay: 3,
         characters: [],
