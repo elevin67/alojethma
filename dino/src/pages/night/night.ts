@@ -34,7 +34,7 @@ export class NightPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
     this.dino_color = this.navParams.get('dino_color');
-    this.character_path = "../assets/images/" + this.dino_color;
+    this.character_path = "./assets/images/" + this.dino_color;
     this.sleep_background = this.dino_color+"Sleep";
 
     this.pages = [
@@ -51,7 +51,7 @@ export class NightPage {
           { image: this.character_path + "/motherblink.gif", style: "mother", location: "row2>col1"}
         ],
         dialogue: [
-          { text: "Ok, bud, off yo go to sleep..", location: "row1>col3", owner: "father", delay: 1 }
+          { text: "Ok, bud, off you go to sleep..", location: "row1>col3", owner: "father", delay: 1 }
         ]
       },
 
@@ -60,7 +60,7 @@ export class NightPage {
         id: "night2",
         text: "",
         image: "bedroom",
-        options: [{ title: "I love you both", id: "sleep", location: "row3>col1", style: "right" }],
+        options: [{ title: "Next", id: "sleep", location: "row3>col1", style: "right" }],
         options_delay: 3,
         characters: [
           { image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" },
@@ -68,7 +68,7 @@ export class NightPage {
           { image: this.character_path + "/motherblink.gif", style: "mother", location: "row2>col1"}
         ],
         dialogue: [
-          { text: "I love you Momma. I love you Dada.", location: "row1>col3", owner: "child", delay: 1 },
+          { text: "I love you Momma. I love you Dada.", location: "row2>col2", owner: "child", delay: 1 },
           { text: "Oh hon, we both love you too.", location: "row1>col1", owner: "mother", delay: 1 }
         ]
       },
@@ -77,7 +77,7 @@ export class NightPage {
         id: "sleep",
         text: "",
         image: this.sleep_background,
-        options: [],
+        options: [{ title: "The end!", id: "sleep", location: "row2>col3", style: "left" }],
         options_delay: 3,
         characters: [],
         dialogue: []

@@ -35,7 +35,7 @@ export class CandyPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
     this.dino_color = this.navParams.get('dino_color');
-    this.character_path = "../assets/images/" + this.dino_color;
+    this.character_path = "./assets/images/" + this.dino_color;
     this.pages = [
       {
         title: "CandyDad",
@@ -103,7 +103,7 @@ export class CandyPage {
         ],
         options_delay: 3,
         characters: [
-          {image: '../assets/images/choco.png', style: 'cookie', location: "row2>col2"}
+          {image: './assets/images/choco.png', style: 'cookie', location: "row2>col2"}
         ],
         dialogue: [
         ]
@@ -119,7 +119,7 @@ export class CandyPage {
         ],
         options_delay: 3,
         characters: [
-          {image: '../assets/images/gummy.png', style: 'cookie', location: "row2>col2"}
+          {image: './assets/images/gummy.png', style: 'cookie', location: "row2>col2"}
         ],
         dialogue: [
         ]
@@ -135,7 +135,7 @@ export class CandyPage {
         ],
         options_delay: 3,
         characters: [
-          {image: '../assets/images/sour.png', style: 'cookie', location: "row2>col2"}
+          {image: './assets/images/sour.png', style: 'cookie', location: "row2>col2"}
         ],
         dialogue: [
         ]
