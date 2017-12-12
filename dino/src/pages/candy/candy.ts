@@ -155,24 +155,20 @@ export class CandyPage {
           { image: this.character_path + "/fatherblink.gif", style: "father", location: "row2>col3" }
         ],
         dialogue: [
-          { text: "Well let'g go home and have dinner.", location: "row1>col3", owner: "father", delay: 1 }
+          { text: "Well let's go home and have dinner.", location: "row1>col3", owner: "father", delay: 1 }
         ]
       },
 
       {
         title: "CandyDad",
         id: "candydinner",
-        text: "Rowlf and his parents have dinner, and after a long day Momma and Dada put Rowlf to bed..",
-        image: "kitchen",
-        options: [
-          { title: "Next..", id: "next", location: "row3>col1", style: "right" }
-        ],
+        text:"Rowlf, Mommy and Dada enjoy a delicious dinner of mashed potatoes, baked chicken and green beans.",
+        image:"dinoB",
+        options: [{title:"Next", id:"next", location:"row2>col3", style:"right"}],
         options_delay: 3,
         characters: [
-        ],
-        dialogue: [
-          { text: "", location: "row1>col3", owner: "father", delay: 1 }
-        ]
+          {image: "./assets/images/dinner2.png", style: "food", location: "row2>col2"}],
+        dialogue: [],
       },
     ];
 

@@ -221,7 +221,7 @@ export class Ache1Page {
       options: [{title:"Next", id:"next", location:"row2>col3", style:"right"}],
       options_delay: 3,
       characters: [
-        {image: "../assets/images/dinner2.png", style: "food", location: "row2>col2"}],
+        {image: "./assets/images/dinner2.png", style: "food", location: "row2>col2"}],
       dialogue: [],
     },
     ];

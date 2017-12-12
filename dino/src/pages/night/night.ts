@@ -77,8 +77,8 @@ export class NightPage {
         id: "sleep",
         text: "",
         image: this.sleep_background,
-        options: [{ title: "The end!", id: "sleep", location: "row2>col3", style: "left" }],
-        options_delay: 3,
+        options: [{ title: "The end!", id: "next", location: "row2>col3", style: "left" }],
+        options_delay: 1,
         characters: [],
         dialogue: []
       },
