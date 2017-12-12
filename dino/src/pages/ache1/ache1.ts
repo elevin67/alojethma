@@ -27,7 +27,7 @@ export class Ache1Page {
   constructor(public navCtrl: NavController, public navParams: NavParams,public events: Events) {
     this.dino_color = this.navParams.get('dino_color');
     this.ache = this.navParams.get('ache');
-    this.character_path = "../assets/images/"+this.dino_color;
+    this.character_path = "./assets/images/"+this.dino_color;
     this.pages = [
 
     { //Rowlf first feels tummy ache.

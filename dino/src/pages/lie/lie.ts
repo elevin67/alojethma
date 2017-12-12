@@ -11,7 +11,7 @@ import { DrawActPage } from '../draw-act/draw-act';
  */
 @Component({
   selector: 'page-lie',
-  templateUrl: '../lie/lie.html',
+  templateUrl: '../act.html',
 })
 @IonicPage()
 export class LiePage {
@@ -41,7 +41,7 @@ export class LiePage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
     this.dino_color = this.navParams.get('dino_color');
     this.ache = this.navParams.get('ache');
-    this.character_path = "../assets/images/" + this.dino_color;
+    this.character_path = "./assets/images/" + this.dino_color;
     this.pages = [
     {
       title:"Rowlf_Lies",

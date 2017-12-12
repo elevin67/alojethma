@@ -13,7 +13,7 @@ import { DrawActPage } from '../draw-act/draw-act';
 @IonicPage()
 @Component({
   selector: 'page-truth',
-  templateUrl: '../truth/truth.html',
+  templateUrl: '../act.html',
 })
 export class TruthPage {
 
@@ -26,7 +26,7 @@ export class TruthPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
     this.dino_color = this.navParams.get('dino_color');
     this.ache = this.navParams.get('ache');
-    this.character_path = "../assets/images/"+this.dino_color;
+    this.character_path = "./assets/images/"+this.dino_color;
     this.pages = [
 
 
