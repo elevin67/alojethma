@@ -35,7 +35,7 @@ export class CandyPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
     this.dino_color = this.navParams.get('dino_color');
-    this.character_path = "../assets/images/" + this.dino_color;
+    this.character_path = "./assets/images/" + this.dino_color;
     this.pages = [
       {
         title: "CandyDad",
@@ -79,9 +79,9 @@ export class CandyPage {
         text: "Rowlf and Dad drove to the candy store and Rowlf is excited to buy his favourite candy.",
         image: "candy",
         options: [
-          { title: "Chocolate!", id: "candyChoco", location: "row3>col1", style: "right" },
-          { title: "Gummy Bear!", id: "candyGummy", location: "row3>col2", style: "left" },
-          { title: "Sour Bomb!", id: "candySour", location: "row3>col2", style: "right" }
+          { title: "Chocolate!", id: "candyChoco", location: "row2>col1", style: "right" },
+          { title: "Gummy Bear!", id: "candyGummy", location: "row2>col2", style: "left" },
+          { title: "Sour Bomb!", id: "candySour", location: "row2>col2", style: "right" }
         ],
         options_delay: 3,
         characters: [
@@ -97,12 +97,13 @@ export class CandyPage {
         title: "CandyDad",
         id: "candyChoco",
         text: "",
-        image: "candy",
+        image: "dinoB",
         options: [
           { title: "Next..", id: "candyend", location: "row3>col1", style: "right" }
         ],
         options_delay: 3,
         characters: [
+          {image: './assets/images/choco.png', style: 'cookie', location: "row2>col2"}
         ],
         dialogue: [
         ]
@@ -112,12 +113,13 @@ export class CandyPage {
         title: "CandyDad",
         id: "candyGummy",
         text: "",
-        image: "backyard",
+        image: "dinoB",
         options: [
           { title: "Next..", id: "candyend", location: "row3>col1", style: "right" }
         ],
         options_delay: 3,
         characters: [
+          {image: './assets/images/gummy.png', style: 'cookie', location: "row2>col2"}
         ],
         dialogue: [
         ]
@@ -127,12 +129,13 @@ export class CandyPage {
         title: "CandyDad",
         id: "candySour",
         text: "",
-        image: "LivingRoom",
+        image: "dinoB",
         options: [
           { title: "Next..", id: "candyend", location: "row3>col1", style: "right" }
         ],
         options_delay: 3,
         characters: [
+          {image: './assets/images/sour.png', style: 'cookie', location: "row2>col2"}
         ],
         dialogue: [
         ]
@@ -152,24 +155,20 @@ export class CandyPage {
           { image: this.character_path + "/fatherblink.gif", style: "father", location: "row2>col3" }
         ],
         dialogue: [
-          { text: "Well let'g go home and have dinner.", location: "row1>col3", owner: "father", delay: 1 }
+          { text: "Well let's go home and have dinner.", location: "row1>col3", owner: "father", delay: 1 }
         ]
       },
 
       {
         title: "CandyDad",
         id: "candydinner",
-        text: "Rowlf and his parents have dinner, and after a long day Momma and Dada put Rowlf to bed..",
-        image: "kitchen",
-        options: [
-          { title: "Next..", id: "next", location: "row3>col1", style: "right" }
-        ],
+        text:"Rowlf, Mommy and Dada enjoy a delicious dinner of mashed potatoes, baked chicken and green beans.",
+        image:"dinoB",
+        options: [{title:"Next", id:"next", location:"row2>col3", style:"right"}],
         options_delay: 3,
         characters: [
-        ],
-        dialogue: [
-          { text: "", location: "row1>col3", owner: "father", delay: 1 }
-        ]
+          {image: "./assets/images/dinner2.png", style: "food", location: "row2>col2"}],
+        dialogue: [],
       },
     ];
 

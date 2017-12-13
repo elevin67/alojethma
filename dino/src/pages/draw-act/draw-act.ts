@@ -1,7 +1,5 @@
 import { Component, ViewChild, Renderer } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, Platform, Events } from 'ionic-angular';
-import { Screenshot } from '@ionic-native/screenshot';
-import { HomePage } from '../home/home';
+import { IonicPage, NavParams, AlertController, Platform, Events } from 'ionic-angular';
 import { Ache1Page } from '../ache1/ache1';
 import { CandyPage } from '../candy/candy';
 
@@ -23,7 +21,6 @@ export class DrawActPage {
   ache: boolean;
 
   @ViewChild('myCanvas') canvas: any;
-  screenshotPage;
   canvasElement: any;
   lastX: number;
   lastY: number;
@@ -33,7 +30,7 @@ export class DrawActPage {
 
   brushSize: number = 10;
 
-  constructor(public navParams: NavParams, public platform: Platform, public renderer: Renderer, private alertCtrl: AlertController, private screenshot: Screenshot, public events: Events) {
+  constructor(public navParams: NavParams, public platform: Platform, public renderer: Renderer, private alertCtrl: AlertController, public events: Events) {
       this.dino_color = this.navParams.get('dino_color');
       this.ache = this.navParams.get('ache');
       this.availableColors = [

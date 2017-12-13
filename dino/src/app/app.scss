@@ -153,3 +153,44 @@ h2 { //story narrative
   background-repeat:   no-repeat;
   background-position: center center;
 }
+
+
+.food {
+  width: 80vw;
+  height: 60vh;
+}
+
+.candy {
+  background-image: url('../assets/images/candy.png');
+  background-size: cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
+.dinoB {
+  background-image: url('../assets/images/dinoB.png');
+  background-size: cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
+.redSleep {
+  background-image: url('../assets/images/red/sleep.png');
+  background-size: cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
+.greenSleep {
+  background-image: url('../assets/images/green/sleep.png');
+  background-size: cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
+.blueSleep {
+  background-image: url('../assets/images/blue/sleep.png');
+  background-size: cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+}

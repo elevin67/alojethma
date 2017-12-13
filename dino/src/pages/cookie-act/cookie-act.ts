@@ -35,7 +35,7 @@ export class CookieActPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
     this.dino_color = this.navParams.get('dino_color');
-    this.character_path = "../assets/images/"+this.dino_color;
+    this.character_path = "./assets/images/"+this.dino_color;
     this.pages = [
       // Cookie1
       {
@@ -45,7 +45,7 @@ export class CookieActPage {
         image: "backyard",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col2"},
-          {image: "../assets/images/sun.gif", style: "sun", location: "row1>col3"}
+          {image: "./assets/images/sun.gif", style: "sun", location: "row1>col3"}
         ],
         dialogue: [],
         options: [
@@ -60,7 +60,7 @@ export class CookieActPage {
         image: "backyard",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col2"},
-          {image: "../assets/images/sun.gif", style: "sun", location: "row1>col3"}
+          {image: "./assets/images/sun.gif", style: "sun", location: "row1>col3"}
         ],
         dialogue: [
           {text: "Rowlf, can you come to the kitchen please?", location: "row1>col1", owner: "parent", delay: 1},
@@ -77,7 +77,7 @@ export class CookieActPage {
         image: "backyard",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col2"},
-          {image: "../assets/images/sun.gif", style: "sun", location: "row1>col3"}
+          {image: "./assets/images/sun.gif", style: "sun", location: "row1>col3"}
         ],
         dialogue: [],
         options: [
@@ -168,7 +168,7 @@ export class CookieActPage {
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
           {image: this.character_path+"/motherBlink.gif", style: "mother", location: "row2>col3"},
-          {image: '../assets/images/cookie.png', style: 'cookie', location: "row3>col2"}
+          {image: './assets/images/cookie.png', style: 'cookie', location: "row3>col2"}
         ],
         dialogue: [
           {text: "What about chocolate chip cookies??", location: "row1>col3", owner: "mother", delay: 1},
@@ -205,7 +205,7 @@ export class CookieActPage {
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
           {image: this.character_path+"/motherBlink.gif", style: "mother", location: "row2>col3"},
-          {image: '../assets/images/cookieFull.png', style: 'cookieTray', location: 'row3>col2'},
+          {image: './assets/images/cookieFull.png', style: 'cookieTray', location: 'row3>col2'},
         ],
         dialogue: [
           {text: "Now don't eat all of them at once! You may get a tummy ache...", location: "row1>col3", owner: "mother", delay: 2},
@@ -222,7 +222,7 @@ export class CookieActPage {
         image: "kitchen",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
-          {image: '../assets/images/cookieTray.gif', style: 'cookieTray', location: 'row3>col2'},
+          {image: './assets/images/cookieTray.gif', style: 'cookieTray', location: 'row3>col2'},
         ],
         dialogue: [],
         options: [
@@ -237,7 +237,7 @@ export class CookieActPage {
         image: "kitchen",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
-          {image: '../assets/images/cookie2.png', style: 'cookieTray', location: 'row3>col2'},
+          {image: './assets/images/cookie2.png', style: 'cookieTray', location: 'row3>col2'},
         ],
         dialogue: [
           {text: "Should I eat one more?", location: "row2>col1", owner: "child", delay: 2},
@@ -255,7 +255,6 @@ export class CookieActPage {
         image: "kitchen",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
-          {image: '../assets/images/cookie2.png', style: 'cookieTray', location: 'row3>col2'},
         ],
         dialogue: [
           {text: "Mommy said my tummy would hurt. I'm done eating cookies", location: "row2>col1", owner: "child", delay: 2},
@@ -272,7 +271,7 @@ export class CookieActPage {
         image: "kitchen",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
-          {image: '../assets/images/cookie2-1.png', style: 'cookieTray', location: 'row3>col2'},
+          {image: './assets/images/cookie1.png', style: 'cookieTray', location: 'row3>col2'},
         ],
         dialogue: [
           {text: "I kind of want that last cookie... What should I do?", location: "row2>col1", owner: "child", delay: 2},

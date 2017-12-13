@@ -27,7 +27,7 @@ export class Ache1Page {
   constructor(public navCtrl: NavController, public navParams: NavParams,public events: Events) {
     this.dino_color = this.navParams.get('dino_color');
     this.ache = this.navParams.get('ache');
-    this.character_path = "../assets/images/"+this.dino_color;
+    this.character_path = "./assets/images/"+this.dino_color;
     this.pages = [
 
     { //Rowlf first feels tummy ache.
@@ -217,10 +217,11 @@ export class Ache1Page {
       title:"Rowlf_Pain15",
       id:"ache1n",
       text:"Rowlf, Mommy and Dada enjoy a delicious dinner of mashed potatoes, baked chicken and green beans.",
-      image:"kitchen",
-      options: [{title:"Next", id:"next", location:"row2>col2", style:"right"}],
+      image:"dinoB",
+      options: [{title:"Next", id:"next", location:"row2>col3", style:"right"}],
       options_delay: 3,
-      characters: [],
+      characters: [
+        {image: "./assets/images/dinner2.png", style: "food", location: "row2>col2"}],
       dialogue: [],
     },
     ];
