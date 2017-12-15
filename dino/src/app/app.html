@@ -1,11 +1,17 @@
-<ion-nav [root]="rootPage" #content></ion-nav>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
 <p>If you are reading this, it is because your browser does not support the audio element.</p>
-<!-- <audio src="/assets/music/dino.mp3" autoplay loop></audio> -->
-<div class="speaker"></div>
+<audio autoplay="true" loop>
+  <source src="./assets/music/dino.mp3">
+</audio>
 
-<audio id="player" src="/assets/music/dino.mp3" ></audio>
-<div>
-    <button onclick="document.getElementById('player').play()">Play</button>
+<!-- <div class="speaker"></div> -->
+
+<!-- <audio id="player" src="/assets/music/dino.mp3" ></audio>
+<body>
+<div> -->
+  <!-- <button onclick="document.getElementById('player').pause()">Pause</button> -->
+    <!-- <button onclick="document.getElementById('player').play()">Play</button> -->
     <!-- <button onclick="document.getElementById('player').pause()">Pause</button>
     <button onclick="document.getElementById('player').muted=!document.getElementById('player').muted">Mute/ Unmute</button> -->
-</div>
+<!-- </div> -->
+<!-- </body> -->
