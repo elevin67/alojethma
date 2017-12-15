@@ -90,7 +90,7 @@ export class Ache1Page {
       options: [{title:"Next...", id:"ache1f", location:"row2>col3", style:"right"}],
       options_delay: 3,
       characters: [
-        {image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col2"},
+        {image:this.character_path+"/sadRowlf.png", style:"child", location:"row3>col2"},
         {image:this.character_path+"/motherBlink.gif", style:"mother", location:"row2>col3"},
         {image:this.character_path+"/fatherBlink.gif", style:"father", location:"row2>col1"}],
       dialogue: [{text:"Rowlf ate too many chocolate chip cookies.The poor dear now has a stomach ache.",location:"row1>col3",owner:"child", delay:1}]
