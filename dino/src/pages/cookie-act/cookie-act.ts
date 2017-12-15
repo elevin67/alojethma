@@ -93,7 +93,7 @@ export class CookieActPage {
         image: "backyard",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col2"},
-          {image: "../assets/images/sun.gif", style: "sun", location: "row1>col3"}
+          {image: "./assets/images/sun.gif", style: "sun", location: "row1>col3"}
         ],
         dialogue: [
           {text: "Rowlf honey??", location: "row1>col1", owner: "mother", delay: 1}
@@ -201,7 +201,7 @@ export class CookieActPage {
         title: "Cookie3a",
         id: "cookie3a",
         text: "Mommy brings out the cookies. They smell so good!",
-        image: "kitchen",
+        image: "dinoB",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
           {image: this.character_path+"/motherBlink.gif", style: "mother", location: "row2>col3"},
@@ -219,7 +219,7 @@ export class CookieActPage {
         title: "Cookie3b",
         id: "cookie3b",
         text: "Mommy leaves. Rowlf eats a cookie, and another one, and another one...",
-        image: "kitchen",
+        image: "dinoB",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
           {image: './assets/images/cookieTray.gif', style: 'cookieTray', location: 'row3>col2'},
@@ -234,7 +234,7 @@ export class CookieActPage {
         title: "Cookie3c",
         id: "cookie3c",
         text: "There are only two cookies left...",
-        image: "kitchen",
+        image: "dinoB",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
           {image: './assets/images/cookie2.png', style: 'cookieTray', location: 'row3>col2'},
@@ -268,7 +268,7 @@ export class CookieActPage {
         title: "Cookie3e",
         id: "cookie3e",
         text: "Now there is only one cookie left... Mommy said not to eat all the cookies!",
-        image: "kitchen",
+        image: "dinoB",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
           {image: './assets/images/cookie1.png', style: 'cookieTray', location: 'row3>col2'},

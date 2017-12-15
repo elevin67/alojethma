@@ -78,7 +78,7 @@ export class Ache1Page {
       characters: [
         {image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col1"},
         {image:this.character_path+"/motherBlink.gif", style:"mother", location:"row2>col2"}],
-      dialogue: [{text:"What is it, honey? What's wrong?",location:"row1>col2",owner:"child", delay:2}],
+      dialogue: [{text:"What is it, honey? What's wrong?",location:"row1>col2",owner:"mother", delay:2}],
     },
 
     { //Mommy explains that Rowlf ate too many cookies.
@@ -90,10 +90,10 @@ export class Ache1Page {
       options: [{title:"Next...", id:"ache1f", location:"row2>col3", style:"right"}],
       options_delay: 3,
       characters: [
-        {image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col2"},
+        {image:this.character_path+"/sadRowlf.png", style:"child", location:"row3>col2"},
         {image:this.character_path+"/motherBlink.gif", style:"mother", location:"row2>col3"},
         {image:this.character_path+"/fatherBlink.gif", style:"father", location:"row2>col1"}],
-      dialogue: [{text:"Rowlf ate too many chocolate chip cookies.The poor dear now has a stomach ache.",location:"row1>col3",owner:"child", delay:1}]
+      dialogue: [{text:"Rowlf ate too many chocolate chip cookies.The poor dear now has a stomach ache.",location:"row1>col3",owner:"mother", delay:1}]
     },
 
     { //Dada offers to go get some medicine.
@@ -123,7 +123,7 @@ export class Ache1Page {
         {image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col2"},
         {image:this.character_path+"/motherBlink.gif", style:"mother", location:"row2>col3"},
         {image:this.character_path+"/fatherBlink.gif", style:"father", location:"row2>col1"}],
-      dialogue: [{text:"B-but I don't want medicine, Dada! It tastes really bad!",location:"row1>col2",owner:"child", delay:1}],
+      dialogue: [{text:"B-but I don't want medicine, Dada! It tastes really bad!",location:"row2>col2",owner:"child", delay:1}],
     },
 
     { //Mommy and Dada convince Rowlf.
@@ -150,7 +150,7 @@ export class Ache1Page {
       options: [{title:"Take the medcine", id:"ache1j", location:"row2>col3", style:"right"}],
       options_delay: 3,
       characters: [{image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col2"}],
-      dialogue: [{text:"Hmm...I guess Mommy and Dada are right. I should probably take the medicine.",location:"row1>col2",owner:"child", delay:1}],
+      dialogue: [{text:"Hmm...I guess Mommy and Dada are right. I should probably take the medicine.",location:"row2>col2",owner:"child", delay:1}],
     },
 
     { //He starts to feel much better.
@@ -162,7 +162,7 @@ export class Ache1Page {
       options: [{title:"Next", id:"ache1k", location:"row2>col3", style:"right"}],
       options_delay: 3,
       characters: [{image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col2"}],
-      dialogue: [{text:"Wow!My stomach ache is gone. I wonder if Dada will take me to the candy store now.",location:"row1>col2",owner:"child", delay:1}],
+      dialogue: [{text:"Wow! My stomach ache is gone. I wonder if Dada will take me to the candy store now.",location:"row2>col2",owner:"child", delay:1}],
     },
 
     { //Rowlf asks his Dada if they can go to the candy shop.
@@ -176,7 +176,7 @@ export class Ache1Page {
       characters: [
         {image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col1"},
         {image:this.character_path+"/fatherBlink.gif", style:"father", location:"row2>col3"}],
-      dialogue: [{text:"Dada! I don't feel sick anymore.You said you would take me to candy shop today.Let's go!",location:"row1>col1",owner:"child", delay:1}],
+      dialogue: [{text:"Dada! I don't feel sick anymore.You said you would take me to candy shop today.Let's go!",location:"row2>col1",owner:"child", delay:1}],
     },
 
     { //Dada says no to the candy shop.
@@ -203,10 +203,10 @@ export class Ache1Page {
       options_delay: 3,
       characters: [
         {image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col1"},
-        {image:this.character_path+"/fatherBlink.gif", style:"father", location:"row3>col3"}
+        {image:this.character_path+"/fatherBlink.gif", style:"father", location:"row2>col3"}
       ],
       dialogue: [
-        {text:"Hey, kiddo, don't feel bad. Let's go have some dinner now. I've made your favourite dish.",location:"row2>col3",owner:"father", delay:1}
+        {text:"Hey, kiddo, don't feel bad. Let's go have some dinner now. I've made your favourite dish.",location:"row1>col3",owner:"father", delay:1}
       ],
     },
 

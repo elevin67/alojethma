@@ -59,6 +59,7 @@ export class DrawActPage {
     }
 
     handleStart(ev) {
+      console.log('handleStart');
       this.lastX = ev.touches[0].pageX;
       this.lastY = ev.touches[0].pageY;
     }
@@ -66,8 +67,12 @@ export class DrawActPage {
     handleMove(ev) {
 
       let ctx = this.canvasElement.getContext('2d');
+      console.log(ctx);
       let currentX = ev.touches[0].pageX;
       let currentY = ev.touches[0].pageY;
+
+      // console.log(currentX);
+      // console.log(currentY);
 
       ctx.beginPath();
       ctx.lineJoin = 'round';
@@ -80,6 +85,9 @@ export class DrawActPage {
 
       this.lastX = currentX;
       this.lastY = currentY;
+
+      // console.log(this.lastX);
+      // console.log(this.lastY);
     }
 
     clearCanvas() {

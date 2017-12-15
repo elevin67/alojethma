@@ -90,6 +90,7 @@ export class MyApp {
   }
 
   reveal_delayed (currentPage) {
+    console.log('in reveal_delayed');
     // reveals the options
     // don't use document
     // use currentPage
@@ -102,6 +103,7 @@ export class MyApp {
 
     // reveals dialogues
     for (let i = 0; i < currentPage.dialogue.length; i++) {
+      console.log('revealing dialogues')
       let dialogue_delay = currentPage.dialogue[i].delay;
       let dialogue_id = currentPage.dialogue[i].owner;
       setTimeout(function() {

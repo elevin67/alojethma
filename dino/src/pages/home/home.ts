@@ -11,7 +11,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.openStory = function() {
-      this.navCtrl.push(PersonalizePage);
+      this.navCtrl.setRoot(PersonalizePage);
     }
   }
 

@@ -41,7 +41,7 @@ export class TruthPage {
       options_delay: 3,
       characters: [
         {image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col2"},
-        {image:this.character_path+"/motherblink.gif", style:"mother", location:"row2>col3"}
+        {image:this.character_path+"/motherBlink.gif", style:"mother", location:"row2>col3"}
       ],
       dialogue: [{text:"Hey bud, how many cookies did you eat?",location:"row1>col3",owner:"mother", delay:1}]
     },
@@ -72,7 +72,7 @@ export class TruthPage {
       options_delay: 3,
       characters: [
         {image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col2"},
-        {image:this.character_path+"/motherblink.gif", style:"mother", location:"row2>col3"}
+        {image:this.character_path+"/motherBlink.gif", style:"mother", location:"row2>col3"}
       ],
       dialogue: [
         {text:"Very well, Rowlf! You did not eat too many! Well, do you want to go finish up the drawing that you have to turn it for Mr. Rex’s class tomorrow?",location:"row1>col3",owner:"mother", delay:2}
@@ -90,7 +90,7 @@ export class TruthPage {
       options_delay: 3,
       characters: [
         {image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col2"},
-        {image:this.character_path+"/motherblink.gif", style:"mother", location:"row2>col3"}
+        {image:this.character_path+"/motherBlink.gif", style:"mother", location:"row2>col3"}
       ],
       dialogue: [{text:"Yes!!",location:"row2>col2",owner:"child", delay:2}],
     },
