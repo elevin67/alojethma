@@ -42,9 +42,9 @@ export class MyApp {
     });
   }
 
-  sendFeedback (id, pages, component, dino_color, ache) {
+  sendFeedback (id, pages, next_act, dino_color, ache) {
     if(id=='next') {
-      this.navCtrl.setRoot(component, {
+      this.navCtrl.setRoot(next_act, {
         dino_color: dino_color,
         ache: ache
       });

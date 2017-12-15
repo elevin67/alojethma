@@ -15,7 +15,7 @@ export class PersonalizePage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.startStory = function(color) {
       console.log(color);
-      this.navCtrl.setRoot(DrawActPage, {
+      this.navCtrl.setRoot(CookieActPage, {
         dino_color: color
       });
     }
