@@ -93,7 +93,7 @@ export class CookieActPage {
         image: "backyard",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col2"},
-          {image: "../assets/images/sun.gif", style: "sun", location: "row1>col3"}
+          {image: "./assets/images/sun.gif", style: "sun", location: "row1>col3"}
         ],
         dialogue: [
           {text: "Rowlf honey??", location: "row1>col1", owner: "mother", delay: 1}

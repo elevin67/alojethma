@@ -72,7 +72,7 @@ export class LiePage {
       options_delay: 3,
       characters: [
         {image:this.character_path+"/childblink.gif", style:"child", location:"row3>col2"},
-        {image:this.character_path+"/motherblink.gif", style:"mother", location:"row2>col3"}
+        {image:this.character_path+"/motherBlink.gif", style:"mother", location:"row2>col3"}
       ],
       dialogue: []
     },
@@ -87,7 +87,7 @@ export class LiePage {
         options_delay: 3,
         characters: [
           { image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" },
-          { image: this.character_path + "/motherblink.gif", style: "mother", location: "row2>col3" }
+          { image: this.character_path + "/motherBlink.gif", style: "mother", location: "row2>col3" }
         ],
         dialogue: [
           { text: "I only ate a few!", location: "row2>col2", owner: "child", delay: 2 }
@@ -105,7 +105,7 @@ export class LiePage {
         options_delay: 3,
         characters: [
           { image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" },
-          { image: this.character_path + "/motherblink.gif", style: "mother", location: "row2>col3" }
+          { image: this.character_path + "/motherBlink.gif", style: "mother", location: "row2>col3" }
         ],
         dialogue: [
           { text: "Are you sure?", location: "row1>col3", owner: "mother", delay: 1 }
@@ -122,7 +122,7 @@ export class LiePage {
         options_delay: 3,
         characters: [
           { image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" },
-          { image: this.character_path + "/motherblink.gif", style: "mother", location: "row2>col3" }
+          { image: this.character_path + "/motherBlink.gif", style: "mother", location: "row2>col3" }
         ],
         dialogue: [
           { text: "Okay, if you say so", location: "row1>col3", owner: "mother", delay: 1 }
@@ -135,7 +135,7 @@ export class LiePage {
         image: "kitchen",
         options: [{ title: "Next..", id: "A01D", location: "row3>col1", style: "right" }],
         options_delay: 4,
-        characters: [{ image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" }, { image: this.character_path + "/motherblink.gif", style: "mother", location: "row2>col3" }],
+        characters: [{ image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" }, { image: this.character_path + "/motherBlink.gif", style: "mother", location: "row2>col3" }],
         dialogue: [{ text: "So you lied to me before? Well, Rowlf, you should not lie. You ate so many cookies, what if your stomach hurts later now?", location: "row1>col3", owner: "mother", delay: 1 }]
       },
       {
@@ -145,7 +145,7 @@ export class LiePage {
         image: "kitchen",
         options: [{ title: "Next..", id: "A01C", location: "row3>col1", style: "right" }],
         options_delay: 3,
-        characters: [{ image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" }, { image: this.character_path + "/motherblink.gif", style: "mother", location: "row2>col3" }],
+        characters: [{ image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" }, { image: this.character_path + "/motherBlink.gif", style: "mother", location: "row2>col3" }],
         dialogue: [{ text: "I ate all the cookies.", location: "row1>col2", owner: "child", delay: 1 }]
       },
       {
@@ -155,7 +155,7 @@ export class LiePage {
         image: "kitchen",
         options: [{ title: "Next..", id: "A01D", location: "row3>col1", style: "right" }],
         options_delay: 3,
-        characters: [{ image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" }, { image: this.character_path + "/motherblink.gif", style: "mother", location: "row2>col3" }],
+        characters: [{ image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" }, { image: this.character_path + "/motherBlink.gif", style: "mother", location: "row2>col3" }],
         dialogue: [{ text: "Rowlf! I told you not to eat a lot of cookies! You ate so many cookies, what if your stomach hurts later now?", location: "row1>col3", owner: "mother", delay: 1 }]
       },
       {
@@ -165,7 +165,7 @@ export class LiePage {
         image: "kitchen",
         options: [{ title: "Next..", id: "next", location: "row3>col1", style: "right" }],
         options_delay: 3,
-        characters: [{ image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" }, { image: this.character_path + "/motherblink.gif", style: "mother", location: "row2>col3" }],
+        characters: [{ image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" }, { image: this.character_path + "/motherBlink.gif", style: "mother", location: "row2>col3" }],
         dialogue: [{ text: "Well, I think you should go to your room and color your drawing, the one you have to turn in tomorrow for Mr. Rex’s class. ", location: "row1>col3", owner: "mother", delay: 1 }]
       },
     ];

@@ -45,8 +45,8 @@ export class CandyPage {
         options: [{ title: "Next..", id: "candy2", location: "row3>col1", style: "right" }],
         options_delay: 3,
         characters: [
-          { image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" },
-          { image: this.character_path + "/fatherblink.gif", style: "father", location: "row2>col3" }
+          { image: this.character_path + "/childBlink.gif", style: "child", location: "row3>col2" },
+          { image: this.character_path + "/fatherBlink.gif", style: "father", location: "row2>col3" }
         ],
         dialogue: [
           { text: "Hey Rowlf, I heard you were a good boy today and only ate two cookies..", location: "row1>col3", owner: "father", delay: 1 },
@@ -64,8 +64,8 @@ export class CandyPage {
         ],
         options_delay: 3,
         characters: [
-          { image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" },
-          { image: this.character_path + "/fatherblink.gif", style: "father", location: "row2>col3" }
+          { image: this.character_path + "/childBlink.gif", style: "child", location: "row3>col2" },
+          { image: this.character_path + "/fatherBlink.gif", style: "father", location: "row2>col3" }
         ],
         dialogue: [
           { text: "Well, let's go to the Candy shop to get you some candies..", location: "row1>col3", owner: "father", delay: 1 },
@@ -85,8 +85,8 @@ export class CandyPage {
         ],
         options_delay: 3,
         characters: [
-          { image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" },
-          { image: this.character_path + "/fatherblink.gif", style: "father", location: "row2>col3" }
+          { image: this.character_path + "/childBlink.gif", style: "child", location: "row3>col2" },
+          { image: this.character_path + "/fatherBlink.gif", style: "father", location: "row2>col3" }
         ],
         dialogue: [
           { text: "So what candy do you want Rowlf?", location: "row1>col3", owner: "father", delay: 1 }
@@ -151,8 +151,8 @@ export class CandyPage {
         ],
         options_delay: 3,
         characters: [
-          { image: this.character_path + "/childblink.gif", style: "child", location: "row3>col2" },
-          { image: this.character_path + "/fatherblink.gif", style: "father", location: "row2>col3" }
+          { image: this.character_path + "/childBlink.gif", style: "child", location: "row3>col2" },
+          { image: this.character_path + "/fatherBlink.gif", style: "father", location: "row2>col3" }
         ],
         dialogue: [
           { text: "Well let's go home and have dinner.", location: "row1>col3", owner: "father", delay: 1 }
