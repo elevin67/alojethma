@@ -101,6 +101,15 @@ export class MyApp {
       }
     }, currentPage.options_delay * 1000);
 
+    // something for the text box at top
+    var textEl = <HTMLElement>document.getElementById('text');
+    console.log('hello?');
+    console.log(textEl);
+    if(textEl != null) {
+      console.log("its lit");
+      textEl.innerHTML = currentPage.text;
+    }
+
     // reveals dialogues
     for (let i = 0; i < currentPage.dialogue.length; i++) {
       console.log('revealing dialogues')

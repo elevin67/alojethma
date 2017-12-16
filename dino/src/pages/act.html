@@ -5,7 +5,7 @@
           <h2 (click)="goHome()" class="home_button">Home</h2>
         </ion-col>
         <ion-col col-11>
-          <div *ngIf="currentPage.text != ''"><h2>{{ currentPage.text }}</h2></div>
+          <div *ngIf="currentPage.text != ''"><h2 id="text">{{ currentPage.text }}</h2></div>
         </ion-col>
       </ion-row>
       <ion-row text-center class="row1">
