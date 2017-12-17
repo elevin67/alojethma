@@ -146,11 +146,14 @@ export class Ache1Page {
       title:"Rowlf_Pain9",
       id:"ache1i",
       text:"",
-      image:"bedroom",
+      image:"dinoB",
       options: [{title:"Take the medcine", id:"ache1j", location:"row2>col3", style:"right"}],
       options_delay: 3,
-      characters: [{image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col2"}],
-      dialogue: [{text:"Hmm...I guess Mommy and Dada are right. I should probably take the medicine.",location:"row2>col2",owner:"child", delay:1}],
+      characters: [
+        {image:this.character_path+"/childBlink.gif", style:"child", location:"row3>col1"},
+        {image: "./assets/images/medicine.png", style: "sun", location: "row2>col2"}
+],
+      dialogue: [{text:"Hmm...I guess Mommy and Dada are right. I should probably take the medicine.",location:"row2>col1",owner:"child", delay:1}],
     },
 
     { //He starts to feel much better.
