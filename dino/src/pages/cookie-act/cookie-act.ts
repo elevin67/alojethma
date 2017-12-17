@@ -164,7 +164,7 @@ export class CookieActPage {
         title: "Cookie2d",
         id: "cookie2d",
         text: "",
-        image: "kitchen",
+        image: "dinoB",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
           {image: this.character_path+"/motherBlink.gif", style: "mother", location: "row2>col3"},
@@ -183,7 +183,7 @@ export class CookieActPage {
         title: "Cookie2e",
         id: "cookie2e",
         text: "Rowlf decides he really does want some cookies",
-        image: "kitchen",
+        image: "dinoB",
         characters: [
           {image: this.character_path+"/childBlink.gif", style: "child", location: "row3>col1"},
           {image: this.character_path+"/motherBlink.gif", style: "mother", location: "row2>col3"}
