@@ -28,21 +28,21 @@ export class MyApp {
       splashScreen.hide();
     });
 
-    this.events.subscribe('buttonClick',(id, pages, component, dino_color, ache) => {
+    this.events.subscribe('buttonClick',(id, pages, next_act, dino_color, ache) => {
       if(id == 'home') {
         this.homePrompt();
       } else {
-        this.sendFeedback(id, pages, component, dino_color, ache);
+        this.changePage(id, pages, next_act, dino_color, ache);
       }
     });
 
     this.events.subscribe('opened', (currentPage) => {
       console.log('opened event');
-      this.reveal_delayed(currentPage);
+      this.revealDelayed(currentPage);
     });
   }
 
-  sendFeedback (id, pages, next_act, dino_color, ache) {
+  changePage (id, pages, next_act, dino_color, ache) {
     if(id=='next') {
       this.navCtrl.setRoot(next_act, {
         dino_color: dino_color,
@@ -50,13 +50,13 @@ export class MyApp {
       });
       return;
     }
-    let next_page_index = this.find_page(id,pages);
+    let next_page_index = this.findPageFromID(id,pages);
     let currentPage = pages[next_page_index];
     this.events.publish('next_page',currentPage);
-    this.reveal_delayed(currentPage);
+    this.revealDelayed(currentPage);
   }
 
-  find_page = function(id, pages) {
+  findPageFromID = function(id, pages) {
     for (let i = 0; i < pages.length; i++) {
       if(pages[i].id == id) {
         return i;
@@ -89,8 +89,8 @@ export class MyApp {
     alert.present();
   }
 
-  reveal_delayed (currentPage) {
-    console.log('in reveal_delayed');
+  revealDelayed (currentPage) {
+    console.log('in revealDelayed');
     // reveals the options
     // don't use document
     // use currentPage
@@ -102,13 +102,13 @@ export class MyApp {
     }, currentPage.options_delay * 1000);
 
     // makes sure the text at top isn't overlapped
-    let textEl = <HTMLElement>document.getElementById('text');
-    if(textEl != null) {
-      console.log("reloading h2 tag")
-      let content = currentPage.text;
-      console.log(currentPage.text);
-      textEl.innerHTML = content;
-    }
+    // let textEl = <HTMLElement>document.getElementById('text');
+    // if(textEl != null) {
+    //   console.log("reloading h2 tag")
+    //   let content = currentPage.text;
+    //   console.log(currentPage.text);
+    //   textEl.innerHTML = content;
+    // }
 
     // reveals dialogues
     for (let i = 0; i < currentPage.dialogue.length; i++) {
