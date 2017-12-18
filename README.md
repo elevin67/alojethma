@@ -8,9 +8,9 @@ To run Dino's Choice:
 
 1. Check out the repository. Open a terminal, navigate to the "dino" folder within the repository.
 
-2. Make sure you have the latest version of Ionic installed. To install, run:
-  $ npm install -g ionic cordova
-Or go to https://ionicframework.com/docs/intro/installation/ for more information.
+2. Make sure you have the latest version of Ionic installed. To install, go to https://ionicframework.com/docs/intro/installation/ for more information, or run:
+  $ npm install -g ionic cordova.
+
 
 3. Add the iOS platform by running in terminal:
   $ ionic cordova platform add ios
