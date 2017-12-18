@@ -49,8 +49,8 @@ export class CandyPage {
           { image: this.character_path + "/fatherBlink.gif", style: "father", location: "row2>col3" }
         ],
         dialogue: [
-          { text: "Hey Rowlf, I heard you were a good boy today and only ate two cookies..", location: "row1>col3", owner: "father", delay: 1 },
-          {text: "Yes Dada! I ate only two cookies!", location: "row2>col2", owner: "child", delay: 1 }
+          { text: "Hey Rowlf, I heard you were a good boy today and didn't eat all the cookies..", location: "row1>col3", owner: "father", delay: 1 },
+          {text: "Yes Dada! I only ate a few cookies!", location: "row2>col2", owner: "child", delay: 1 }
         ]
       },
 

@@ -66,7 +66,7 @@ export class TruthPage {
     {
       title:"Rowlf_Truth",
       id:"A012",
-      text:"Mom was happy that Rowlf only ate 2.",
+      text:"Mom was happy that Rowlf only ate a few cookies.",
       image:"kitchen",
       options: [{title:"Next..", id:"A013", location:"row2>col1", style:"left"}],
       options_delay: 3,
