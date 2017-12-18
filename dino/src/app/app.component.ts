@@ -101,13 +101,13 @@ export class MyApp {
       }
     }, currentPage.options_delay * 1000);
 
-    // something for the text box at top
-    var textEl = <HTMLElement>document.getElementById('text');
-    console.log('hello?');
-    console.log(textEl);
+    // makes sure the text at top isn't overlapped
+    let textEl = <HTMLElement>document.getElementById('text');
     if(textEl != null) {
-      console.log("its lit");
-      textEl.innerHTML = currentPage.text;
+      console.log("reloading h2 tag")
+      let content = currentPage.text;
+      console.log(currentPage.text);
+      textEl.innerHTML = content;
     }
 
     // reveals dialogues
