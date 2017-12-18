@@ -20,7 +20,7 @@ export class DrawActPage {
   dino_color;
   ache: boolean;
 
-  @ViewChild('myCanvas') canvas: any;
+  @ViewChild('dinoCanvas') canvas: any;
   canvasElement: any;
   lastX: number;
   lastY: number;

@@ -8,19 +8,17 @@
       <button *ngFor="let color of availableColors" icon-only ion-button (click)="changeColor(color)">
         <ion-icon [style.color]="color" name="brush"></ion-icon>
       </button>
-      <!-- <ion-icon [style.color]="red" name="brush"></ion-icon> -->
     </ion-buttons>
     <ion-buttons middle>
     </ion-buttons>
     <ion-buttons right>
-
       <button color="dark" ion-button icon-only (click)="clearCanvas()">
         <p>Clear your screen</p>
       </button>
     </ion-buttons>
   </ion-toolbar>
 
-  <canvas #myCanvas id="canvas" (touchstart)="handleStart($event)" (touchmove)="handleMove($event)"></canvas>
+  <canvas #dinoCanvas id="canvas" (touchstart)="handleStart($event)" (touchmove)="handleMove($event)"></canvas>
 
   <ion-toolbar id="bottom-toolbar">
     <ion-buttons left>

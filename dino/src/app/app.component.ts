@@ -90,7 +90,6 @@ export class MyApp {
   }
 
   revealDelayed (currentPage) {
-    console.log('in revealDelayed');
     // reveals the options
     // don't use document
     // use currentPage
@@ -101,25 +100,20 @@ export class MyApp {
       }
     }, currentPage.options_delay * 1000);
 
-    // makes sure the text at top isn't overlapped
-    // let textEl = <HTMLElement>document.getElementById('text');
-    // if(textEl != null) {
-    //   console.log("reloading h2 tag")
-    //   let content = currentPage.text;
-    //   console.log(currentPage.text);
-    //   textEl.innerHTML = content;
-    // }
+    // text overlap workaround
+    let textEl = <HTMLElement>document.getElementById('textDiv');
+    if(textEl != null) {
+      textEl.style.opacity = '0.99';
+      textEl.innerHTML = "<h2>"+currentPage.text+"</h2>";
+    }
 
     // reveals dialogues
     for (let i = 0; i < currentPage.dialogue.length; i++) {
-      console.log('revealing dialogues')
       let dialogue_delay = currentPage.dialogue[i].delay;
       let dialogue_id = currentPage.dialogue[i].owner;
       setTimeout(function() {
         if(document.getElementById(dialogue_id) != null) {
-          console.log(document.getElementById(dialogue_id));
           document.getElementById(dialogue_id).style.visibility = "visible";
-          console.log(document.getElementById(dialogue_id));
         }
       }, dialogue_delay * 1000);
     }
